@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VersaKey documentation: build and use the Rust command-line app to generate reproducible key files on Windows and Linux.">
+  <meta name="color-scheme" content="light">
+  <title>VersaKey — Readme</title>
+  <style>
+    :root {
+      --paper: #f5f6f2;
+      --surface: #ffffff;
+      --ink: #202c32;
+      --muted: #53646c;
+      --line: #d9e1dc;
+      --accent: #086b57;
+      --soft: #e8f3ed;
+      --mono: Consolas, "Liberation Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 "Segoe UI", system-ui, sans-serif; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #b15c0b; outline-offset: 4px; }
+    .skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 5; padding: .6rem 1rem; background: white; }
+    .skip-link:focus { top: 1rem; }
+    .wrap { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; }
+    .brand { font-size: 1.05rem; font-weight: 750; letter-spacing: -.03em; color: var(--ink); text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .version { font: .75rem var(--mono); color: var(--muted); }
+    .hero { padding: 4.5rem 0 3rem; }
+    .eyebrow { margin: 0 0 .8rem; color: var(--accent); font-size: .75rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(3.2rem, 8vw, 5.6rem); font-weight: 750; letter-spacing: -.065em; line-height: 1.05; }
+    .intro { max-width: 750px; margin: 1.4rem 0 1.8rem; color: var(--muted); font-size: 1.2rem; line-height: 1.65; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .button { display: inline-block; padding: .6rem 1.1rem; border: 1px solid var(--accent); border-radius: 6px; font-size: .9rem; font-weight: 650; text-decoration: none; }
+    .button.primary { background: var(--accent); color: white; }
+    .button:hover { box-shadow: 0 0 0 2px var(--line); }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 2.5rem 0 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+    .facts div { padding: 1.1rem 1.4rem; border-right: 1px solid var(--line); }
+    .facts div:last-child { border-right: 0; }
+    .facts dt { color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+    .facts dd { margin: .25rem 0 0; font-size: 1.05rem; font-weight: 650; }
+    .layout { display: grid; grid-template-columns: 185px minmax(0, 1fr); gap: 3.5rem; align-items: start; padding-bottom: 4rem; }
+    .toc { position: sticky; top: 6rem; padding-block: .5rem; }
+    .toc p { margin: 0 0 .6rem; font-size: .72rem; letter-spacing: .1em; font-weight: 750; text-transform: uppercase; color: var(--muted); }
+    .toc ul { list-style: none; margin: 0; padding: 0; }
+    .toc li { margin: 0; }
+    .toc a { display: block; padding: .4rem 0; text-decoration: none; color: var(--muted); font-size: .9rem; }
+    .toc a:hover { color: var(--accent); text-decoration: underline; }
+    section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+    section:first-child { padding-top: 0; border-top: 0; }
+    h2 { margin: 0 0 1rem; font-size: 1.65rem; line-height: 1.3; letter-spacing: -.035em; }
+    h3 { margin: 1.7rem 0 .6rem; font-size: 1.05rem; line-height: 1.4; }
+    p { margin: 0 0 1rem; }
+    ul, ol { padding-left: 1.4rem; margin: .8rem 0 1.3rem; }
+    li { margin: .5rem 0; }
+    code { padding: .12rem .32rem; border-radius: 4px; background: #e8ede8; color: #234d42; font: .87em var(--mono); overflow-wrap: anywhere; }
+    pre { margin: 1rem 0 1.3rem; padding: 1.2rem 1.3rem; overflow-x: auto; border-radius: 8px; background: #18282d; color: #e3eee8; font: .85rem/1.8 var(--mono); tab-size: 2; }
+    pre code { padding: 0; background: transparent; color: inherit; font: inherit; overflow-wrap: normal; }
+    .comment { color: #acbeb6; }
+    .callout { margin: 1.3rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); border-radius: 0 7px 7px 0; background: var(--soft); }
+    .callout p:last-child { margin-bottom: 0; }
+    .notice { background: #fff2de; border-color: #a55a09; }
+    .table-wrap { margin: 1.2rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: .9rem; }
+    caption { text-align: left; padding: .85rem 1rem; color: var(--muted); font-size: .8rem; font-weight: 600; }
+    th, td { padding: .9rem 1rem; border-top: 1px solid var(--line); vertical-align: top; }
+    thead th { background: #edf1ec; color: var(--muted); font-size: .73rem; letter-spacing: .04em; text-transform: uppercase; }
+    tbody th { font-weight: 600; }
+    .suite-table { min-width: 640px; }
+    .suite-table th:first-child { width: 25%; }
+    .suite-table td:nth-child(2) { width: 42%; }
+    .suite-table code { white-space: nowrap; }
+    .detail { display: block; margin-top: .35rem; color: var(--muted); font-size: .85rem; }
+    .small { color: var(--muted); font-size: .88rem; }
+    footer { padding: 1.4rem 0 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+      .toc { position: static; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
+      .toc ul { display: flex; flex-wrap: wrap; column-gap: 1.4rem; }
+      .hero { padding-top: 3rem; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: calc(100% - 2rem); }
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .facts div { padding: .9rem 1rem; }
+      .facts div:nth-child(2) { border-right: 0; }
+      .facts div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .intro { font-size: 1.05rem; }
+      section { padding-block: 2rem; }
+      pre { padding: 1rem; font-size: .78rem; }
+    }
+    @media print {
+      body { background: white; color: black; font-size: 10pt; }
+      .wrap { width: 100%; }
+      .topbar { position: static; }
+      .toc, .hero-links, .skip-link { display: none; }
+      .hero { padding: 1rem 0 2rem; }
+      h1 { font-size: 36pt; }
+      .layout { display: block; padding-bottom: 0; }
+      section { padding-block: 1.2rem; }
+      h2, h3, caption { break-after: avoid; }
+      tr, pre, .callout { break-inside: avoid; }
+      pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f0f0f0; color: black; border: 1px solid #ccc; }
+      .comment { color: #444; }
+      .table-wrap { overflow: visible; }
+      .suite-table { min-width: 0; }
+      .suite-table code { white-space: normal; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to documentation</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Versa<span>Key</span></a>
+      <span class="version">v0.1.0 / README</span>
+    </div>
+  </header>
+
+  <div class="hero wrap">
+    <p class="eyebrow">Windows &amp; Linux · Rust CLI</p>
+    <h1>VersaKey</h1>
+    <p class="intro">Reproducible key files from a password. One interactive command-line app, five generator suites, and an exact byte count you choose.</p>
+    <div class="hero-links">
+      <a class="button primary" href="#quick-start">Get started</a>
+      <a class="button" href="#suites">Compare suites</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Output</dt><dd><code>key.key</code></dd></div>
+      <div><dt>File size</dt><dd>1 byte–20 GB</dd></div>
+      <div><dt>Generator suites</dt><dd>5 explicit choices</dd></div>
+      <div><dt>Stream buffer</dt><dd>1 MiB</dd></div>
+    </dl>
+  </div>
+
+  <div class="layout wrap">
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ul>
+        <li><a href="#quick-start">Build &amp; run</a></li>
+        <li><a href="#usage">Interactive usage</a></li>
+        <li><a href="#suites">Generator suites</a></li>
+        <li><a href="#output">Output handling</a></li>
+        <li><a href="#security">Determinism &amp; security</a></li>
+        <li><a href="#compatibility">Compatibility</a></li>
+        <li><a href="#tests">Tests &amp; checks</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+      </ul>
+    </nav>
+
+    <main id="content">
+      <section id="quick-start" aria-labelledby="quick-start-title">
+        <p class="eyebrow">01 / Get started</p>
+        <h2 id="quick-start-title">Build &amp; run</h2>
+        <p>VersaKey deterministically creates <code>key.key</code> in the current working directory. To reproduce a file, use the same password, byte count, generator suite, and compatibility-critical configuration.</p>
+        <h3>1. Build the executable</h3>
+        <p>Use a terminal on Windows or Linux with Rust and Cargo installed. The project pins Rust <strong>1.98.1</strong> in <code>rust-toolchain.toml</code>, including <code>rustfmt</code> and <code>clippy</code>. From the project directory, run:</p>
+        <pre tabindex="0" aria-label="Build command"><code>cargo build --release --locked</code></pre>
+        <p>Build separately on each operating system. Use a release build, especially for large files.</p>
+        <h3>2. Choose a generator</h3>
+        <p>For the original Argon2id + AES-256-CTR suite, run the compiled executable:</p>
+        <pre tabindex="0" aria-label="Run the compiled executable"><code><span class="comment"># Windows PowerShell</span>
+.\target\release\versakey.exe argon2-aes
+
+<span class="comment"># Linux</span>
+./target/release/versakey argon2-aes</code></pre>
+        <p>Alternatively, build and run through Cargo:</p>
+        <pre tabindex="0" aria-label="Run through Cargo"><code>cargo run --release -- argon2-aes</code></pre>
+        <h3>3. Enter the size and password</h3>
+        <p>Enter a decimal byte count, then enter the same password twice at the hidden prompts. For example, <code>1048576</code> creates a 1 MiB file.</p>
+        <aside class="callout notice" aria-label="Output replacement notice">
+          <p><strong>Each successful run replaces <code>key.key</code>.</strong> All five suites use the same filename in the current directory. Move or rename an existing key before generating another if you need to keep both.</p>
+        </aside>
+      </section>
+
+      <section id="usage" aria-labelledby="usage-title">
+        <h2 id="usage-title">Interactive usage</h2>
+        <p>The subcommand is required; there is no implicit default generator. The size and password are entered interactively. Passwords are never accepted as command-line arguments.</p>
+        <ol>
+          <li>Start VersaKey with one of the five subcommands.</li>
+          <li>At <code>Key size in bytes:</code>, enter a whole number from <code>1</code> to <code>20000000000</code>, inclusive. Use digits only, with no commas or unit suffix.</li>
+          <li>At <code>Password:</code> and <code>Confirm password:</code>, enter a nonempty, matching password. Input is hidden.</li>
+          <li>Wait for <code>Created key.key (&lt;size&gt; bytes).</code></li>
+        </ol>
+        <p class="small">The maximum is 20,000,000,000 bytes: 20 decimal GB, approximately 18.63 GiB. Memory use stays bounded by the stream buffer and the selected key derivation function’s fixed working set.</p>
+        <h3>Help and version</h3>
+        <p>Use the executable path shown above, or <code>versakey</code> if it is on your <code>PATH</code>:</p>
+        <pre tabindex="0" aria-label="Help and version commands"><code>versakey --help
+versakey scrypt-aes --help
+versakey --version</code></pre>
+        <p>A missing or unknown subcommand, or any unexpected argument, fails before a password prompt or file write.</p>
+      </section>
+
+      <section id="suites" aria-labelledby="suites-title">
+        <h2 id="suites-title">Choose a generator suite</h2>
+        <p>Each suite derives a 32-byte key from the password, then expands it into the requested output. A key derivation function (KDF) makes password guessing more costly.</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable generator suite comparison">
+          <table class="suite-table">
+            <caption>Five subcommands, with distinct output for each suite</caption>
+            <thead><tr><th scope="col">Subcommand</th><th scope="col">Construction</th><th scope="col">Intended choice</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>argon2-aes</code></th><td>Argon2id v1.3 → AES-256-CTR<span class="detail">64 MiB · 3 iterations · 1 lane</span></td><td>Original suite; preserves output compatibility with earlier VersaKey versions.</td></tr>
+              <tr><th scope="row"><code>scrypt-aes</code></th><td>scrypt → AES-256-CTR<span class="detail">N = 2<sup>16</sup> · r = 8 · p = 1 · about 64 MiB</span></td><td>Memory-hard alternative to Argon2id.</td></tr>
+              <tr><th scope="row"><code>pbkdf2-aes</code></th><td>PBKDF2-HMAC-SHA-256 → AES-256-CTR<span class="detail">600,000 iterations · low memory use</span></td><td>Widely standardized alternative when low memory use or compatibility is needed.</td></tr>
+              <tr><th scope="row"><code>argon2-chacha20</code></th><td>Argon2id v1.3 → ChaCha20<span class="detail">64 MiB · 3 iterations · 1 lane</span></td><td>Non-AES stream-cipher alternative.</td></tr>
+              <tr><th scope="row"><code>argon2-blake3</code></th><td>Argon2id v1.3 → keyed BLAKE3 XOF<span class="detail">64 MiB · 3 iterations · 1 lane</span></td><td>Direct extendable-output alternative.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Run any suite through Cargo</h3>
+        <p>Choose one command per generation:</p>
+        <pre tabindex="0" aria-label="All generator commands"><code>cargo run --release -- argon2-aes
+cargo run --release -- scrypt-aes
+cargo run --release -- pbkdf2-aes
+cargo run --release -- argon2-chacha20
+cargo run --release -- argon2-blake3</code></pre>
+        <aside class="callout">
+          <p><strong>Record the subcommand and exact byte count.</strong> The suites are deliberately domain-separated and non-interchangeable. They produce different bytes for the same password and size, and <code>key.key</code> contains no suite header.</p>
+        </aside>
+      </section>
+
+      <section id="output" aria-labelledby="output-title">
+        <h2 id="output-title">Output handling</h2>
+        <p>Generation streams through a <strong>1 MiB buffer</strong>. Memory use does not grow with the requested file size; it is bounded by the buffer plus the chosen KDF’s fixed working set.</p>
+        <p>VersaKey writes to a temporary file, flushes and synchronizes it, then atomically replaces <code>key.key</code>. A derivation or write failure before the final replacement preserves an earlier key file.</p>
+        <h3>Interrupted generation</h3>
+        <p>Normal errors and Rust unwinding remove the temporary file. A forced process kill, abort, or power loss can leave a partial <code>.key.key.*</code> file. After confirming that no VersaKey process is running, you can remove that stale file. Stale files are not removed automatically because another concurrent VersaKey process may still own them.</p>
+        <h3>Platform behavior</h3>
+        <ul>
+          <li><strong>Unix:</strong> the containing directory is synchronized after replacement. A rare failure at that point is reported as already committed; the replacement cannot be rolled back.</li>
+          <li><strong>Windows:</strong> the completed temporary file is synchronized before replacement, but the same directory-sync path is unavailable. A sudden power loss immediately after replacement can have weaker rename-durability guarantees.</li>
+          <li><strong>Windows permissions:</strong> the replacement inherits the containing directory’s access-control policy instead of preserving a custom ACL on the old <code>key.key</code>. Use a suitably restricted directory for sensitive output.</li>
+        </ul>
+      </section>
+
+      <section id="security" aria-labelledby="security-title">
+        <h2 id="security-title">Determinism &amp; security</h2>
+        <h3>What makes a file reproducible</h3>
+        <p>The password, requested byte length, suite domain, application salt and pepper, KDF parameters, and stream construction determine the output. Changing the requested size changes the entire output rather than retaining the shorter file’s stream prefix.</p>
+        <h3>Password strength sets the limit</h3>
+        <p>Output entropy is limited by the password-derived 256-bit key. A large file is deterministic pseudorandom material; its size does not make it a true-random one-time pad.</p>
+        <p>Anyone who obtains <code>key.key</code> can test password guesses offline by regenerating it. Argon2id and scrypt raise guessing costs through memory-hard work, but no KDF adds entropy to a weak password. Use a long, high-entropy passphrase.</p>
+        <p>PBKDF2 is CPU-hard but not memory-hard. Its low memory use and broad standardization can suit constrained or compatibility-oriented deployments, while also allowing more economical parallel guessing than the configured Argon2id or scrypt suites. Prefer a memory-hard suite unless you need that tradeoff.</p>
+        <h3>Repeating bytes and stream behavior</h3>
+        <p>Individual bytes and short substrings can repeat in random-looking output. No generator can make every byte unique after 256 bytes. These suites do not cycle or copy a shorter digest.</p>
+        <p>The AES-256-CTR suites maintain one stream without reusing its 128-bit counter within a generated file. Because AES is a permutation, their aligned 16-byte blocks cannot repeat at the supported sizes. That specific guarantee does not apply to ChaCha20 or BLAKE3 output.</p>
+        <h3>Pepper and memory cleanup</h3>
+        <p>The compiled-in pepper can be extracted from the executable. It diversifies builds but does not replace a strong password or an external secret.</p>
+        <p>VersaKey zeroizes the password values and key/buffer state it owns. The third-party scrypt and PBKDF2 implementations do not guarantee erasure of every internal intermediate allocation after derivation.</p>
+      </section>
+
+      <section id="compatibility" aria-labelledby="compatibility-title">
+        <h2 id="compatibility-title">Compatibility with earlier executables</h2>
+        <p>The five generators now live in one executable. Each subcommand retains its predecessor’s application salt, pepper, domain, KDF parameters, and stream construction, preserving the original output for existing password-and-size combinations.</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Previous executable to current command mapping">
+          <table>
+            <caption>Migration reference</caption>
+            <thead><tr><th scope="col">Previous executable</th><th scope="col">Current command</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>versakey</code></th><td><code>versakey argon2-aes</code></td></tr>
+              <tr><th scope="row"><code>versakey-scrypt</code></th><td><code>versakey scrypt-aes</code></td></tr>
+              <tr><th scope="row"><code>versakey-pbkdf2</code></th><td><code>versakey pbkdf2-aes</code></td></tr>
+              <tr><th scope="row"><code>versakey-chacha20</code></th><td><code>versakey argon2-chacha20</code></td></tr>
+              <tr><th scope="row"><code>versakey-blake3</code></th><td><code>versakey argon2-blake3</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The separate executable targets have been removed. Changing a suite’s salt, pepper, domain, KDF parameters, or stream construction breaks compatibility. CLI names themselves are not derivation inputs.</p>
+      </section>
+
+      <section id="tests" aria-labelledby="tests-title">
+        <h2 id="tests-title">Tests &amp; development checks</h2>
+        <p>Run the complete test suite in release mode using production-strength KDFs:</p>
+        <pre tabindex="0" aria-label="Test, formatting, and lint commands"><code>cargo test --release --locked
+cargo fmt --all -- --check
+cargo clippy --all-targets --locked -- -D warnings</code></pre>
+        <p>Per-suite tests cover original known-answer output, fixed configuration, repeated small and large generations in separate directories, password and size sensitivity, exact file lengths, and failed replacements.</p>
+        <p>A <strong>2 MiB + 137 byte</strong> fixture crosses two production buffer boundaries. Its entire content is compared with direct AES counter encryption, one ChaCha20 expansion, or one BLAKE3 XOF read. Tests reject repeating whole-file periods from 1 byte through 1 MiB and check for duplicate aligned 16-byte blocks in that fixture.</p>
+        <p class="small">These are regression checks for accidental repetition and stream resets, not proof that all output lacks repeated substrings or exhaustive coverage of every supported size.</p>
+        <p>Shared reliability checks cover partial and interrupted writes, write-zero errors, injected disk failures around buffer boundaries, preservation of an existing key before commit, temporary-file cleanup on errors and unwinding, counter limits, bounded writes, hidden-password handling, and Unix permissions.</p>
+        <p>Successful CLI tests use the real parser, dispatch, derivation, and writer with an injected password reader. Subprocess tests cover help, argument validation, suite selection, and invalid size handling. All subcommands use the shared implementations for their selected algorithms, KDF costs, zeroization, and atomic replacement.</p>
+        <h3>Linux and WSL checks</h3>
+        <pre tabindex="0" aria-label="Linux and WSL test script commands"><code><span class="comment"># Linux, from the project directory</span>
+bash scripts/test-linux.sh
+
+<span class="comment"># Windows PowerShell, with Ubuntu installed in WSL</span>
+wsl.exe -d Ubuntu -- bash scripts/test-linux.sh</code></pre>
+        <p>The script runs formatting, tests, lint, and a release build. By default it uses <code>target/linux</code> to separate Linux artifacts from native Windows builds; an existing <code>CARGO_TARGET_DIR</code> overrides that location.</p>
+      </section>
+
+      <section id="troubleshooting" aria-labelledby="troubleshooting-title">
+        <h2 id="troubleshooting-title">Troubleshooting</h2>
+        <h3>“A generator subcommand is required”</h3>
+        <p>Supply a suite, such as <code>argon2-aes</code>. Use <code>versakey --help</code> to list all choices. With Cargo, put the subcommand after <code>--</code>.</p>
+        <h3>The size is rejected</h3>
+        <p>Enter digits only, between <code>1</code> and <code>20000000000</code>. For example, use <code>1048576</code> instead of <code>1 MiB</code>, <code>1,048,576</code>, or <code>1e6</code>.</p>
+        <h3>The password is blank or the two entries differ</h3>
+        <p>Run the command again and enter the same nonempty password at both prompts. Hidden input does not display the password as you type.</p>
+        <h3>A file operation fails</h3>
+        <p>Check write access and available disk space in the current directory. The temporary file must fit alongside any existing <code>key.key</code> until replacement completes.</p>
+        <h3>The error says the key was already created or replaced</h3>
+        <p>A directory-sync failure after replacement, or a console error while reporting success, can occur after the output is committed. Read the error carefully: it does not mean the earlier key was preserved.</p>
+        <h3>A regenerated key is different</h3>
+        <p>Check the exact password, byte count, suite, and build configuration. Matching only the password is insufficient; the output file has no suite header to recover the original choice.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>VersaKey v0.1.0 · Standalone documentation · Works offline</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

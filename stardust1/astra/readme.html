@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Astra XOR: one directory, a required key.key, and a complete guide to building, using, and testing on Windows and Linux.">
+  <title>Astra XOR — User guide</title>
+  <style>
+    :root { color-scheme: light; --paper:#f6f5f0; --white:#fff; --ink:#142d34; --muted:#52676d; --line:#d7dfda; --green:#086b55; --pale:#e4f0e8; --gold:#edcd7a; --mono:Consolas,"Cascadia Code",monospace; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:28px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 "Segoe UI",system-ui,sans-serif; }
+    a { color:var(--green); text-underline-offset:4px; }
+    a:hover { text-decoration-thickness:2px; }
+    :focus-visible { outline:3px solid #b25d13; outline-offset:4px; }
+    .skip { position:absolute; left:16px; top:-90px; background:var(--white); padding:10px 18px; z-index:5; }
+    .skip:focus { top:12px; }
+    .layout { display:grid; grid-template-columns:234px minmax(0,1fr); max-width:1600px; margin:auto; }
+    aside { position:sticky; top:0; height:100vh; padding:42px 28px; border-right:1px solid var(--line); display:flex; flex-direction:column; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:24px; font-weight:750; letter-spacing:-1px; color:var(--ink); text-decoration:none; }
+    .mark { display:grid; place-items:center; width:39px; height:39px; background:var(--ink); color:var(--gold); border-radius:10px; font:28px/1 var(--mono); }
+    .sidebar-caption { margin:9px 0 35px; font:11px/1.6 var(--mono); color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; }
+    nav a { display:block; text-decoration:none; color:var(--muted); font-size:14px; padding:9px 12px; margin:3px -12px; border-radius:6px; }
+    nav a:hover, nav a[aria-current="location"] { background:var(--pale); color:var(--green); }
+    nav span { display:inline-block; width:27px; font:11px var(--mono); opacity:.75; }
+    .sidebar-foot { margin-top:auto; font-size:12px; color:var(--muted); }
+    .sidebar-foot strong { color:var(--ink); }
+    main { min-width:0; padding:57px clamp(24px,4.7vw,76px) 40px; max-width:1200px; }
+    .eyebrow { margin:0 0 17px; color:var(--green); font:700 11px/1.5 var(--mono); letter-spacing:1.8px; text-transform:uppercase; }
+    h1 { font-size:clamp(42px,4.8vw,70px); line-height:1.06; letter-spacing:-3px; font-weight:720; margin:0 0 24px; }
+    h1 em { color:var(--green); font-style:normal; }
+    .intro { max-width:610px; font-size:18px; line-height:1.75; color:var(--muted); }
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin:23px 0 30px; }
+    .badge { border:1px solid var(--line); border-radius:20px; padding:5px 12px; font:12px/1.5 var(--mono); background:#ffffff88; }
+    .terminal { background:var(--ink); color:#f0f6f3; border-radius:12px; overflow:hidden; margin:24px 0 0; }
+    .terminal-head { padding:12px 20px; border-bottom:1px solid #ffffff24; display:flex; justify-content:space-between; align-items:center; font:11px var(--mono); color:#bdd0cd; }
+    .dots { display:flex; gap:6px; }
+    .dots i { width:7px; height:7px; background:#809b97; border-radius:50%; }
+    .terminal pre { margin:0; padding:24px; color:inherit; background:none; border:0; }
+    .prompt { color:var(--gold); }
+    .terminal .success { color:#a0dec0; }
+    section { margin-top:58px; scroll-margin-top:26px; }
+    .section-title { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .section-title .number { color:var(--green); font:12px var(--mono); }
+    h2 { margin:0; font-size:28px; line-height:1.25; letter-spacing:-.8px; font-weight:680; }
+    h3 { font-size:17px; margin:0 0 10px; font-weight:650; }
+    p { margin:12px 0; }
+    .muted { color:var(--muted); }
+    .small { font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .card { background:var(--white); border:1px solid var(--line); border-radius:10px; padding:24px; min-width:0; }
+    .card p:last-child { margin-bottom:0; }
+    pre { overflow-x:auto; border:1px solid var(--line); background:#edf0e9; padding:16px 18px; border-radius:7px; font:13px/1.8 var(--mono); margin:14px 0; tab-size:2; }
+    code { font-family:var(--mono); font-size:.9em; }
+    :not(pre)>code { background:#e7ede6; border-radius:3px; padding:2px 5px; overflow-wrap:anywhere; }
+    pre code { font-size:inherit; }
+    .callout { border-left:3px solid var(--green); padding:5px 0 5px 19px; margin:22px 0; }
+    .callout p { margin:4px 0; }
+    .lab { background:var(--white); border:1px solid var(--line); border-radius:12px; padding:25px; margin-top:24px; }
+    .lab-head { display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:18px; }
+    .lab-head h3 { margin:0; }
+    .tag { font:10px var(--mono); letter-spacing:.8px; text-transform:uppercase; color:var(--green); }
+    .bytes { display:grid; grid-template-columns:1fr 28px 1fr 28px 1fr; gap:12px; align-items:center; }
+    .byte { min-width:0; }
+    label, .field-label { display:block; font-size:12px; color:var(--muted); margin-bottom:6px; }
+    input, select { font:inherit; border:1px solid #afc2b9; border-radius:6px; padding:10px 12px; background:#fff; color:var(--ink); max-width:100%; min-width:0; }
+    .byte input, .byte output { width:100%; display:block; font:600 32px/1.35 var(--mono); text-align:center; text-transform:uppercase; padding:12px 6px; }
+    .byte output { background:var(--pale); border:1px solid #afc2b9; border-radius:6px; color:var(--green); }
+    .binary { display:block; margin-top:9px; text-align:center; font:12px var(--mono); letter-spacing:1.2px; color:var(--muted); }
+    .operator { font:25px var(--mono); text-align:center; }
+    .lab-note { margin:18px 0 0; font-size:12px; color:var(--muted); }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .fields input, .fields select { width:100%; }
+    .result { display:block; margin-top:18px; padding:12px 15px; background:var(--pale); border-radius:6px; font-size:14px; }
+    [aria-invalid="true"] { border-color:#b24c34; }
+    .table-wrap { overflow:auto; margin:20px 0; }
+    table { border-collapse:collapse; width:100%; text-align:left; font-size:14px; }
+    th { font-weight:650; background:#e9eee7; }
+    th, td { padding:14px 15px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .steps { padding:0; list-style:none; counter-reset:step; }
+    .steps li { display:grid; grid-template-columns:35px 1fr; gap:12px; padding:13px 0; counter-increment:step; }
+    .steps li::before { content:counter(step); display:grid; place-items:center; align-self:start; width:29px; height:29px; background:var(--pale); color:var(--green); border-radius:50%; font:12px var(--mono); }
+    .steps strong { display:block; }
+    .steps p { margin:3px 0 0; color:var(--muted); font-size:14px; }
+    details { border:1px solid var(--line); border-radius:8px; padding:15px 19px; margin:14px 0; background:#ffffff66; }
+    summary { cursor:pointer; font-weight:600; }
+    details p, details li { font-size:14px; }
+    ul { padding-left:22px; }
+    li { margin:7px 0; }
+    .test-banner { display:flex; gap:24px; align-items:center; background:var(--ink); color:white; padding:24px; border-radius:10px; }
+    .test-number { font:600 47px/1 var(--mono); color:var(--gold); }
+    .test-banner p { margin:0; }
+    .test-banner .small { color:#c0d1cd; }
+    .file-list { font-family:var(--mono); font-size:12px; line-height:2; }
+    footer { border-top:1px solid var(--line); margin-top:55px; padding-top:22px; display:flex; justify-content:space-between; gap:14px; font-size:12px; color:var(--muted); }
+    @media(max-width:1050px) { .layout { grid-template-columns:195px minmax(0,1fr); } aside { padding:32px 23px; } main { padding:40px 30px; } .grid { grid-template-columns:1fr; } }
+    @media(max-width:720px) {
+      .layout { display:block; } aside { height:auto; position:static; padding:21px 22px 14px; border-right:0; border-bottom:1px solid var(--line); }
+      .brand { font-size:22px; } .sidebar-caption, .sidebar-foot { display:none; }
+      nav { display:flex; overflow-x:auto; gap:8px; margin-top:14px; } nav a { white-space:nowrap; margin:0; padding:6px 9px; font-size:12px; } nav span { display:none; }
+      main { padding:34px 22px; } h1 { font-size:45px; letter-spacing:-2px; } .intro { font-size:16px; }
+      section { margin-top:43px; } h2 { font-size:25px; } .lab, .card { padding:19px; }
+      .bytes { gap:5px; grid-template-columns:1fr 16px 1fr 16px 1fr; } .byte input, .byte output { font-size:26px; }
+      .operator { font-size:19px; } .binary { font-size:10px; letter-spacing:0; } .fields { grid-template-columns:1fr; }
+      .lab-head { align-items:flex-start; } .tag { text-align:right; } .test-banner { gap:16px; padding:20px; }
+      th, td { padding:11px; } .table-wrap table { min-width:510px; } footer { flex-direction:column; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { aside, .skip { display:none; } .layout { display:block; } main { padding:0; max-width:none; } body { background:white; font-size:11pt; } section { margin-top:25px; } .card, .lab, pre, .test-banner { break-inside:avoid; } details { display:block; } footer { margin-top:20px; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="layout">
+    <aside aria-label="Guide navigation">
+      <a class="brand" href="#main"><span class="mark" aria-hidden="true">⊕</span> Astra XOR</a>
+      <p class="sidebar-caption">v0.3.0 / User guide</p>
+      <nav aria-label="Contents">
+        <a href="#what"><span>01</span> How XOR works</a>
+        <a href="#start"><span>02</span> Build &amp; run</a>
+        <a href="#lengths"><span>03</span> Files &amp; lengths</a>
+        <a href="#safety"><span>04</span> File safety</a>
+        <a href="#examples"><span>05</span> Examples</a>
+        <a href="#tests"><span>06</span> Tests &amp; source</a>
+      </nav>
+      <p class="sidebar-foot"><strong>One directory. Careful writes.</strong><br>Windows and Linux.<br>This guide works offline.</p>
+    </aside>
+    <main id="main" tabindex="-1">
+      <header>
+        <p class="eyebrow">A small command-line tool for your files</p>
+        <h1>One folder.<br><em>One clear rule.</em></h1>
+        <p class="intro">Keep your input and <code>key.key</code> beside the executable. Astra checks that the key covers every input byte, then saves their XOR result in the same folder.</p>
+        <div class="badges"><span class="badge">Windows + Linux</span><span class="badge">Rust · zero dependencies</span><span class="badge">One processing mode</span></div>
+        <div class="terminal" aria-label="Example terminal command">
+          <div class="terminal-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>KEY.KEY IS SELECTED AUTOMATICALLY</span></div>
+          <pre><code><span class="prompt">&gt;</span> astra-xor a.bin out.bin
+<span class="success">wrote 3 bytes to out.bin (beside the executable)</span></code></pre>
+        </div>
+      </header>
+
+      <section id="what" aria-labelledby="what-title">
+        <div class="section-title"><span class="number">01 /</span><h2 id="what-title">Different bits become 1.</h2></div>
+        <p>XOR means <em>exclusive OR</em>. Matching bits produce <code>0</code>; different bits produce <code>1</code>. Astra combines byte zero of FILE_A with byte zero of <code>key.key</code>, and continues in order.</p>
+        <p class="muted">For example, <code>FF 0F AA</code> XOR <code>0F 0F 55</code> produces <code>F0 00 FF</code>. Each pair of hex digits represents one byte.</p>
+        <div class="lab">
+          <div class="lab-head"><h3>Try a byte</h3><span class="tag">Interactive example</span></div>
+          <div class="bytes">
+            <div class="byte"><label for="byte-a">FILE_A byte · hex</label><input id="byte-a" value="FF" maxlength="2" spellcheck="false" autocomplete="off" aria-describedby="byte-hint"><span class="binary" id="bits-a">11111111</span></div>
+            <span class="operator" aria-hidden="true">⊕</span>
+            <div class="byte"><label for="byte-b">key.key byte · hex</label><input id="byte-b" value="0F" maxlength="2" spellcheck="false" autocomplete="off" aria-describedby="byte-hint"><span class="binary" id="bits-b">00001111</span></div>
+            <span class="operator" aria-hidden="true">=</span>
+            <div class="byte"><label for="byte-result">Result · hex</label><output id="byte-result" for="byte-a byte-b" aria-live="polite">F0</output><span class="binary" id="bits-result">11110000</span></div>
+          </div>
+          <p class="lab-note" id="byte-hint">Enter 00–FF. This example runs in your browser and does not read any files.</p>
+        </div>
+        <div class="callout"><p><strong>XOR is reversible:</strong> <code>(A ⊕ key) ⊕ key = A</code>. Use exactly the same key bytes to restore a file. Key length alone does not make XOR secure encryption: this tool does not generate random keys, prevent key reuse, or authenticate data.</p></div>
+      </section>
+
+      <section id="start" aria-labelledby="start-title">
+        <div class="section-title"><span class="number">02 /</span><h2 id="start-title">Build once. Keep the files together.</h2></div>
+        <p>Requires <strong>Rust 1.88 or newer</strong> and Cargo. Run the build commands from this project's directory. There are no third-party crates; builds and tests work offline once the Rust toolchain and platform linker are installed.</p>
+        <div class="grid">
+          <div class="card"><h3>Windows · PowerShell</h3><pre><code>cargo build --release --offline --locked
+Copy-Item .\target\release\astra-xor.exe .\astra-xor.exe
+# Put a.bin and key.key beside astra-xor.exe.
+.\astra-xor.exe a.bin out.bin</code></pre><p class="small muted">Build output: <code>target\release\astra-xor.exe</code>. Use the Windows MSVC toolchain with its C++ build tools and Windows SDK.</p></div>
+          <div class="card"><h3>Linux · shell</h3><pre><code>cargo build --release --offline --locked
+cp target/release/astra-xor ./astra-xor
+# Put a.bin and key.key beside astra-xor.
+./astra-xor a.bin out.bin</code></pre><p class="small muted">Build output: <code>target/release/astra-xor</code>. Install a C linker, such as the one supplied by your distribution's build tools.</p></div>
+        </div>
+        <p>You can copy the executable to any writable working folder. The folder should look like this before a run:</p>
+        <pre><code>your-folder/
+  astra-xor.exe     (Windows) or astra-xor (Linux)
+  a.bin            (your input; choose its filename)
+  key.key          (required name; at least as many bytes as a.bin)
+  out.bin          (created or replaced after success)</code></pre>
+        <p><strong>The executable's directory controls file lookup.</strong> Launching <code>C:\tools\astra-xor.exe a.bin out.bin</code> from another folder still reads <code>C:\tools\a.bin</code> and <code>C:\tools\key.key</code>, and writes <code>C:\tools\out.bin</code>. Linux behaves the same way.</p>
+        <p class="small muted">When using <code>cargo run --release -- a.bin out.bin</code>, place the data and key in <code>target/release</code>. If you use <code>cargo install --path . --locked</code>, the files belong beside the installed executable. A copied executable in a dedicated data folder is usually easier to manage.</p>
+      </section>
+
+      <section id="lengths" aria-labelledby="lengths-title">
+        <div class="section-title"><span class="number">03 /</span><h2 id="lengths-title">The key must cover the whole input.</h2></div>
+        <pre><code>astra-xor [--] &lt;FILE_A&gt; &lt;OUTPUT&gt;
+astra-xor --in-place [--] &lt;FILE_A&gt;</code></pre>
+        <p>Supply two <strong>filenames</strong> to save to a separate output, or <code>--in-place</code> and one filename to replace FILE_A. Paths are not accepted. The second input (B) is always <code>key.key</code>; do not pass it as an argument. Before creating a temporary file or modifying output, Astra checks both inputs and their lengths.</p>
+        <div class="callout"><p><strong>Atomic in-place replacement:</strong> <code>astra-xor --in-place a.bin</code> writes the complete result to a temporary file beside <code>a.bin</code>, syncs it, then replaces that filename. It needs free disk space for the complete result. FILE_A must be writable and cannot be the key, executable, or a hard link to either. Running the command again with the same key restores the original bytes.</p></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Condition</th><th scope="col">Result</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">key.key is missing or is not an ordinary file</th><td>Exit with code 1. Existing output stays unchanged, even if FILE_A is empty.</td></tr>
+            <tr><th scope="row">key.key is shorter than FILE_A</th><td>Exit with code 1 and a length diagnostic. No output or temporary file is created.</td></tr>
+            <tr><th scope="row">key.key is the same length or longer</th><td>Process all of FILE_A. The result has exactly FILE_A's length. Extra key bytes are not read.</td></tr>
+            <tr><th scope="row">FILE_A is empty and key.key exists</th><td>Produce an empty output. The key may also be empty.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="lab">
+          <div class="lab-head"><h3>Check the length rule</h3><span class="tag">No files needed</span></div>
+          <div class="fields">
+            <div><label for="len-a">FILE_A · bytes</label><input id="len-a" type="number" min="0" max="1000000000000" step="1" value="10" aria-describedby="length-result"></div>
+            <div><label for="len-b">key.key · bytes</label><input id="len-b" type="number" min="0" max="1000000000000" step="1" value="16" aria-describedby="length-result"></div>
+          </div>
+          <output id="length-result" class="result" for="len-a len-b" aria-live="polite">10 output bytes. 6 unused key bytes.</output>
+        </div>
+        <noscript><p>The calculators require JavaScript. All instructions and the length table remain available without it.</p></noscript>
+        <details><summary>Filename rules on both systems</summary>
+          <p>Spaces, Unicode, leading dots, and native OS filenames are supported. Quote names containing spaces. Use <code>--</code> before filenames starting with a dash. A lone <code>-</code> is an ordinary filename, not standard input.</p>
+          <p>Absolute paths, subdirectories, <code>./</code>, <code>../</code>, both slash styles, Windows drive prefixes and alternate data streams are rejected. Both systems also reject control characters, <code>&lt; &gt; : &quot; | ? *</code>, trailing dots/spaces, Windows device names such as <code>NUL</code> or <code>COM1</code>, and the reserved <code>.astra-xor-</code> prefix.</p>
+          <p>Name the key <code>key.key</code> exactly, and use the actual case of input names. Windows normally ignores case; Linux normally distinguishes it. Astra checks file identity when protecting inputs. Without <code>--in-place</code>, a case alias or hard link to either input cannot be used as output. The key and executable remain protected in both modes.</p>
+        </details>
+        <details><summary>Moving from version 0.2</summary>
+          <p>The old three-filename command and the <code>--repeat</code>/<code>--truncate</code> options have been removed. Rename your B file to <code>key.key</code>, make sure it is long enough, put the files beside the executable, and use <code>astra-xor a.bin out.bin</code>. No bytes from FILE_A are discarded and the key never cycles.</p>
+        </details>
+      </section>
+
+      <section id="safety" aria-labelledby="safety-title">
+        <div class="section-title"><span class="number">04 /</span><h2 id="safety-title">Finish the result before replacing a file.</h2></div>
+        <ol class="steps">
+          <li><div><strong>Resolve the executable and validate the files.</strong><p>Use the canonical executable directory, independent of the shell's working directory. Require regular input files and a sufficiently long key. Protect the key and executable, including hard links. Only explicit <code>--in-place</code> allows replacing FILE_A; verify that its path still names the opened input before transforming it.</p></div></li>
+          <li><div><strong>Write a separate temporary file in the same folder.</strong><p>Create it exclusively. Two 64 KiB buffers keep processing memory bounded, regardless of file or key size. Short and interrupted reads/writes are handled; a read error or a key becoming too short fails the run.</p></div></li>
+          <li><div><strong>Check, sync, then rename.</strong><p>Detect input growth and observed length, permission, or modification-time changes, plus Unix status-change times. Sync the completed temporary file, recheck the destination's identity and metadata, and rename the result into place. On Linux, also sync the parent directory. Never delete the old output first.</p></div></li>
+        </ol>
+        <div class="callout"><p><strong>Existing unrelated output is replaced without a prompt after success.</strong> Keep enough free space for the complete result while the old output still exists. The executable's folder must allow creating and renaming files. Read-only or locked output fails safely.</p></div>
+        <details><summary>Links, special files, and permissions</summary>
+          <p>Input, key, and output file symlinks are refused, including links to the same folder and dangling links. Windows reparse points (including cloud placeholders) are also refused; use ordinary local copies. Directories, devices, and pipes are not supported.</p>
+          <p>Hard-linked inputs are regular files and can be read. A separate output may not be a hard link to either input or the executable. In-place replacement changes the directory entry, not the original file object: other hard links and already-open readers keep the original bytes. Readers opening the filename after replacement see the complete result. Windows readers must permit deletion/renaming; otherwise replacement fails safely.</p>
+          <p>New Unix outputs use mode <code>0600</code>, subject to the process's umask. Replacement preserves ordinary Unix access bits, without setuid/setgid/sticky bits. Ownership, ACLs, timestamps, and other metadata are not guaranteed to survive replacement. On Windows, input handles permit other readers but prevent concurrent writes or deletion while open. An existing output also refuses active writers and prevents new writers through processing, file sync, and the final rename. In-place replacement keeps that protection after its input reader closes.</p>
+          <p>File identities use Unix device/inode pairs and Windows volume/128-bit file IDs. If file identity cannot be obtained, Astra exits before writing. See <a href="https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_id_info">Windows file identity</a>, <a href="https://doc.rust-lang.org/std/os/unix/fs/trait.MetadataExt.html">Unix metadata</a>, and <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file">Windows filename rules</a>.</p>
+        </details>
+        <details><summary>Failures, concurrent changes, and interrupted runs</summary>
+          <p>Failures before publication clean up the temporary file without deleting the destination, including FILE_A in in-place mode. If Linux directory syncing fails after the rename, the completed output is already in place; Astra returns a failure and explicitly reports that publication succeeded but durability is uncertain. Do not blindly retry that error in in-place mode: XORing again would undo the completed transformation. Forced termination or filesystem failures can leave a <code>.astra-xor-*.tmp</code> file. Remove such files only after confirming no Astra process is still using them.</p>
+          <p>Keep inputs, executable, and directory entries stable during a run. Metadata checks catch observable changes but are not a snapshot or a defense against hostile concurrent directory manipulation. Do not direct simultaneous runs to the same output filename.</p>
+          <p>Linux checks directory-sync support before writing and syncs that directory again after publishing the completed file, following the <a href="https://man7.org/linux/man-pages/man2/fsync.2.html">Linux fsync requirements</a>. Filesystems that cannot sync directories fail before replacement. Windows syncs file contents before renaming, but does not guarantee that the renamed directory entry survives power loss. Physical disk failure, filesystem corruption, unusual network filesystems, and abrupt termination cannot be made failure-proof by this program. See Rust's <a href="https://doc.rust-lang.org/std/fs/struct.File.html#method.sync_all">file sync</a>, <a href="https://doc.rust-lang.org/std/fs/fn.rename.html">rename</a>, and <a href="https://doc.rust-lang.org/std/env/fn.current_exe.html">executable path</a> documentation.</p>
+        </details>
+      </section>
+
+      <section id="examples" aria-labelledby="examples-title">
+        <div class="section-title"><span class="number">05 /</span><h2 id="examples-title">A few useful commands.</h2></div>
+        <p>The commands below assume Astra is on PATH. Otherwise use <code>.\astra-xor.exe</code> on Windows or <code>./astra-xor</code> on Linux. Every named file still belongs beside that executable.</p>
+        <div class="grid">
+          <div class="card"><h3>Process a file</h3><pre><code>astra-xor a.bin out.bin</code></pre><p class="small muted">Automatically reads <code>key.key</code>. A short or missing key fails before writing.</p></div>
+          <div class="card"><h3>Mask, then restore</h3><pre><code>astra-xor message.txt masked.bin
+astra-xor masked.bin restored.txt</code></pre><p class="small muted">Keep <code>key.key</code> unchanged for both commands. This demonstrates XOR's reversibility.</p></div>
+          <div class="card"><h3>Replace a file in place</h3><pre><code>astra-xor --in-place message.txt
+# Run the same command again to restore its bytes.
+astra-xor --in-place -- -input.bin</code></pre><p class="small muted">The original remains intact until the completed result replaces its filename. Use <code>--</code> before a filename starting with a dash.</p></div>
+          <div class="card"><h3>Names with spaces or dashes</h3><pre><code>astra-xor "input one.bin" "output file.bin"
+astra-xor -- -input.bin -output.bin</code></pre><p class="small muted">Names only: even <code>./input.bin</code> is rejected.</p></div>
+          <div class="card"><h3>Help and version</h3><pre><code>astra-xor --help
+astra-xor --version</code></pre><p class="small muted">Also accepts <code>-h</code> and <code>-V</code>. These informational commands do not require input files or a key.</p></div>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Exit code</th><th scope="col">Meaning</th></tr></thead>
+          <tbody><tr><td><code>0</code></td><td>Success, help, or version. A successful data run prints its byte count.</td></tr><tr><td><code>1</code></td><td>Runtime failure: missing/short key, missing input, unsafe destination, changed input, or I/O error. A diagnostic goes to standard error.</td></tr><tr><td><code>2</code></td><td>Invalid arguments: wrong filename count, unknown/removed option, or rejected filename/path.</td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section id="tests" aria-labelledby="tests-title">
+        <div class="section-title"><span class="number">06 /</span><h2 id="tests-title">Test the bytes. Test the failures.</h2></div>
+        <div class="test-banner"><div class="test-number">139</div><div><p><strong>Windows regression tests · 141 on Linux</strong></p><p class="small">Windows: 86 internal + 53 real executable tests · Linux: 89 internal + 52 real executable tests · 256 randomized oracle cases within the suite</p></div></div>
+        <p>Application logic, filesystem safety, atomic replacement, and tests are separated into focused files. Tests use isolated temporary directories, copy Cargo's actual executable into their fixtures, and verify the resolved temporary directory before recursive cleanup. Executable copying and process creation share a short lock so a fork cannot inherit a writable executable handle and trigger Linux's <a href="https://man7.org/linux/man-pages/man2/execve.2.html">Text file busy error</a>; processes still run concurrently. A regression test exercises 64 fixture copies and launches across eight threads. No real user inputs are used.</p>
+        <pre><code>cargo fmt --check
+cargo clippy --offline --locked --all-targets -- -D warnings
+cargo test --offline --locked
+cargo test --release --offline --locked
+cargo build --release --offline --locked</code></pre>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Area</th><th scope="col">Coverage</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Arguments and names</th><td>Two filenames for separate output; one with <code>--in-place</code>; duplicate flags and extra filenames refused; fixed key; removed options; help/version; <code>--</code>; spaces, Unicode and native non-Unicode names; both path separators; Windows devices and streams on both OSes.</td></tr>
+            <tr><th scope="row">Startup checks</th><td>Missing, empty, shorter, equal and longer keys; an empty input still needs a key; length validation precedes destination inspection and temporary creation.</td></tr>
+            <tr><th scope="row">Location</th><td>Launching from another directory with decoy files; no fallback to the current directory; absolute and nested paths refused; executable folders containing spaces and Unicode.</td></tr>
+            <tr><th scope="row">Byte processing</th><td>Known vectors, all byte values, zero keys, empty files, 8 KiB/64 KiB boundaries and multiple buffers. 256 deterministic randomized cases use an independent bytewise oracle and round trips.</td></tr>
+            <tr><th scope="row">Bounded memory</th><td>A virtual key larger than 4 GiB tracks read sizes and consumption; only FILE_A's length is consumed. No giant physical fixture is needed.</td></tr>
+            <tr><th scope="row">I/O faults and changes</th><td>Short/interrupted reads and writes, zero writes, errors after partial progress, shortened inputs, growth at EOF, length and timestamp changes, failures after a full output block.</td></tr>
+            <tr><th scope="row">Output preservation</th><td>Input/executable aliases and hard links, read-only output, directories, missing parents, replaced destinations, edits to the same destination file, permission changes, panic unwinding, temporary cleanup, successful replacement without trailing bytes, and a directory-sync error after publication.</td></tr>
+            <tr><th scope="row">In-place replacement</th><td>Round trips at empty and buffer boundaries; protected key/executable aliases; read-only inputs; partial-write/read errors; file-sync failure before publication; panic cleanup; changed paths and contents; changes after the source handle closes; concurrent readers seeing complete versions; old readers retaining original bytes; long paths; preservation of other hard links.</td></tr>
+            <tr><th scope="row">Windows</th><td>Case aliases, unpaired UTF-16 names, file identity, active input/output writer refusal, output write protection during processing and sync, in-place write protection after the source reader closes, real locked-file rename failures.</td></tr>
+            <tr><th scope="row">Linux</th><td>Non-UTF-8 names, input/key/output symlinks, dangling links, executable symlink resolution, FIFO/device refusal, new-file permissions, preservation of ordinary access bits.</td></tr>
+            <tr><th scope="row">Processes</th><td>Exit codes, diagnostics, fixed-key round trips, unchanged inputs, and independent concurrent invocations with separate output names.</td></tr>
+          </tbody>
+        </table></div>
+        <p><strong>Local validation, October 26, 2026:</strong> all 139 Windows tests and all 141 Linux tests passed in both debug and release with Rust 1.99.1 and Rust 1.88.0. Formatting with stable Rust, Clippy with warnings denied on both toolchains, and release builds also passed. Linux ran directly in Ubuntu WSL2 on its native filesystem. Results are saved in <code>target/validation/windows.log</code> and <code>target/validation/linux.log</code>; all 14 recorded manifest, lockfile, source, and test hashes in each log match the checked files. <a href=".github/workflows/ci.yml">The CI workflow</a> checks the same Windows/Linux and Rust-version matrix; remote CI execution was not run in this local review.</p>
+        <p><strong>Reliability fix:</strong> Windows output inspection previously allowed concurrent writers, and in-place replacement released its write protection before syncing. Windows can <a href="https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times">defer last-write timestamp updates until writer handles close</a>, so metadata checks alone cannot reliably detect those edits. Output inspection now holds a reader that denies write sharing through the rename. Regression tests verify early refusal of an active writer, protection during processing and sync, and successful replacement after a writer closes. Unix retains its metadata-change tests.</p>
+        <details><summary>Run Linux checks in Ubuntu WSL</summary>
+          <p>From this project's directory in Linux, run <code>bash scripts/test-linux.sh</code>. The runner checks stable Rust and Rust 1.88.0 and saves <code>target/validation/linux.log</code>. It snapshots the source, builds and tests under Linux's <code>/tmp</code>, sets a predictable test umask, and limits each Cargo build/lint/test command to five minutes. This keeps Linux permissions and symlink tests off Windows-mounted filesystems and separates Windows and Linux build outputs.</p>
+          <p>On a fresh Ubuntu install, add <code>--install-tools</code> to install missing C build tools and Rust toolchains using <a href="https://rust-lang.org/tools/install/">Rust's official installer</a>. If sudo requests a password, enter it in your terminal; the script does not store credentials. After setup, Cargo builds and tests run offline.</p>
+          <p>From PowerShell, replace the example project path below with your own WSL path:</p>
+          <pre><code>wsl -d Ubuntu -- bash /mnt/c/path/to/astra-xor/scripts/test-linux.sh --install-tools</code></pre>
+        </details>
+        <details><summary>Source layout and running individual tests</summary>
+          <ul class="file-list"><li><a href="src/main.rs">src/main.rs</a> — command-line entry point and exit status</li><li><a href="src/lib.rs">src/lib.rs</a> — arguments, XOR streaming, and application flow</li><li><a href="src/atomic_file.rs">src/atomic_file.rs</a> — overwrite_atomically, safe publication, and cleanup</li><li><a href="src/file_safety.rs">src/file_safety.rs</a> — regular-file checks, native identities, and change detection</li><li>src/tests/ — unit tests, fault injection, and transaction tests</li><li>tests/cli.rs / tests/cases/ — real executable regression tests</li><li>tests/support/ — shared isolated fixtures</li><li>Cargo.toml / Cargo.lock — standard Cargo targets; no dependencies</li><li>.github/workflows/ci.yml — Windows/Linux and minimum-Rust checks</li><li>scripts/test-linux.sh — native Linux and WSL validation with saved logs</li><li>.gitattributes — Linux script line endings</li><li>readme.html — complete offline guide, including test coverage</li></ul>
+          <p>Cargo builds the library, thin application entry point, unit tests, and integration tests using its standard layout. Tests are excluded from the shipped executable.</p>
+          <pre><code>cargo test --offline --locked --test cli
+cargo test --offline --locked --lib streams::
+cargo test --offline --locked --lib atomic_file::
+cargo test --offline --locked in_place</code></pre>
+        </details>
+        <details><summary>Limits of the tests</summary>
+          <p>Fault injection covers read/write failures, cleanup, a file-sync failure before publication, and a directory-sync failure after publication. Windows tests exercise actual failed renames and sharing restrictions. The suite does not simulate physical power loss, arbitrary filesystem corruption, hostile directory races, every filesystem implementation, or every possible failure of a disk-sync operation. Passing tests support the stated behavior; they cannot promise failure-proof storage.</p>
+        </details>
+      </section>
+      <footer><span>Astra XOR · v0.3.0 · Derived from the Claude implementation</span><a href="#main">Back to top ↑</a></footer>
+    </main>
+  </div>
+  <script>
+    (() => {
+      'use strict';
+      const byId = id => document.getElementById(id);
+      const byteA = byId('byte-a'), byteB = byId('byte-b');
+      const updateBytes = () => {
+        const valid = input => /^[0-9a-f]{1,2}$/i.test(input.value.trim());
+        const okA = valid(byteA), okB = valid(byteB);
+        byteA.setAttribute('aria-invalid', String(!okA));
+        byteB.setAttribute('aria-invalid', String(!okB));
+        const a = parseInt(byteA.value.trim(), 16), b = parseInt(byteB.value.trim(), 16);
+        byId('bits-a').textContent = okA ? a.toString(2).padStart(8, '0') : '--------';
+        byId('bits-b').textContent = okB ? b.toString(2).padStart(8, '0') : '--------';
+        byId('byte-result').textContent = okA && okB ? (a ^ b).toString(16).padStart(2, '0').toUpperCase() : '—';
+        byId('bits-result').textContent = okA && okB ? (a ^ b).toString(2).padStart(8, '0') : '--------';
+        byId('byte-hint').textContent = okA && okB
+          ? 'Enter 00–FF. This example runs in your browser and does not read any files.'
+          : 'Use one or two hexadecimal digits (0–9 or A–F) for each byte.';
+      };
+      byteA.addEventListener('input', updateBytes); byteB.addEventListener('input', updateBytes);
+      const lenA = byId('len-a'), lenB = byId('len-b');
+      const updateLengths = () => {
+        const a = lenA.valueAsNumber, b = lenB.valueAsNumber;
+        const valid = n => Number.isSafeInteger(n) && n >= 0 && n <= 1000000000000;
+        lenA.setAttribute('aria-invalid', String(!valid(a))); lenB.setAttribute('aria-invalid', String(!valid(b)));
+        let text;
+        if (!valid(a) || !valid(b)) text = 'Enter whole, nonnegative lengths up to 1,000,000,000,000 bytes.';
+        else if (b < a) text = 'Exit 1: key.key is too short by ' + (a - b).toLocaleString('en-US') + ' byte' + (a - b === 1 ? '' : 's') + '. No output is created; existing output stays unchanged.';
+        else {
+          text = a.toLocaleString('en-US') + ' output byte' + (a === 1 ? '' : 's') + '.';
+          if (b > a) text += ' ' + (b - a).toLocaleString('en-US') + ' unused key byte' + (b - a === 1 ? '' : 's') + '.';
+          if (a === 0) text += ' key.key must still exist as an ordinary file.';
+        }
+        byId('length-result').textContent = text;
+      };
+      lenA.addEventListener('input', updateLengths); lenB.addEventListener('input', updateLengths);
+      updateBytes(); updateLengths();
+      if ('IntersectionObserver' in window) {
+        const links = [...document.querySelectorAll('nav a')];
+        const observer = new IntersectionObserver(entries => {
+          for (const entry of entries) if (entry.isIntersecting) {
+            for (const link of links) {
+              if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+              else link.removeAttribute('aria-current');
+            }
+          }
+        }, { rootMargin: '-10% 0px -65% 0px' });
+        document.querySelectorAll('main section').forEach(section => observer.observe(section));
+      }
+    })();
+  </script>
+</body>
+</html>

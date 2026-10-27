@@ -1,0 +1,13 @@
+[package]
+name = "astra-xor"
+version = "0.3.0"
+edition = "2024"
+rust-version = "1.88"
+description = "XOR files beside the executable using a required key.key, on Windows and Linux"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
