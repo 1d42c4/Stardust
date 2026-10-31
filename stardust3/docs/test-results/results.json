@@ -1,0 +1,3400 @@
+{
+    "generated_utc":  "2026-10-31T04:19:58.1620918Z",
+    "windows_started_utc":  "2026-10-31T04:04:48.3946881+00:00",
+    "linux_started_utc":  "2026-10-31T04:05:36.0000000+00:00",
+    "windows_passed":  387,
+    "linux_passed":  390,
+    "unique_tests":  404,
+    "source_files":  [
+                         {
+                             "path":  "Cargo.lock",
+                             "sha256":  "ec93da356f51134ce13bc49ac80d09f9b9855452fc13886fc9aaf01416eff7fd"
+                         },
+                         {
+                             "path":  "Cargo.toml",
+                             "sha256":  "3a72bb600581a9f249a41a011f5fcbca4015cfb1d5422638b7e8262656fab7f2"
+                         },
+                         {
+                             "path":  "rust-toolchain.toml",
+                             "sha256":  "c910997cb152c6dc8ed13b1fdf9fa28a4ed30d6776123e27dd6170e5c66067a0"
+                         },
+                         {
+                             "path":  "src/app/controller.rs",
+                             "sha256":  "ffb89dd19fe3b6815dffc86d3419387ca13c9e6d47092de1cdf8f7352e8e8d96"
+                         },
+                         {
+                             "path":  "src/app/mod.rs",
+                             "sha256":  "b333c20a625257a5a42281d346cc422e8cacc9a3664f8ed66e466b5fbf6f2c69"
+                         },
+                         {
+                             "path":  "src/app/model.rs",
+                             "sha256":  "ee5b85a39433d549fcda52cab4928d758be668e943f47ca5ff811b06f656e498"
+                         },
+                         {
+                             "path":  "src/app/view.rs",
+                             "sha256":  "bcf336eeac9ec7f15f0b46ff320ad66496077251b7ebb985e8e2d616202fd674"
+                         },
+                         {
+                             "path":  "src/keygen/cli.rs",
+                             "sha256":  "ecd086564957c42f67e02a12c1dc3a138c99d6bc05aec7f6ea922af361d346c8"
+                         },
+                         {
+                             "path":  "src/keygen/cli_reliability_tests.rs",
+                             "sha256":  "952c17fe8766879a3e7439db903e08298c898ca8e4e3bd3a9c9c575d2f7ec967"
+                         },
+                         {
+                             "path":  "src/keygen/cli_tests.rs",
+                             "sha256":  "6ef4c4f75c4439f19b780ff99fc3bc657fb9677de89f97f3559b38d35f4fcf46"
+                         },
+                         {
+                             "path":  "src/keygen/command_tests.rs",
+                             "sha256":  "b38a70428b11840c07a167ff84c31d97ec33861610c35d7662ccb105e2bd7b86"
+                         },
+                         {
+                             "path":  "src/keygen/commands.rs",
+                             "sha256":  "adcf5413bd72247d94719734f8c92f319b962a0f3e42c54f62d15ffec322b7d1"
+                         },
+                         {
+                             "path":  "src/keygen/controller.rs",
+                             "sha256":  "c50d5ee5e08526d437deb030a4cfbedc3a4a63ecd7238553c75d5e583ca59328"
+                         },
+                         {
+                             "path":  "src/keygen/derivation.rs",
+                             "sha256":  "08f979a3af1139d0f0fe33488ac824e8a1aa74355677cfdc311aa23dd4fcd311"
+                         },
+                         {
+                             "path":  "src/keygen/mod.rs",
+                             "sha256":  "d584d733252e0bd7d25deb39cf048814530a050005f6a46e3392405f9bfba749"
+                         },
+                         {
+                             "path":  "src/keygen/model.rs",
+                             "sha256":  "a016b99ab4a785b0a50b4b03038b8f115ff3c2d5e7e926f36e9e967fbc2b2c8b"
+                         },
+                         {
+                             "path":  "src/keygen/storage.rs",
+                             "sha256":  "5d46e44217a9d2d8c1911cf46a3a86d5c763215c5d3bc12e1913b78c39b27a80"
+                         },
+                         {
+                             "path":  "src/keygen/storage_tests.rs",
+                             "sha256":  "b0910cd8a6ee3fa14652fd8f13c549518f58423dd0e3dec74732e443747aa806"
+                         },
+                         {
+                             "path":  "src/keygen/stream.rs",
+                             "sha256":  "45a688fec312d122c05224c00bf3ebc60d079f2a7644bb2a4a2c861b994c2bd4"
+                         },
+                         {
+                             "path":  "src/keygen/tests.rs",
+                             "sha256":  "ec9665057cbe9cd5e52d790f8a6043986878a4935142ad715f03a584a78fb6d3"
+                         },
+                         {
+                             "path":  "src/lib.rs",
+                             "sha256":  "3accde9b3224a938d28545a293b1491eea535fb40fa7f2248efb9b0497fa311a"
+                         },
+                         {
+                             "path":  "src/main.rs",
+                             "sha256":  "2af09a491657d718937f351cd749ad201182849ab53e334932639aa633fed630"
+                         },
+                         {
+                             "path":  "src/xor/atomic_file.rs",
+                             "sha256":  "e4eb5a3e67a4820ad415fbcd5d0b4ca27453a594b0bc819c2a71da60f25dd3e3"
+                         },
+                         {
+                             "path":  "src/xor/controller.rs",
+                             "sha256":  "64d4ad9777b070487e7f85640c33feb6d5c285972ece716801fe3004363024d7"
+                         },
+                         {
+                             "path":  "src/xor/file_safety.rs",
+                             "sha256":  "c4b0231bb54d00b9c85e15c1d2f1ddaea46a6a2b5a19289138dcba04ddbafe91"
+                         },
+                         {
+                             "path":  "src/xor/mod.rs",
+                             "sha256":  "31668c917c883ee543dc55b34630a56eb4fd5c58c1518d34bacaae1d7e18f341"
+                         },
+                         {
+                             "path":  "src/xor/model.rs",
+                             "sha256":  "648f4769fc9e81ca410570b39a79401b5273f9da20eccb51c99bea6eef755596"
+                         },
+                         {
+                             "path":  "src/xor/stream.rs",
+                             "sha256":  "f7d15f62c47940d910d52592ee03b8b5f22414cf6116302ac82ab45b7adf0dfd"
+                         },
+                         {
+                             "path":  "src/xor/tests/arguments.rs",
+                             "sha256":  "efa635c547b7bf9650e605f7b58cf904bcc8b72a64e91ebc5013185572b46361"
+                         },
+                         {
+                             "path":  "src/xor/tests/file_checks.rs",
+                             "sha256":  "fb7e5329f799b089b8a6fd3f191f78bab604d1497bd3aaa83916948790f8628b"
+                         },
+                         {
+                             "path":  "src/xor/tests/in_place.rs",
+                             "sha256":  "bee39feb30b6091a13995f576fca845157fe00eeb1fd87685797976aba0534c0"
+                         },
+                         {
+                             "path":  "src/xor/tests/streams.rs",
+                             "sha256":  "bf105a7d811a0e56fee00585c282e4367c702f0a6ae131bcb6504b91ce1d0935"
+                         },
+                         {
+                             "path":  "src/xor/tests/transactions.rs",
+                             "sha256":  "6c41f75dff2c4cfe41f7c2deaa1430af4a09f1bde8318fd43dcca969556d98af"
+                         },
+                         {
+                             "path":  "tests/app_dispatch.rs",
+                             "sha256":  "75fbb3df83e28603968b8c68166a0b35c19f31cffa2a9bc0a2a4e75032983cf9"
+                         },
+                         {
+                             "path":  "tests/cases/in_place.rs",
+                             "sha256":  "2f749a248de1186c6400c654a78b7ff9c34ca611aedfaf18eea076d47b66dfac"
+                         },
+                         {
+                             "path":  "tests/combined_workflows.rs",
+                             "sha256":  "bf307b74f07ab9b25558aef8ccf92c267c8593d97b8c432db3d60d35d471c908"
+                         },
+                         {
+                             "path":  "tests/keygen_cli.rs",
+                             "sha256":  "0b47cb54efe31069782fbb7ddb5e4cc195adb4d4b36052eedaf95deccf492d95"
+                         },
+                         {
+                             "path":  "tests/support/mod.rs",
+                             "sha256":  "721e0618eecc48d134f0318b87e906cedc87a509405076c561e1b36870dd2b35"
+                         },
+                         {
+                             "path":  "tests/xor_cli.rs",
+                             "sha256":  "2910a25af17de007f0ae423367afad46c81573bc888ec6c433ed324b24c7e870"
+                         }
+                     ],
+    "tests":  [
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "broken_generator_status_pipe_fails_before_password_or_generation",
+                      "explanation":  "Breaks the generator\u0027s output stream and verifies generation and password prompting never begin.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "closed_status_pipe_does_not_turn_committed_xor_into_failure",
+                      "explanation":  "Breaks XOR status output after publication and verifies the committed operation remains successful.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "command_names_remain_literal_xor_filenames",
+                      "explanation":  "Uses generator names and option-like names as literal XOR filenames after the option terminator.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "confirmation_read_failure_preserves_the_existing_key_and_hard_link",
+                      "explanation":  "Fails confirmation for all five generators and checks old bytes and the original hard-link relationship survive.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "each_generator_routes_to_its_original_configuration",
+                      "explanation":  "Checks every generator command selects the expected suite, domain, and application salt.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "every_generator_accepts_a_native_non_unicode_working_directory",
+                      "explanation":  "Generates real keys from all five suites inside an OS-native non-Unicode directory without using a lossy path.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "final_flush_failure_reports_commit_and_keeps_each_generated_key",
+                      "explanation":  "For every production suite, fails final status flush and checks exit code, committed bytes, cleanup, and reproducibility.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "generating_a_key_never_requires_an_executable_file",
+                      "explanation":  "Generates through the application controller with a nonexistent executable path.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "global_version_does_not_require_a_directory_or_terminal",
+                      "explanation":  "Checks global version output works with nonexistent environment paths and no password reader.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "invalid_global_commands_never_read_input_or_echo_secrets",
+                      "explanation":  "Checks malformed top-level commands fail without prompting or echoing synthetic secret arguments.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "malformed_xor_commands_retain_astra_usage_exit_code",
+                      "explanation":  "Checks invalid XOR command forms retain usage exit code 2.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "native_non_unicode_subcommand_is_rejected_without_lossy_dispatch",
+                      "explanation":  "Checks a non-Unicode command selector is rejected instead of being guessed through lossy text.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "root_help_lists_all_six_operations_and_both_location_policies",
+                      "explanation":  "Checks root help lists five generators, XOR, and their distinct directory rules.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "wrong_generator_size_is_rejected_before_password_in_combined_dispatch",
+                      "explanation":  "Checks application-level dispatch rejects invalid sizes for every suite before password entry.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "app_dispatch",
+                      "test":  "xor_help_aliases_explain_the_same_contract_without_files",
+                      "explanation":  "Checks the application-level XOR help aliases produce identical help without file access.",
+                      "source":  "tests/app_dispatch.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::failed_regeneration_keeps_a_key_usable_for_restoration",
+                      "explanation":  "Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly",
+                      "explanation":  "Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::generated_key_supports_atomic_in_place_round_trip",
+                      "explanation":  "Uses the selected generated key for in-place XOR twice and checks exact restoration.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::generated_short_key_cannot_damage_an_input_or_existing_output",
+                      "explanation":  "Generates a key one byte too short and checks both XOR modes preserve all existing files.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::generation_and_xor_retain_their_distinct_directory_rules",
+                      "explanation":  "Checks generation uses its working directory while XOR uses files beside the executable.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_aes::regenerated_key_restores_a_previous_ciphertext",
+                      "explanation":  "Regenerates the selected suite\u0027s key from identical inputs and uses it to restore earlier ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::failed_regeneration_keeps_a_key_usable_for_restoration",
+                      "explanation":  "Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::generated_key_crosses_both_buffer_sizes_and_restores_exactly",
+                      "explanation":  "Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::generated_key_supports_atomic_in_place_round_trip",
+                      "explanation":  "Uses the selected generated key for in-place XOR twice and checks exact restoration.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::generated_short_key_cannot_damage_an_input_or_existing_output",
+                      "explanation":  "Generates a key one byte too short and checks both XOR modes preserve all existing files.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::generation_and_xor_retain_their_distinct_directory_rules",
+                      "explanation":  "Checks generation uses its working directory while XOR uses files beside the executable.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_blake3::regenerated_key_restores_a_previous_ciphertext",
+                      "explanation":  "Regenerates the selected suite\u0027s key from identical inputs and uses it to restore earlier ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::failed_regeneration_keeps_a_key_usable_for_restoration",
+                      "explanation":  "Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::generated_key_crosses_both_buffer_sizes_and_restores_exactly",
+                      "explanation":  "Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::generated_key_supports_atomic_in_place_round_trip",
+                      "explanation":  "Uses the selected generated key for in-place XOR twice and checks exact restoration.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::generated_short_key_cannot_damage_an_input_or_existing_output",
+                      "explanation":  "Generates a key one byte too short and checks both XOR modes preserve all existing files.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::generation_and_xor_retain_their_distinct_directory_rules",
+                      "explanation":  "Checks generation uses its working directory while XOR uses files beside the executable.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "argon2_chacha20::regenerated_key_restores_a_previous_ciphertext",
+                      "explanation":  "Regenerates the selected suite\u0027s key from identical inputs and uses it to restore earlier ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::failed_regeneration_keeps_a_key_usable_for_restoration",
+                      "explanation":  "Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly",
+                      "explanation":  "Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::generated_key_supports_atomic_in_place_round_trip",
+                      "explanation":  "Uses the selected generated key for in-place XOR twice and checks exact restoration.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::generated_short_key_cannot_damage_an_input_or_existing_output",
+                      "explanation":  "Generates a key one byte too short and checks both XOR modes preserve all existing files.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::generation_and_xor_retain_their_distinct_directory_rules",
+                      "explanation":  "Checks generation uses its working directory while XOR uses files beside the executable.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "pbkdf2_aes::regenerated_key_restores_a_previous_ciphertext",
+                      "explanation":  "Regenerates the selected suite\u0027s key from identical inputs and uses it to restore earlier ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::failed_regeneration_keeps_a_key_usable_for_restoration",
+                      "explanation":  "Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly",
+                      "explanation":  "Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::generated_key_supports_atomic_in_place_round_trip",
+                      "explanation":  "Uses the selected generated key for in-place XOR twice and checks exact restoration.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::generated_short_key_cannot_damage_an_input_or_existing_output",
+                      "explanation":  "Generates a key one byte too short and checks both XOR modes preserve all existing files.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::generation_and_xor_retain_their_distinct_directory_rules",
+                      "explanation":  "Checks generation uses its working directory while XOR uses files beside the executable.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "scrypt_aes::regenerated_key_restores_a_previous_ciphertext",
+                      "explanation":  "Regenerates the selected suite\u0027s key from identical inputs and uses it to restore earlier ciphertext.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "combined_workflows",
+                      "test":  "xor_does_not_prompt_or_generate_when_key_is_missing",
+                      "explanation":  "Checks missing-key XOR fails without prompting, generating a replacement key, or changing source bytes.",
+                      "source":  "tests/combined_workflows.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "argon2_aes_validates_before_password_or_file_access",
+                      "explanation":  "Runs argon2-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "argon2_blake3_validates_before_password_or_file_access",
+                      "explanation":  "Runs argon2-blake3 as a subprocess and checks invalid sizes fail before password prompts or key replacement.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "argon2_chacha20_validates_before_password_or_file_access",
+                      "explanation":  "Runs argon2-chacha20 as a subprocess and checks invalid sizes fail before password prompts or key replacement.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "each_subcommand_has_help_without_starting_generation",
+                      "explanation":  "Runs every generator help form without prompting or creating a key.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "help_and_version_exit_successfully_without_prompting_or_writing",
+                      "explanation":  "Runs global help and version as subprocesses and checks success without interactive or file side effects.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "missing_unknown_or_extra_arguments_never_default_to_a_generator",
+                      "explanation":  "Checks invalid generator command lines never silently select a default operation.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "pbkdf2_aes_validates_before_password_or_file_access",
+                      "explanation":  "Runs pbkdf2-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "keygen_cli",
+                      "test":  "scrypt_aes_validates_before_password_or_file_access",
+                      "explanation":  "Runs scrypt-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.",
+                      "source":  "tests/keygen_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture",
+                      "explanation":  "Scans the fixed large command fixture for repeated aligned blocks.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::exact_lengths_replace_existing_files_without_temporary_files",
+                      "explanation":  "Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::failed_replacement_cleans_up_and_reports_no_success",
+                      "explanation":  "Forces a command\u0027s key replacement to fail and checks cleanup and absence of a success message.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::invalid_input_and_password_failures_preserve_existing_key",
+                      "explanation":  "Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::large_key_is_not_a_repeated_short_key",
+                      "explanation":  "Checks a large generated key is not formed by repeating the corresponding short key.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::matches_original_binary_known_answer",
+                      "explanation":  "Compares the selected generator command with the frozen original-binary byte vector.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::multi_buffer_output_matches_independent_expansion",
+                      "explanation":  "Checks a multi-MiB command output against separately implemented stream expansion.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::original_suite_and_configuration_are_frozen",
+                      "explanation":  "Pins each shipped command\u0027s suite, salt, pepper, and domain to its original values.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::password_and_size_change_the_output",
+                      "explanation":  "For the selected command, changes password and size separately and checks output changes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_aes::small_and_large_keys_are_deterministic_across_directories",
+                      "explanation":  "Generates matching small and large fixtures in different directories and compares their bytes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::aligned_blocks_do_not_repeat_in_fixed_large_fixture",
+                      "explanation":  "Scans the fixed large command fixture for repeated aligned blocks.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::exact_lengths_replace_existing_files_without_temporary_files",
+                      "explanation":  "Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::failed_replacement_cleans_up_and_reports_no_success",
+                      "explanation":  "Forces a command\u0027s key replacement to fail and checks cleanup and absence of a success message.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::invalid_input_and_password_failures_preserve_existing_key",
+                      "explanation":  "Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::large_key_is_not_a_repeated_short_key",
+                      "explanation":  "Checks a large generated key is not formed by repeating the corresponding short key.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::matches_original_binary_known_answer",
+                      "explanation":  "Compares the selected generator command with the frozen original-binary byte vector.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::multi_buffer_output_matches_independent_expansion",
+                      "explanation":  "Checks a multi-MiB command output against separately implemented stream expansion.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::original_suite_and_configuration_are_frozen",
+                      "explanation":  "Pins each shipped command\u0027s suite, salt, pepper, and domain to its original values.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::password_and_size_change_the_output",
+                      "explanation":  "For the selected command, changes password and size separately and checks output changes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_blake3::small_and_large_keys_are_deterministic_across_directories",
+                      "explanation":  "Generates matching small and large fixtures in different directories and compares their bytes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::aligned_blocks_do_not_repeat_in_fixed_large_fixture",
+                      "explanation":  "Scans the fixed large command fixture for repeated aligned blocks.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::exact_lengths_replace_existing_files_without_temporary_files",
+                      "explanation":  "Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::failed_replacement_cleans_up_and_reports_no_success",
+                      "explanation":  "Forces a command\u0027s key replacement to fail and checks cleanup and absence of a success message.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::invalid_input_and_password_failures_preserve_existing_key",
+                      "explanation":  "Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::large_key_is_not_a_repeated_short_key",
+                      "explanation":  "Checks a large generated key is not formed by repeating the corresponding short key.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::matches_original_binary_known_answer",
+                      "explanation":  "Compares the selected generator command with the frozen original-binary byte vector.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::multi_buffer_output_matches_independent_expansion",
+                      "explanation":  "Checks a multi-MiB command output against separately implemented stream expansion.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::original_suite_and_configuration_are_frozen",
+                      "explanation":  "Pins each shipped command\u0027s suite, salt, pepper, and domain to its original values.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::password_and_size_change_the_output",
+                      "explanation":  "For the selected command, changes password and size separately and checks output changes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::argon2_chacha20::small_and_large_keys_are_deterministic_across_directories",
+                      "explanation":  "Generates matching small and large fixtures in different directories and compares their bytes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture",
+                      "explanation":  "Scans the fixed large command fixture for repeated aligned blocks.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::exact_lengths_replace_existing_files_without_temporary_files",
+                      "explanation":  "Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::failed_replacement_cleans_up_and_reports_no_success",
+                      "explanation":  "Forces a command\u0027s key replacement to fail and checks cleanup and absence of a success message.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::invalid_input_and_password_failures_preserve_existing_key",
+                      "explanation":  "Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::large_key_is_not_a_repeated_short_key",
+                      "explanation":  "Checks a large generated key is not formed by repeating the corresponding short key.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::matches_original_binary_known_answer",
+                      "explanation":  "Compares the selected generator command with the frozen original-binary byte vector.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::multi_buffer_output_matches_independent_expansion",
+                      "explanation":  "Checks a multi-MiB command output against separately implemented stream expansion.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::original_suite_and_configuration_are_frozen",
+                      "explanation":  "Pins each shipped command\u0027s suite, salt, pepper, and domain to its original values.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::password_and_size_change_the_output",
+                      "explanation":  "For the selected command, changes password and size separately and checks output changes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::pbkdf2_aes::small_and_large_keys_are_deterministic_across_directories",
+                      "explanation":  "Generates matching small and large fixtures in different directories and compares their bytes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture",
+                      "explanation":  "Scans the fixed large command fixture for repeated aligned blocks.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::exact_lengths_replace_existing_files_without_temporary_files",
+                      "explanation":  "Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::failed_replacement_cleans_up_and_reports_no_success",
+                      "explanation":  "Forces a command\u0027s key replacement to fail and checks cleanup and absence of a success message.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::invalid_input_and_password_failures_preserve_existing_key",
+                      "explanation":  "Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::large_key_is_not_a_repeated_short_key",
+                      "explanation":  "Checks a large generated key is not formed by repeating the corresponding short key.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::matches_original_binary_known_answer",
+                      "explanation":  "Compares the selected generator command with the frozen original-binary byte vector.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::multi_buffer_output_matches_independent_expansion",
+                      "explanation":  "Checks a multi-MiB command output against separately implemented stream expansion.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::original_suite_and_configuration_are_frozen",
+                      "explanation":  "Pins each shipped command\u0027s suite, salt, pepper, and domain to its original values.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::password_and_size_change_the_output",
+                      "explanation":  "For the selected command, changes password and size separately and checks output changes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::scrypt_aes::small_and_large_keys_are_deterministic_across_directories",
+                      "explanation":  "Generates matching small and large fixtures in different directories and compares their bytes.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::command_tests::subcommands_have_distinct_domains_and_outputs",
+                      "explanation":  "Checks the five command configurations use distinct domains and produce distinct keys.",
+                      "source":  "src/keygen/command_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::canonically_equivalent_unicode_passwords_must_match_exact_bytes",
+                      "explanation":  "Rejects a composed character and its decomposed equivalent as mismatched passwords.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::committed_directory_sync_error_is_not_reported_as_success",
+                      "explanation":  "Passes a post-publication directory-sync error through the CLI and checks the commit is disclosed without a success message.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::crlf_size_input_is_accepted",
+                      "explanation":  "Checks Windows CRLF line endings parse as the requested size.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::embedded_nul_password_is_not_truncated",
+                      "explanation":  "Checks the prompt seam preserves password bytes on both sides of an embedded NUL.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::final_flush_failure_reports_that_the_key_was_created",
+                      "explanation":  "Fails only the post-generation flush and checks the error explicitly states the key was created.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::generating_message_flush_failure_prevents_generation",
+                      "explanation":  "Fails the pre-generation status flush after both passwords and checks the generator is never called.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::generator_panic_never_prints_a_success_message",
+                      "explanation":  "Panics in the generator callback and verifies no created-key message appears.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::infinite_size_input_stops_after_129_bytes",
+                      "explanation":  "Feeds an endless size stream and verifies reading stops at the rejection bound before prompting.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::interrupted_size_reads_are_retried_without_losing_digits",
+                      "explanation":  "Alternates Interrupted errors with single-byte reads and checks the complete size is parsed.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::invalid_utf8_size_fails_before_password_or_generation",
+                      "explanation":  "Provides invalid UTF-8 size bytes and checks InvalidData is returned before prompting.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::maximum_length_leading_zero_input_preserves_the_value",
+                      "explanation":  "Parses a 128-byte size line with leading zeros and checks the resulting value is exactly one.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::partial_and_interrupted_console_writes_preserve_complete_status",
+                      "explanation":  "Combines short writes with Interrupted errors and checks complete status text without password disclosure.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::read_failure_after_size_digits_does_not_use_a_partial_number",
+                      "explanation":  "Fails input after valid digits and checks the CLI does not generate using the partial size.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::size_at_eof_without_newline_is_accepted",
+                      "explanation":  "Checks a valid size is accepted when EOF follows immediately without a newline.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::size_prompt_flush_failure_does_not_consume_input",
+                      "explanation":  "Fails flushing the size prompt and checks no size bytes are consumed.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::size_reader_leaves_following_lines_unconsumed",
+                      "explanation":  "Checks size reading stops at the first newline instead of consuming later lines.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::success_status_reaches_a_buffered_writer_before_returning",
+                      "explanation":  "Uses a real BufWriter and checks successful generation flushes its final status before returning.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::unicode_whitespace_is_counted_in_bytes_at_the_input_limit",
+                      "explanation":  "Checks multibyte whitespace obeys the 128-byte size-input bound, not a character count.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::whitespace_only_password_is_preserved_as_nonempty",
+                      "explanation":  "Checks a nonempty whitespace-only password is preserved rather than silently trimmed.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::reliability_tests::zero_length_console_write_fails_before_reading_size",
+                      "explanation":  "Uses a zero-progress console writer and checks WriteZero occurs before size input is consumed.",
+                      "source":  "src/keygen/cli_reliability_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_accepts_maximum_without_narrowing_the_byte_count",
+                      "explanation":  "Passes the 20-billion-byte maximum through the prompt seam without truncating the integer or writing a huge file.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_bounds_size_input_before_asking_for_password",
+                      "explanation":  "Checks the exact 128-byte size-line limit and rejects a longer line before password entry.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_checks_size_before_asking_for_password",
+                      "explanation":  "Supplies invalid sizes and verifies neither passwords nor generation are requested.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_distinguishes_post_commit_status_failure",
+                      "explanation":  "Fails the final status write and checks the error explicitly acknowledges completed key creation.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_errors_and_output_do_not_reveal_password",
+                      "explanation":  "Checks mismatch diagnostics and console output do not contain the synthetic password.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_preserves_unicode_and_whitespace_password_exactly",
+                      "explanation":  "Passes Unicode and surrounding spaces through the prompt without trimming or normalization.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_prompts_for_password_exactly_twice",
+                      "explanation":  "Checks that one successful generation reads a password and one confirmation.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_propagates_first_password_read_error",
+                      "explanation":  "Fails initial hidden password input and verifies the I/O error stops generation.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_propagates_generation_failure_without_success_message",
+                      "explanation":  "Injects a generator failure and verifies no success message appears.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_propagates_second_password_read_error",
+                      "explanation":  "Fails confirmation input and verifies the error propagates after exactly two prompts.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_rejects_empty_password_before_generation",
+                      "explanation":  "Checks an empty password cannot reach the generator.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_rejects_password_mismatch_before_generation",
+                      "explanation":  "Checks different password and confirmation bytes prevent generation.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_reports_eof_before_password_or_generation",
+                      "explanation":  "Ends size input immediately and checks failure occurs before any password prompt.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::cli_success_uses_exact_size_and_password",
+                      "explanation":  "Checks a successful prompt passes the exact requested size and password to generation.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::cli::tests::non_unicode_arguments_fail_without_panicking_or_defaulting",
+                      "explanation":  "Checks native non-Unicode generator arguments fail cleanly without a default suite.",
+                      "source":  "src/keygen/cli_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::complete_data_is_synced_before_replacement_and_directory_after",
+                      "explanation":  "Checks production, complete-file sync, publication, and directory sync occur in that order.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::directory_sync_failure_retains_the_committed_key",
+                      "explanation":  "Fails key directory sync after publication and checks the new key remains with an explicit committed error.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::directory_sync_panic_does_not_remove_committed_key",
+                      "explanation":  "Panics after key publication and verifies cleanup cannot delete the committed key.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::file_as_parent_fails_without_truncating_it",
+                      "explanation":  "Uses a regular file as the key directory and checks rejection preserves that file.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::file_sync_failure_does_not_publish_a_new_key",
+                      "explanation":  "Fails key file sync and checks no new key or temporary file remains.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::file_sync_failure_preserves_existing_key_and_cleans_temporary",
+                      "explanation":  "Injects a storage-full error during key sync and checks old key preservation and temporary cleanup.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::file_sync_panic_preserves_old_key_and_cleans_temporary",
+                      "explanation":  "Panics during key sync and checks old bytes and temporary cleanup.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::key_replacement_preserves_hard_links_and_platform_reader_policy",
+                      "explanation":  "Checks old hard links keep their bytes; Linux open readers survive replacement, while Windows safely refuses and succeeds after closing the reader.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::key_symlink_is_replaced_without_modifying_its_target",
+                      "explanation":  "On Unix, checks key generation replaces the symlink entry while preserving its referent.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::missing_directory_fails_before_producer_runs",
+                      "explanation":  "Attempts key creation under a missing directory and checks no writer callback or directory creation occurs.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::nested_failure_cannot_remove_another_active_temporary",
+                      "explanation":  "Runs a failing key transaction inside an active one and checks it cannot delete the outer temporary file.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::persist_failure_skips_directory_sync_and_preserves_destination",
+                      "explanation":  "Blocks key persistence with a populated directory and checks no directory sync or deletion follows.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::producer_failure_skips_both_sync_stages",
+                      "explanation":  "Fails key production and checks neither file sync nor directory sync is called.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::stale_temporary_files_survive_success_and_failure",
+                      "explanation":  "Leaves another process\u0027s key temporary sentinel in place and checks both successful and failed transactions preserve it.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::unicode_directory_supports_atomic_key_replacement",
+                      "explanation":  "Replaces a key inside a directory containing spaces and Unicode and checks exact bytes and cleanup.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::storage::tests::windows_delete_lock_preserves_existing_key_and_cleans_temporary",
+                      "explanation":  "Blocks key deletion sharing and checks failed replacement preserves old bytes and removes its temporary.",
+                      "source":  "src/keygen/storage_tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::aes_ctr_stream_matches_direct_counter_encryption",
+                      "explanation":  "Compares the AES stream with separately encrypted big-endian counter blocks.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::aligned_blocks_do_not_repeat_in_large_fixture",
+                      "explanation":  "Checks a large AES output for repeated aligned blocks.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::aligned_blocks_stay_unique_across_many_keys",
+                      "explanation":  "Checks aligned-block uniqueness across a collection of synthetic AES keys.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::all_five_suites_are_domain_separated_with_cheap_kdfs",
+                      "explanation":  "Uses inexpensive test KDFs to confirm the five constructions produce distinct output.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_cleans_up_when_destination_cannot_be_replaced",
+                      "explanation":  "Forces key publication to fail and verifies temporary cleanup and preservation of the destination.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_creates_the_requested_file",
+                      "explanation":  "Writes through the key transaction and checks the published file has exactly the requested bytes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_preserves_existing_file_on_failure",
+                      "explanation":  "Injects a key-writing error and verifies the previous file survives unchanged.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_removes_temporary_file_after_failure",
+                      "explanation":  "Checks a failed key write leaves no temporary artifact.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_removes_temporary_file_during_unwind",
+                      "explanation":  "Panics during key writing and checks stack unwinding removes the temporary file.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::atomic_writer_replaces_and_truncates_existing_file",
+                      "explanation":  "Replaces a longer key and verifies no trailing old bytes remain.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::blake3_keyed_xof_stream_matches_known_answer",
+                      "explanation":  "Checks the keyed BLAKE3 stream against a fixed expected byte vector.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::chacha20_fails_closed_at_its_counter_limit",
+                      "explanation":  "Seeks to ChaCha20\u0027s last supported block and checks an extra byte fails instead of wrapping.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::chacha20_zero_key_stream_matches_known_answer",
+                      "explanation":  "Compares a zero-key ChaCha20 stream with a fixed known-answer vector.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::counter_exhaustion_does_not_publish_a_partial_key",
+                      "explanation":  "Exhausts ChaCha20 after one block inside a real key transaction and checks rollback and cleanup.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::derived_key_is_deterministic",
+                      "explanation":  "Derives twice from identical test inputs and compares the keys.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_aes_keys_change_stream",
+                      "explanation":  "Checks different synthetic AES keys produce different streams.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_domain_changes_derived_key",
+                      "explanation":  "Changes only the configuration domain and checks the derived key changes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_lengths_do_not_share_a_stream_prefix",
+                      "explanation":  "Checks requested length participates in derivation rather than merely truncating one common key stream.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_password_changes_derived_key",
+                      "explanation":  "Changes only the password and checks the derived key changes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_pepper_changes_derived_key",
+                      "explanation":  "Changes only the application pepper and checks the derived key changes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::different_salt_changes_derived_key",
+                      "explanation":  "Changes only the application salt and checks the derived key changes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::effective_salt_binds_requested_length",
+                      "explanation":  "Checks the framed Argon2 salt changes when requested output length changes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::effective_salt_is_unambiguous",
+                      "explanation":  "Checks length-prefixed domain and salt fields cannot collide through simple concatenation.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::empty_configuration_fields_are_rejected",
+                      "explanation":  "Rejects empty salt, pepper, and domain fields.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::error_messages_never_include_password_material",
+                      "explanation":  "Checks generator error formatting does not disclose synthetic password material.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_kdf_distinguishes_unicode_normalization_forms",
+                      "explanation":  "Checks Argon2, scrypt, and PBKDF2 distinguish composed and decomposed password bytes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_kdf_preserves_embedded_nul_password_bytes",
+                      "explanation":  "Checks all three KDFs use the complete password, including bytes after NUL.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_handles_partial_writes",
+                      "explanation":  "Limits each write and checks AES, ChaCha20, and BLAKE3 still emit complete correct output.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_is_independent_of_buffer_partitioning",
+                      "explanation":  "Checks all stream generators emit identical bytes with different internal chunk sizes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_propagates_write_failure",
+                      "explanation":  "Injects output errors into each stream generator and checks propagation.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_rejects_invalid_size_and_zero_buffer_before_writing",
+                      "explanation":  "Checks all stream generators reject invalid lengths and zero buffers before emitting bytes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_reports_write_zero",
+                      "explanation":  "Checks all stream generators reject a writer returning zero rather than looping forever.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_retries_interrupted_writes",
+                      "explanation":  "Injects Interrupted errors into each generator\u0027s writer and checks retry preserves output.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_uses_bounded_production_writes",
+                      "explanation":  "Measures every generator\u0027s write requests and checks the production one-MiB bound.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_generator_writes_exact_boundary_lengths",
+                      "explanation":  "Checks each generator emits exactly the requested length around important block and buffer boundaries.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_stream_preserves_existing_key_on_disk_failure_across_buffer_boundaries",
+                      "explanation":  "Injects disk failures into every expansion stream around buffer boundaries and checks transactional rollback.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::every_suite_rejects_invalid_input_without_touching_existing_file",
+                      "explanation":  "Checks all five suites reject invalid inputs while preserving an existing key.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::fixed_key_stream_has_prefix_property",
+                      "explanation":  "Checks stream expansion with a fixed derived key has consistent prefixes at different lengths.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::framed_salt_capacity_overflow_is_rejected_without_allocating",
+                      "explanation":  "Passes impossible salt capacities and checks checked arithmetic or allocation rejection prevents a panic.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::framed_salts_keep_all_eight_size_bytes_above_four_gib",
+                      "explanation":  "Checks both salt formats retain all eight big-endian length bytes above 4 GiB and at the maximum.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::generated_file_is_named_key_key_and_has_exact_raw_content",
+                      "explanation":  "Checks key generation publishes key.key with the exact raw stream and no added header.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::generated_file_replaces_a_longer_existing_key",
+                      "explanation":  "Generates a shorter key over a longer one and checks exact replacement without an old tail.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::generated_key_file_has_owner_only_permissions",
+                      "explanation":  "On Unix, checks newly generated keys are readable and writable only by their owner.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::hundreds_of_stream_lengths_match_one_shot_reference",
+                      "explanation":  "Compares hundreds of chunked AES stream lengths with a one-shot reference.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::invalid_configuration_does_not_touch_existing_file",
+                      "explanation":  "Supplies invalid generator configuration and checks an existing key is untouched.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::invalid_generation_does_not_touch_existing_file",
+                      "explanation":  "Supplies invalid generation lengths and checks the existing key survives.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::invalid_stream_sizes_are_rejected_before_writing",
+                      "explanation":  "Checks AES stream length validation occurs before output is written.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::library_rejects_empty_password_without_touching_existing_file",
+                      "explanation":  "Calls the generator library with an empty password and checks the old key survives.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::maximum_size_counter_and_chunk_arithmetic_is_safe",
+                      "explanation":  "Checks counter and chunk arithmetic at 20 billion bytes without allocating or writing that much data.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::new_kdfs_reject_empty_passwords_and_zero_pbkdf2_rounds",
+                      "explanation":  "Checks scrypt and PBKDF2 input validation, including rejection of zero PBKDF2 iterations.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_accepts_exact_boundaries_and_whitespace",
+                      "explanation":  "Checks one byte and the maximum are accepted with permitted surrounding whitespace.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_accepts_hundreds_of_valid_values",
+                      "explanation":  "Parses a broad set of valid decimal byte counts.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_accepts_values_near_maximum",
+                      "explanation":  "Checks decimal values near the maximum are accepted exactly.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_rejects_empty_and_zero",
+                      "explanation":  "Rejects empty, whitespace-only, and zero byte counts.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_rejects_every_common_unit_suffix",
+                      "explanation":  "Rejects size suffixes such as KB, MB, and GiB; sizes must be plain byte counts.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_rejects_non_decimal_notation",
+                      "explanation":  "Rejects signs, separators, fractions, exponents, and other non-decimal input.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::parse_size_rejects_values_above_maximum_and_u64",
+                      "explanation":  "Rejects oversized values, including decimal integers that overflow u64.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::password_is_unicode_and_whitespace_sensitive",
+                      "explanation":  "Checks the KDF treats Unicode and whitespace password bytes as significant.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::pbkdf2_derivation_is_deterministic_and_input_sensitive",
+                      "explanation":  "Checks PBKDF2 repeatability and sensitivity to password, size, salt, pepper, and domain.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::pbkdf2_sha256_matches_known_vector",
+                      "explanation":  "Compares PBKDF2-HMAC-SHA-256 with a fixed known-answer vector.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::peppered_effective_salt_is_unambiguous_and_binds_every_input",
+                      "explanation":  "Checks peppered salt framing distinguishes field boundaries and binds all configuration fields and length.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::production_kdf_parameters_are_pinned",
+                      "explanation":  "Pins production memory, iteration, lane, and related KDF settings.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::production_stream_writes_are_bounded_to_one_mibibyte",
+                      "explanation":  "Checks production AES output requests stay within one MiB.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::production_suite_outputs_match_known_answers",
+                      "explanation":  "Checks production-cost derivation and expansion for all suites against frozen expected output.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::scrypt_derivation_is_deterministic_and_input_sensitive",
+                      "explanation":  "Checks scrypt repeatability and sensitivity to password, size, salt, pepper, and domain.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::scrypt_matches_rfc_7914_first_vector",
+                      "explanation":  "Compares the scrypt primitive with RFC 7914\u0027s first known-answer vector.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_counter_exhaustion_after_progress_preserves_the_exact_prefix",
+                      "explanation":  "Exhausts ChaCha20 after a complete block and checks the wrapper returns CounterExhausted without outputting invalid bytes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_does_not_repeat_common_digest_periods",
+                      "explanation":  "Checks AES expansion does not repeat short digest-sized patterns.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_halves_are_different",
+                      "explanation":  "Checks the two halves of a fixed generated AES stream are not identical.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_handles_partial_writes",
+                      "explanation":  "Checks AES stream writing completes when the writer accepts only short fragments.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_is_independent_of_buffer_partitioning",
+                      "explanation":  "Checks AES stream bytes are independent of internal buffer size.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_propagates_write_failure",
+                      "explanation":  "Fails an AES output writer and verifies the error propagates.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_reports_write_zero",
+                      "explanation":  "Checks AES output rejects zero-progress writes.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_retries_interrupted_writes",
+                      "explanation":  "Checks AES output retries Interrupted writes without losing data.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::stream_writes_exact_lengths_around_important_boundaries",
+                      "explanation":  "Checks AES output length around cipher-block and output-buffer boundaries.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::suite_display_names_are_stable_and_distinct",
+                      "explanation":  "Pins human-readable suite labels and checks they remain distinct.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::suites_select_the_expected_stream_generators",
+                      "explanation":  "Checks each suite selects its intended AES, ChaCha20, or BLAKE3 expansion.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::validate_size_has_exact_boundaries",
+                      "explanation":  "Checks the numeric size API accepts exactly the documented inclusive range.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "keygen::tests::zero_buffer_size_is_rejected_before_writing",
+                      "explanation":  "Checks AES stream generation rejects a zero-sized buffer before writing anything.",
+                      "source":  "src/keygen/tests.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::control_characters",
+                      "explanation":  "Rejects control characters in XOR filenames on both platforms.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::device_names",
+                      "explanation":  "Rejects reserved Windows device names, including case and extension variants.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::empty_and_dot_names",
+                      "explanation":  "Rejects empty, dot, and parent-directory filenames.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::help_aliases",
+                      "explanation":  "Checks the XOR parser recognizes both short and long help options.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::help_describes_the_complete_new_contract",
+                      "explanation":  "Checks XOR help documents location, key length, in-place mode, and file-safety rules.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::in_place_is_explicit_and_has_one_filename",
+                      "explanation":  "Checks in-place parsing requires its explicit option and exactly one source filename.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::in_place_terminator_preserves_literal_option_and_native_names",
+                      "explanation":  "Checks the option terminator preserves option-like and OS-native in-place filenames.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::in_place_uses_the_same_filename_validation",
+                      "explanation":  "Checks in-place arguments cannot bypass ordinary XOR filename restrictions.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::internal_temporary_names",
+                      "explanation":  "Rejects filenames using the reserved XOR temporary prefix.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::lone_dash_is_a_filename",
+                      "explanation":  "Checks a single dash is accepted as a literal filename.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::native_non_unicode_names_are_preserved",
+                      "explanation":  "Checks parsing retains native filename bytes or UTF-16 units without lossy conversion.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::ordinary_device_like_names_are_allowed",
+                      "explanation":  "Checks harmless names resembling Windows devices are still accepted.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::rejects_all_removed_modes",
+                      "explanation":  "Checks the parser rejects removed XOR modes.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::rejects_wrong_argument_counts_including_old_cli",
+                      "explanation":  "Checks XOR parsing rejects incorrect filename counts and obsolete command forms.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::spaces_and_unicode_are_preserved",
+                      "explanation":  "Checks the parser preserves filename spaces and Unicode characters.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::terminator_allows_option_like_names",
+                      "explanation":  "Checks double dash makes later option-like arguments literal filenames.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::trailing_spaces_and_dots",
+                      "explanation":  "Rejects filenames ending in spaces or dots to prevent ambiguous Windows aliases.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::two_filenames_select_fixed_key_processing",
+                      "explanation":  "Checks ordinary XOR parsing selects two filenames with the fixed key.key policy.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::unix_paths",
+                      "explanation":  "Rejects Unix absolute, parent, and subdirectory paths where plain filenames are required.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::version_aliases",
+                      "explanation":  "Checks the XOR parser recognizes both short and long version flags.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::windows_paths",
+                      "explanation":  "Rejects Windows drive, UNC, and separator-containing paths where plain filenames are required.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::arguments::windows_special_characters",
+                      "explanation":  "Rejects Windows-special characters in filenames on both platforms.",
+                      "source":  "src/xor/tests/arguments.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::concurrent_readers_only_observe_complete_versions",
+                      "explanation":  "Reads concurrently during atomic in-place replacement and rejects any partially written version.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::file_sync_failure_after_complete_transformation_preserves_source",
+                      "explanation":  "Fails sync after a complete in-place transformation and checks the original source survives.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::in_place_preserves_access_bits_and_clears_special_bits",
+                      "explanation":  "On Unix, checks in-place output retains access permissions while clearing special mode bits.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::long_parent_paths_support_atomic_overwrite",
+                      "explanation":  "Exercises in-place atomic replacement under a long directory path.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::missing_or_replaced_source_path_fails_before_transformation",
+                      "explanation":  "Changes the in-place source path before processing and verifies the transaction refuses to transform it.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::original_survives_partial_work_and_existing_readers_keep_old_bytes",
+                      "explanation":  "Checks in-place replacement keeps the original visible during production and old readers retain original bytes afterward.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::panic_during_transformation_preserves_source_and_releases_handle",
+                      "explanation":  "Panics during in-place processing and checks rollback, temporary cleanup, and handle release.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::protected_source_is_refused_before_transformation",
+                      "explanation":  "Checks in-place transactions reject a protected source identity before transforming bytes.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::same_length_source_edit_during_transformation_is_detected",
+                      "explanation":  "On Unix, edits source bytes without changing length and checks in-place change detection.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::short_read_after_a_full_block_preserves_source_and_releases_handle",
+                      "explanation":  "Ends in-place input after partial progress and checks rollback and handle release.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::source_changed_after_reading_but_before_publication_is_detected",
+                      "explanation":  "On Unix, changes source after transformation and checks the final pre-publication validation refuses it.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::source_replaced_during_transformation_is_not_overwritten",
+                      "explanation":  "Replaces the in-place source path during transformation and checks the replacement file survives.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::source_stays_write_protected_after_transformation",
+                      "explanation":  "On Windows, verifies the source remains protected against writers between transformation and publication.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::in_place_tests::write_failure_after_partial_progress_preserves_source",
+                      "explanation":  "Fails in-place output after partial writing and checks original source preservation.",
+                      "source":  "src/xor/tests/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::destination_appearing_during_file_sync_is_not_overwritten",
+                      "explanation":  "Creates a competing output during file sync and checks the final recheck preserves it.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::directory_appearing_before_publish_is_preserved",
+                      "explanation":  "Creates a directory at the destination during processing and checks it is not replaced.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::directory_sync_failure_reports_that_output_was_published",
+                      "explanation":  "Fails directory sync after XOR rename and checks the error discloses publication and preserves the new output.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::existing_output_is_unchanged_until_success",
+                      "explanation":  "Inspects the old output during production and checks it changes only after transaction completion.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::failed_rename_does_not_sync_directory_or_remove_destination",
+                      "explanation":  "Forces XOR rename failure and checks no post-publication sync or destination deletion occurs.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::failed_windows_rename_preserves_output_and_cleans_temp",
+                      "explanation":  "Blocks Windows output rename and checks old output and cleanup.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::failure_after_partial_writes_preserves_existing_output",
+                      "explanation":  "Injects a transaction error after substantial writing and checks old output bytes survive.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::failure_does_not_create_new_output",
+                      "explanation":  "Fails a transaction targeting a missing output and checks the target remains absent.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::file_sync_failure_keeps_new_output_absent",
+                      "explanation":  "Fails XOR file sync and checks a previously absent output remains absent.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::file_sync_failure_preserves_existing_output",
+                      "explanation":  "Injects a storage-full error during XOR sync and checks the existing output survives.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::file_sync_panic_cleans_temporary_without_replacing_output",
+                      "explanation":  "Panics during XOR sync and checks unwinding cleans temporary data without replacing output.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::identity_distinguishes_files_and_recognizes_hard_links",
+                      "explanation":  "Checks native file identities distinguish separate files and identify hard-link aliases.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::independent_temporary_files_have_unique_names",
+                      "explanation":  "Creates overlapping transactions and checks their temporary filenames differ.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::missing_parent_is_not_created",
+                      "explanation":  "Checks XOR does not silently create a missing destination directory.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::new_output_appears_only_after_success",
+                      "explanation":  "Checks a missing XOR output stays absent throughout production and appears only after success.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::new_unix_output_is_private",
+                      "explanation":  "Checks a new Unix XOR output has owner-only permissions.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::output_becoming_read_only_fails_without_data_loss",
+                      "explanation":  "Marks output read-only during processing and checks final validation refuses replacement.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::panic_unwinds_without_deleting_existing_output",
+                      "explanation":  "Panics during ordinary XOR production and checks the prior output survives cleanup.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::producer_failure_never_reaches_file_sync",
+                      "explanation":  "Fails XOR production and checks incomplete output is never synced or published.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::protected_hard_link_appearing_during_sync_is_not_overwritten",
+                      "explanation":  "Adds a protected-key hard link at the output during sync and checks the final identity check rejects it.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::read_only_output_is_not_replaced",
+                      "explanation":  "Checks a read-only output is rejected before replacement.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::rechecks_hard_link_identity_before_publish",
+                      "explanation":  "Changes destination identity during processing and checks protected hard links are caught before publication.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_destination_edited_in_place_during_processing",
+                      "explanation":  "On Unix, edits the destination through its existing inode and checks replacement is refused.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_destination_permission_changes_during_processing",
+                      "explanation":  "On Unix, changes output permissions during processing and checks final validation detects it.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_destination_removed_during_processing",
+                      "explanation":  "Deletes output during production and checks the transaction refuses to recreate it.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_destination_replaced_during_processing",
+                      "explanation":  "Replaces output with another file during production and checks the competing file survives.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_new_destination_created_during_processing",
+                      "explanation":  "Creates a competing destination during production and checks it is not overwritten.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::refuses_same_length_destination_edit_during_processing",
+                      "explanation":  "On Unix, changes output bytes at constant length and checks metadata validation rejects replacement.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::stale_temporary_is_preserved_across_success_and_failure",
+                      "explanation":  "Leaves another process\u0027s XOR temporary sentinel in place and checks both successful and failed transactions preserve it.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::unix_access_bits_are_preserved_without_special_bits",
+                      "explanation":  "Checks ordinary Unix XOR replacement retains access bits while clearing special mode bits.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::unrelated_hard_link_to_old_output_is_not_modified",
+                      "explanation":  "Checks replacing one output directory entry leaves another hard link to the old file unchanged.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::windows_active_output_writer_is_refused_before_production",
+                      "explanation":  "Opens output for writing and checks the Windows transaction fails before producing data.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::windows_device_and_stream_names_are_refused",
+                      "explanation":  "Checks Windows device and alternate-data-stream names cannot become transaction destinations.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::atomic_file::tests::windows_output_denies_writers_until_publication",
+                      "explanation":  "Checks a Windows output remains protected against writers through final publication.",
+                      "source":  "src/xor/tests/transactions.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::direct_api_cannot_bypass_name_validation",
+                      "explanation":  "Calls the XOR library directly with invalid filenames and verifies the same validation applies.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::growth_detected_after_writes_does_not_publish_new_output",
+                      "explanation":  "Detects source growth after writing and checks the transaction does not publish a new output.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::length_changes_are_detected_in_both_directions",
+                      "explanation":  "Checks metadata validation detects both source shrinkage and growth.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::plain_file_check_rejects_directories",
+                      "explanation":  "Checks regular-file validation excludes directory metadata.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::same_length_timestamp_changes_are_detected",
+                      "explanation":  "Checks metadata validation catches changes even when file length stays constant.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::short_key_fails_before_opening_executable_or_creating_temporary",
+                      "explanation":  "Checks a short-key error is detected before executable access or temporary output creation.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::stable_metadata_passes",
+                      "explanation":  "Checks unchanged file metadata passes change detection.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::streaming_failure_after_full_block_preserves_destination",
+                      "explanation":  "Fails streaming after one full XOR block and checks the transaction preserves old output.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::unix_device_is_rejected_before_open",
+                      "explanation":  "Checks the Unix device /dev/null is refused as an input before opening it.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::file_checks::windows_input_handle_denies_writes_and_removal_until_closed",
+                      "explanation":  "Checks open XOR inputs deny writers and deletion until the protecting handle closes.",
+                      "source":  "src/xor/tests/file_checks.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::all_byte_values",
+                      "explanation":  "XORs complementary byte values and checks every result is 255.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::boundaries_and_multiple_buffers_match_independent_oracle",
+                      "explanation":  "Compares XOR at small and multi-buffer lengths with an independent byte-by-byte oracle.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::data_read_errors_propagate_after_a_full_buffer",
+                      "explanation":  "Fails source reading after one complete XOR buffer and checks the source-specific error and output prefix.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::empty_a_and_nonempty_key",
+                      "explanation":  "Checks an empty source produces no output despite a nonempty key stream.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::empty_input_never_reads_the_key_stream",
+                      "explanation":  "Uses a key reader that panics if touched and proves empty XOR consumes no key bytes.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::empty_key_fails_for_nonempty_a",
+                      "explanation":  "Checks nonempty XOR with an empty key fails with unexpected EOF.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::equal_inputs_produce_zeros",
+                      "explanation":  "Checks XOR of a byte sequence with itself is all zeros across a buffer boundary.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::errors_after_partial_writes_propagate",
+                      "explanation":  "Fails XOR output after partial progress and checks the write error is returned.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::every_pair_of_byte_values_matches_the_xor_oracle",
+                      "explanation":  "Checks all 65,536 possible pairs of input and key bytes against direct XOR.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::final_eof_check_propagates_read_errors",
+                      "explanation":  "Fails the final source EOF probe and checks XOR reports the error.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::growth_of_a_fails_even_from_empty",
+                      "explanation":  "Checks source growth detection for both empty and nonempty expected inputs.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::key_read_errors_propagate_after_a_full_buffer",
+                      "explanation":  "Fails key reading after a full XOR buffer and checks key-specific error reporting.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::key_short_by_one_fails",
+                      "explanation":  "Checks a key one byte shorter than the source produces unexpected EOF.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::key_tail_is_never_read",
+                      "explanation":  "Uses a reader that fails beyond the needed key prefix and checks XOR never touches the unused tail.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::known_vector",
+                      "explanation":  "Checks XOR against a small, fixed expected byte vector.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::longer_key_uses_only_its_prefix",
+                      "explanation":  "Checks extra key bytes do not alter the output.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::maximum_u64_length_uses_a_bounded_first_read",
+                      "explanation":  "Requests a virtual u64::MAX XOR length, fails its first read, and verifies that read is only 64 KiB.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::randomized_oracles_and_round_trips",
+                      "explanation":  "Runs deterministic pseudo-random XOR fixtures against an independent oracle and checks double-XOR restoration.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::repeated_interruptions_during_final_eof_check_are_retried",
+                      "explanation":  "Injects seven Interrupted errors into the final EOF probe and checks the eighth read completes successfully.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::short_and_interrupted_reads_use_all_bytes",
+                      "explanation":  "Splits source and key reads and injects interruptions, checking no bytes are lost.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::short_and_interrupted_writes_are_completed",
+                      "explanation":  "Limits XOR output writes and injects interruptions, checking complete correct output.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::short_key_after_full_block_does_not_write_partial_second_block",
+                      "explanation":  "Ends the key during the second block and checks only the complete first block reached output.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::shortened_a_fails",
+                      "explanation":  "Checks XOR detects a source shorter than its declared length.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::simultaneous_short_interrupted_reads_and_writes_preserve_alignment",
+                      "explanation":  "Interrupts and fragments both inputs and output together across multiple buffers and checks exact alignment.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::source_failure_does_not_consume_key_for_an_incomplete_block",
+                      "explanation":  "Fails source input mid-block and checks key consumption and output stop at the previous complete block.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::two_empty_inputs",
+                      "explanation":  "Checks two empty XOR streams produce empty output.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::virtual_key_larger_than_four_gib_is_not_eagerly_read",
+                      "explanation":  "Models a huge key and verifies XOR reads only the needed prefix in bounded chunks.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::write_failure_stops_before_reading_another_block",
+                      "explanation":  "Fails output in the second XOR block and verifies neither input advances into the third.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::zero_key_preserves_all_bytes",
+                      "explanation":  "Checks XOR against an all-zero key preserves source bytes across a buffer boundary.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "lib",
+                      "test":  "xor::streams::zero_writes_fail_instead_of_spinning",
+                      "explanation":  "Checks zero-progress XOR output writes fail promptly rather than spinning.",
+                      "source":  "src/xor/tests/streams.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "all_old_processing_flags_and_three_file_syntax_fail",
+                      "explanation":  "Runs the executable with removed options and the old three-file syntax and expects usage failure.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "case_aliases_of_inputs_are_rejected",
+                      "explanation":  "On Windows, refuses output names differing only in case from a protected input.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "device_stream_and_ambiguous_names_fail_on_every_platform",
+                      "explanation":  "Exercises unsafe device, alternate-stream, and ambiguous filenames through the real executable.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "directory_a_is_refused",
+                      "explanation":  "Uses a directory as XOR input and checks safe rejection.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "directory_key_is_refused",
+                      "explanation":  "Uses a directory as key.key and checks XOR rejects it.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "directory_output_and_its_contents_are_preserved",
+                      "explanation":  "Uses a populated directory as XOR output and verifies it remains intact.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "empty_a_accepts_empty_or_longer_key",
+                      "explanation":  "Runs empty-file XOR with empty and nonempty keys and checks an empty output.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "empty_key_does_not_create_output",
+                      "explanation":  "Uses a zero-length key with nonempty input and checks no output appears.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "executable_directory_can_contain_spaces_and_unicode",
+                      "explanation":  "Launches a copied binary from a directory with spaces and Unicode and checks XOR succeeds there.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "executable_symlink_uses_real_executable_directory",
+                      "explanation":  "Launches through a Unix symlink and checks XOR uses the resolved binary\u0027s directory.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "help_and_version_work_without_input_files",
+                      "explanation":  "Runs XOR help and version without any input files.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::directory_input_is_preserved",
+                      "explanation":  "Attempts in-place XOR on a directory and checks its contents survive.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::executable_and_its_hard_links_are_never_overwritten",
+                      "explanation":  "Attempts in-place replacement of the executable and its aliases and checks protection.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::executable_directory_controls_in_place_target",
+                      "explanation":  "Launches from another working directory and checks in-place XOR selects the executable\u0027s neighboring file.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::in_place_symlinks_and_dangling_links_are_refused",
+                      "explanation":  "Checks in-place XOR refuses both live and dangling source symlinks.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::invalid_in_place_arguments_do_not_modify_files",
+                      "explanation":  "Runs invalid in-place command forms and checks existing files remain unchanged.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::key_and_its_hard_links_are_never_overwritten",
+                      "explanation":  "Attempts in-place XOR on key.key and its hard links and checks key protection.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::known_vector_and_status",
+                      "explanation":  "Runs XOR on known bytes and checks exact output plus the reported byte count.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::missing_input_is_not_created",
+                      "explanation":  "Attempts in-place XOR on a missing source and checks it remains absent.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::missing_short_or_empty_key_preserves_original",
+                      "explanation":  "Tries in-place XOR with absent, short, and empty keys and checks the original source survives.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::other_hard_links_keep_original_bytes",
+                      "explanation":  "Checks in-place XOR replaces one directory entry without rewriting the original file\u0027s other hard links.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::readonly_original_is_preserved_and_readonly_key_is_usable",
+                      "explanation":  "Checks in-place XOR preserves a read-only source while still allowing a read-only key.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::round_trips_at_empty_and_buffer_boundaries_with_longer_keys",
+                      "explanation":  "Checks in-place double-XOR restoration for empty and boundary-sized files with surplus key bytes.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::spaces_unicode_dashes_and_native_names_work_in_place",
+                      "explanation":  "Checks in-place XOR handles spaces, Unicode, dashes, and native non-Unicode names.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::windows_active_writer_is_refused",
+                      "explanation":  "Keeps an in-place source open for writing and checks safe refusal.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::windows_case_aliases_preserve_key_protection",
+                      "explanation":  "Checks case-insensitive Windows aliases cannot bypass in-place key protection.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "in_place::windows_locked_input_rename_failure_preserves_original",
+                      "explanation":  "Holds a rename-blocking source handle during in-place XOR and checks the original survives.",
+                      "source":  "tests/cases/in_place.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "independent_parallel_invocations",
+                      "explanation":  "Runs multiple independent XOR processes concurrently and checks their results and cleanup.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "key_fifo_is_rejected_without_opening_it",
+                      "explanation":  "Uses a Unix FIFO as key.key and checks rejection without a blocking open.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "key_symlinks_cannot_escape_executable_directory",
+                      "explanation":  "Checks XOR refuses a key symlink pointing outside the executable directory.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "known_vector_and_status",
+                      "explanation":  "Runs XOR on known bytes and checks exact output plus the reported byte count.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "launch_directory_is_ignored_for_both_inputs_and_output",
+                      "explanation":  "Runs XOR from another directory and verifies all file selection remains beside the executable.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "length_check_precedes_destination_inspection",
+                      "explanation":  "Combines a short key with an invalid destination and checks key-length preflight fails first.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "locked_output_rename_fails_without_data_loss",
+                      "explanation":  "Holds a Windows rename-blocking output handle and checks failed publication preserves old data.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "longer_key_produces_exactly_a_length",
+                      "explanation":  "Uses an oversized key and checks XOR output is exactly the source length.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "missing_a_preserves_output",
+                      "explanation":  "Runs XOR with a missing source and checks an existing output remains intact.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "missing_key_is_required_for_empty_a_too",
+                      "explanation":  "Checks even an empty XOR source fails when key.key is missing.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "missing_key_preserves_output_even_with_another_b_file",
+                      "explanation":  "Checks XOR never substitutes a differently named file for a missing key and preserves output.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "native_non_unicode_filenames_end_to_end",
+                      "explanation":  "Runs XOR through the real binary using native filenames that cannot be represented as Unicode.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "never_falls_back_to_a_in_working_directory",
+                      "explanation":  "Places a source only in the launch directory and verifies XOR refuses to use it.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "never_falls_back_to_key_in_working_directory",
+                      "explanation":  "Places a key only in the launch directory and verifies XOR refuses to use it.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "output_cannot_be_a_hard_link_to_either_input",
+                      "explanation":  "Uses hard-link aliases of source or key as output and verifies identity-based rejection.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "output_cannot_be_either_input",
+                      "explanation":  "Checks ordinary XOR cannot overwrite its source or key.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "output_cannot_replace_executable_or_its_hard_link",
+                      "explanation":  "Uses the executable or a hard-link alias as output and checks executable protection.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "output_symlinks_are_refused_including_dangling_links",
+                      "explanation":  "Checks XOR refuses live and dangling output symlinks and preserves their targets.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "parallel_fixture_copy_and_launch_are_reliable",
+                      "explanation":  "Stresses concurrent executable copying and process launch to guard against fixture races.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "readonly_inputs_can_be_processed",
+                      "explanation":  "Runs XOR using read-only source and key files and checks successful output.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "readonly_output_is_preserved",
+                      "explanation":  "Runs the executable against a read-only destination and checks its original contents survive.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "rejects_absolute_paths_even_to_files_beside_executable",
+                      "explanation":  "Checks absolute paths are refused even when their files happen to be beside the binary.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "rejects_bad_counts_unknown_options_and_empty_names",
+                      "explanation":  "Runs malformed XOR argument counts, unknown flags, and empty filenames and expects usage failure.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "rejects_parent_paths_subdirectories_and_both_separator_styles",
+                      "explanation":  "Rejects traversal and subdirectory paths using either platform\u0027s path separators.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "replacement_removes_old_trailing_bytes",
+                      "explanation":  "Runs shorter XOR output over a longer file and checks no old suffix remains.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "round_trip_across_multiple_buffers",
+                      "explanation":  "Runs XOR twice on data spanning multiple buffers and checks exact byte restoration.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "same_file_can_supply_a_and_key",
+                      "explanation":  "Uses key.key as the source too and checks a separate output contains zeros.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "short_key_preserves_existing_output",
+                      "explanation":  "Runs XOR with insufficient key bytes and checks an existing output survives.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "spaces_unicode_and_option_like_filenames",
+                      "explanation":  "Runs real XOR commands using spaces, Unicode, and names resembling options.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "symlink_inputs_are_refused_even_inside_the_same_directory",
+                      "explanation":  "Checks XOR refuses source symlinks even when their targets are beside the executable.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Not included",
+                      "linux":  "Passed"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "windows_input_open_for_writing_fails_safely",
+                      "explanation":  "Runs XOR with an actively writable input and checks safe failure.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  },
+                  {
+                      "harness":  "xor_cli",
+                      "test":  "windows_output_open_for_writing_is_preserved",
+                      "explanation":  "Keeps output open for writing and checks the executable refuses replacement without damage.",
+                      "source":  "tests/xor_cli.rs",
+                      "windows":  "Passed",
+                      "linux":  "Not included"
+                  }
+              ]
+}

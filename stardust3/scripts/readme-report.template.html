@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stardust documentation and individually explained Windows and Linux test results.">
+  <title>Stardust — README &amp; test results</title>
+  <style>
+    :root{color-scheme:light;--ink:#1c2935;--muted:#526272;--line:#dce3e9;--accent:#204e73;--paper:#fff;--wash:#f3f6f8;--green:#176347;--green-bg:#e5f5ed}
+    *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:var(--accent);text-underline-offset:3px}a:hover{color:#087b87}a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #197f90;outline-offset:4px}
+    .skip{position:absolute;left:12px;top:-100px;background:white;padding:12px;z-index:3}.skip:focus{top:12px}
+    .layout{display:grid;grid-template-columns:245px minmax(0,1fr);max-width:1540px;margin:auto;min-height:100vh}
+    aside{padding:42px 28px;position:sticky;top:0;height:100vh;border-right:1px solid var(--line)}
+    .brand{display:flex;gap:12px;align-items:center;font-size:23px;font-weight:750;letter-spacing:-.7px;color:var(--ink);text-decoration:none}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#163b59;color:white;font-size:25px}
+    .eyebrow{font-size:11px;letter-spacing:2px;font-weight:750;text-transform:uppercase;color:var(--muted);margin:34px 0 12px}
+    nav a{display:block;padding:8px 0;text-decoration:none;font-size:14px;color:var(--muted)}nav a:hover{color:var(--ink)}nav .result-link{color:var(--green);font-weight:700;margin-top:12px}
+    .side-note{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:34px}
+    main{min-width:0;background:var(--paper);padding:44px clamp(20px,5vw,74px) 50px}.topline{display:flex;justify-content:space-between;gap:16px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.topline span{letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+    #readme{max-width:860px}h1{font-size:clamp(40px,6vw,64px);letter-spacing:-2.5px;line-height:1.12;margin:38px 0 24px}h2{font-size:25px;line-height:1.35;letter-spacing:-.5px;margin:44px 0 15px}h3{font-size:18px;margin:26px 0 10px}p{margin:0 0 18px}li{margin-bottom:7px}ul{padding-left:23px}
+    #readme>h1+p{font-size:19px;line-height:1.7;color:#41566a;margin-bottom:30px}pre{overflow:auto;background:#142a3b;color:#e5edf5;border:1px solid #213e53;border-radius:10px;padding:22px;font:13px/1.8 ui-monospace,Consolas,monospace;margin:20px 0}code{font: .88em/1.5 ui-monospace,Consolas,monospace;background:#eff3f6;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}pre code{font:inherit;color:inherit;padding:0;background:none;overflow-wrap:normal}
+    table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th,td{padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top}thead th{background:#f3f6f8;font-size:11px;font-weight:750;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:9px;margin:20px 0}tbody tr:last-child>*{border-bottom:0}.readme-table{min-width:580px}
+    #test-results{border-top:2px solid var(--ink);margin-top:58px;padding-top:20px}.section-number{font-size:11px;font-weight:750;letter-spacing:1.7px;color:var(--muted)}#test-results h2{font-size:34px;margin-top:10px;letter-spacing:-1px}.lede{max-width:800px;color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0}.stat{background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:22px}.stat .value{font-size:40px;font-weight:750;letter-spacing:-1.5px;line-height:1.2;display:block}.stat .label{font-weight:700;font-size:13px;margin-top:8px;display:block}.stat small{color:var(--muted);font-size:12px;display:block;margin-top:5px}.stat.good .value{color:var(--green)}
+    .finding{border-left:3px solid #277e6a;background:#f1f8f5;padding:18px 22px;margin:24px 0}.finding p{margin:5px 0 0;font-size:14px}.run-info{font-size:13px;color:var(--muted);margin:20px 0}.run-info p{margin:4px 0}.checks th{min-width:230px}
+    .filters{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:var(--wash);border:1px solid var(--line);border-radius:9px;padding:16px;margin:24px 0 10px}.filters label{display:flex;flex-direction:column;font-weight:650;font-size:12px;gap:6px}.filters label:first-child{flex:1;min-width:210px}input,select,button{font:inherit;color:var(--ink);background:white;border:1px solid #b7c4d0;border-radius:6px;padding:9px 11px;font-size:14px}button{cursor:pointer;min-height:41px}input{width:100%}.count{font-size:12px;color:var(--muted)}
+    .test-table{table-layout:fixed}.test-table th:first-child{width:33%}.test-table th:nth-child(2){width:41%}.test-table th:nth-child(3),.test-table th:nth-child(4){width:13%}.test-title{display:block;font-weight:650;line-height:1.5}.test-table td{font-size:13px;line-height:1.65}.badge{font-size:11px;font-weight:750;border-radius:5px;padding:4px 8px;display:inline-block;line-height:1.5}.pass{color:var(--green);background:var(--green-bg)}.neutral{background:#edf0f3;color:#596777}details{font-weight:400;font-size:11px;margin-top:9px;color:var(--muted)}summary{cursor:pointer}details code{display:block;font-size:11px;margin:9px 0;word-break:break-word}details a{display:block;word-break:break-word}tr[hidden]{display:none}.test-table tbody tr:hover{background:#fafcfd}
+    .limits{border-top:1px solid var(--line);padding-top:22px;margin-top:30px;color:var(--muted);font-size:13px}.limits p{margin:9px 0}footer{border-top:1px solid var(--line);padding-top:24px;margin-top:30px;display:flex;justify-content:space-between;gap:16px;font-size:12px;color:var(--muted)}
+    @media(max-width:1000px){.layout{grid-template-columns:190px minmax(0,1fr)}aside{padding:30px 18px}main{padding:30px 25px}.stat{padding:16px}.test-table{min-width:740px}}
+    @media(max-width:700px){.layout{display:block}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:18px 22px}aside nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}nav a{padding:0;font-size:12px}nav .result-link{margin:0}.side-note,aside .eyebrow{display:none}main{padding:24px 20px}.stats{grid-template-columns:1fr}.stat{display:grid;grid-template-columns:85px 1fr;gap:0 16px}.stat .value{grid-row:span 2}.stat .label{margin-top:2px}.topline{font-size:10px}h1{letter-spacing:-1.5px}footer{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body,main{background:white}.layout{display:block}aside,.topline,.filters,.count,.skip,footer{display:none}main{padding:0}pre{white-space:pre-wrap;background:#f3f6f8;color:black;border-color:#ccc}.table-scroll{overflow:visible}.test-table{min-width:0}tr[hidden]{display:table-row!important}.test-table details{display:none}.stats{grid-template-columns:repeat(3,1fr)}a{color:inherit}.badge{border:1px solid #999}.test-table th,.test-table td{font-size:10px;padding:7px}thead{display:table-header-group}tr{break-inside:avoid}h2,h3{break-after:avoid}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#readme">Skip to documentation</a>
+<div class="layout">
+  <aside aria-label="Page navigation">
+    <a class="brand" href="#stardust"><span class="mark" aria-hidden="true">✦</span>Stardust</a>
+    <div class="eyebrow">Project handbook</div>
+    <nav aria-label="Contents">
+      <a href="#build-and-run">Build and run</a>
+      <a href="#commands-and-compatibility">Commands &amp; compatibility</a>
+      <a href="#reliability-and-limits">Reliability &amp; limits</a>
+      <a href="#development-and-tests">Development</a>
+      <a href="#test-results" class="result-link">Test results ↓</a>
+    </nav>
+    <p class="side-note">One executable.<br>Five key generators.<br>Atomic XOR processing.<br><br>Windows + Linux<br>Rust 1.98.1</p>
+  </aside>
+  <main>
+    <div class="topline"><span>Documentation / validation</span><a href="README.md">Markdown source ↗</a></div>
+    <article id="readme" aria-label="README">
+{{README}}
+    </article>
+    <section id="test-results" aria-labelledby="results-title">
+      <span class="section-number">Validation record · 31 October 2026</span>
+      <h2 id="results-title">Every test, explained.</h2>
+      <p class="lede">The complete release test suite ran on Windows and native Linux under Ubuntu WSL2. This record includes the existing suite and <strong>59 additional tests on each platform</strong>. Each result below comes from the recorded test logs.</p>
+      <div class="stats">
+        <div class="stat good"><span class="value">{{WINDOWS_COUNT}}</span><span class="label">Windows tests passed</span><small>0 failed · 0 ignored</small></div>
+        <div class="stat good"><span class="value">{{LINUX_COUNT}}</span><span class="label">Linux tests passed</span><small>0 failed · 0 ignored</small></div>
+        <div class="stat"><span class="value">59</span><span class="label">New tests per platform</span><small>Failures, boundaries &amp; file safety</small></div>
+      </div>
+      <div class="finding"><strong>Found and fixed: buffered success reporting</strong><p>Key generation previously returned without flushing its final success message. Two new regression tests reproduced an unwritten message and a silently missed flush error. The message is now flushed, and a failure explicitly says the key was already created. An integration test checks this behavior with all five generators and confirms that the committed key remains reproducible.</p></div>
+      <div class="table-scroll"><table class="checks"><caption class="visually-hidden" style="text-align:left;padding:12px 15px;font-weight:650">Required validation checks</caption><thead><tr><th scope="col">Check</th><th scope="col">Windows</th><th scope="col">Linux / WSL2</th></tr></thead><tbody>
+        <tr><th scope="row">Full release tests, locked dependencies</th><td><span class="badge pass">Passed</span></td><td><span class="badge pass">Passed</span></td></tr>
+        <tr><th scope="row">Formatting: cargo fmt --all -- --check</th><td><span class="badge pass">Passed</span></td><td><span class="badge pass">Passed</span></td></tr>
+        <tr><th scope="row">Clippy: all targets, warnings denied</th><td><span class="badge pass">Passed</span></td><td><span class="badge pass">Passed</span></td></tr>
+        <tr><th scope="row">Locked release build</th><td><span class="badge pass">Passed</span></td><td><span class="badge pass">Passed</span></td></tr>
+      </tbody></table></div>
+      <div class="run-info">
+        <p><strong>Windows:</strong> {{WINDOWS_DATE}} · x86_64-pc-windows-msvc · <a href="docs/test-results/windows.log">Full Windows log</a></p>
+        <p><strong>Linux:</strong> {{LINUX_DATE}} · x86_64-unknown-linux-gnu · <a href="docs/test-results/linux.log">Full Linux log</a></p>
+        <p>Both use Rust 1.98.1, cached locked dependencies, and two test threads. Linux fixtures ran on the Linux filesystem. <a href="docs/test-results/results.json">Structured results and source hashes</a> · <a href="docs/validation.md">Run details and release hashes</a></p>
+      </div>
+      <h3>Individual test results</h3>
+      <p class="lede">{{UNIQUE_COUNT}} distinct test IDs across both platforms. “Not included” means the test is absent from that platform's test binary; it does not claim a pass. Conditional tests cover OS-specific links, permissions, locking, and file identities. The binary and documentation harnesses also completed, with zero tests defined in each.</p>
+      <div class="filters" id="filters" hidden>
+        <label>Search tests<input id="search" type="search" placeholder="Try: password, sync, hard link…" autocomplete="off"></label>
+        <label>Test suite<select id="group"><option value="all">All suites</option><option value="lib">Unit tests</option><option value="app_dispatch">Application dispatch</option><option value="combined_workflows">Combined workflows</option><option value="keygen_cli">Generator subprocess</option><option value="xor_cli">XOR subprocess</option></select></label>
+        <label>Platform<select id="platform"><option value="all">Both platforms</option><option value="windows">Windows</option><option value="linux">Linux</option></select></label>
+        <button id="reset" type="button">Reset</button>
+      </div>
+      <p class="count" id="result-count" role="status" aria-live="polite">Showing {{UNIQUE_COUNT}} tests.</p>
+      <div class="table-scroll"><table class="test-table" id="test-table"><caption style="text-align:left;padding:12px 15px;font-weight:650">Test purpose and recorded outcome</caption><thead><tr><th scope="col">Test</th><th scope="col">What it checks</th><th scope="col">Windows</th><th scope="col">Linux</th></tr></thead><tbody>
+{{ROWS}}
+      </tbody></table></div>
+      <div class="limits"><strong>What these results establish</strong><p>The tests exercise compatibility vectors, real production KDFs, stream boundaries, injected I/O and synchronization failures, atomic publication, cleanup, command dispatch, and native platform behavior. Tests that cover multiple generators or multiple inputs remain one test result each.</p><p>They do not simulate physical power loss, write a full 20 GB key, or verify hidden password entry on every real terminal. Successful automated generation uses an injected password reader. Filesystem durability and ACL behavior still depend on the deployment environment. These are local results; no hosted CI run is claimed.</p><p>This is a saved validation snapshot. To refresh it, run both platform scripts, then <code>powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-readme-report.ps1</code>. The report builder refuses incomplete runs, mismatched totals, missing explanations, or application source files newer than the recorded runs.</p></div>
+    </section>
+    <footer><span>Stardust · Local documentation and validation</span><a href="#stardust">Back to top ↑</a></footer>
+  </main>
+</div>
+<script>
+(() => {
+  const search = document.getElementById('search');
+  const group = document.getElementById('group');
+  const platform = document.getElementById('platform');
+  const count = document.getElementById('result-count');
+  const rows = Array.from(document.querySelectorAll('#test-table tbody tr'));
+  const indexed = rows.map(row => ({ row, text: row.textContent.toLowerCase().replace(/_/g, ' ') }));
+  function filter() {
+    const terms = search.value.trim().toLowerCase().replace(/_/g, ' ').split(/\s+/).filter(Boolean);
+    let visible = 0;
+    for (const {row, text} of indexed) {
+      const matches = terms.every(term => text.includes(term)) &&
+        (group.value === 'all' || row.dataset.group === group.value) &&
+        (platform.value === 'all' || row.dataset.platform.split(/\s+/).includes(platform.value));
+      row.hidden = !matches;
+      if (matches) visible++;
+    }
+    count.textContent = `Showing ${visible} of ${rows.length} tests.` + (visible ? '' : ' No matching tests.');
+  }
+  document.getElementById('filters').hidden = false;
+  search.addEventListener('input', filter);
+  group.addEventListener('change', filter);
+  platform.addEventListener('change', filter);
+  document.getElementById('reset').addEventListener('click', () => {
+    search.value = ''; group.value = 'all'; platform.value = 'all'; filter(); search.focus();
+  });
+})();
+</script>
+</body>
+</html>

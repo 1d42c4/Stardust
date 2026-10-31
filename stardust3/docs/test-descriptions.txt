@@ -1,0 +1,340 @@
+# Test name | plain-language explanation. Shared macro cases use the same explanation in each suite.
+aes_ctr_stream_matches_direct_counter_encryption|Compares the AES stream with separately encrypted big-endian counter blocks.
+aligned_blocks_do_not_repeat_in_fixed_large_fixture|Scans the fixed large command fixture for repeated aligned blocks.
+aligned_blocks_do_not_repeat_in_large_fixture|Checks a large AES output for repeated aligned blocks.
+aligned_blocks_stay_unique_across_many_keys|Checks aligned-block uniqueness across a collection of synthetic AES keys.
+all_byte_values|XORs complementary byte values and checks every result is 255.
+all_five_suites_are_domain_separated_with_cheap_kdfs|Uses inexpensive test KDFs to confirm the five constructions produce distinct output.
+all_old_processing_flags_and_three_file_syntax_fail|Runs the executable with removed options and the old three-file syntax and expects usage failure.
+argon2_aes_validates_before_password_or_file_access|Runs argon2-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.
+argon2_blake3_validates_before_password_or_file_access|Runs argon2-blake3 as a subprocess and checks invalid sizes fail before password prompts or key replacement.
+argon2_chacha20_validates_before_password_or_file_access|Runs argon2-chacha20 as a subprocess and checks invalid sizes fail before password prompts or key replacement.
+scrypt_aes_validates_before_password_or_file_access|Runs scrypt-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.
+pbkdf2_aes_validates_before_password_or_file_access|Runs pbkdf2-aes as a subprocess and checks invalid sizes fail before password prompts or key replacement.
+atomic_writer_cleans_up_when_destination_cannot_be_replaced|Forces key publication to fail and verifies temporary cleanup and preservation of the destination.
+atomic_writer_creates_the_requested_file|Writes through the key transaction and checks the published file has exactly the requested bytes.
+atomic_writer_preserves_existing_file_on_failure|Injects a key-writing error and verifies the previous file survives unchanged.
+atomic_writer_removes_temporary_file_after_failure|Checks a failed key write leaves no temporary artifact.
+atomic_writer_removes_temporary_file_during_unwind|Panics during key writing and checks stack unwinding removes the temporary file.
+atomic_writer_replaces_and_truncates_existing_file|Replaces a longer key and verifies no trailing old bytes remain.
+blake3_keyed_xof_stream_matches_known_answer|Checks the keyed BLAKE3 stream against a fixed expected byte vector.
+boundaries_and_multiple_buffers_match_independent_oracle|Compares XOR at small and multi-buffer lengths with an independent byte-by-byte oracle.
+broken_generator_status_pipe_fails_before_password_or_generation|Breaks the generator's output stream and verifies generation and password prompting never begin.
+canonically_equivalent_unicode_passwords_must_match_exact_bytes|Rejects a composed character and its decomposed equivalent as mismatched passwords.
+case_aliases_of_inputs_are_rejected|On Windows, refuses output names differing only in case from a protected input.
+chacha20_fails_closed_at_its_counter_limit|Seeks to ChaCha20's last supported block and checks an extra byte fails instead of wrapping.
+chacha20_zero_key_stream_matches_known_answer|Compares a zero-key ChaCha20 stream with a fixed known-answer vector.
+cli_accepts_maximum_without_narrowing_the_byte_count|Passes the 20-billion-byte maximum through the prompt seam without truncating the integer or writing a huge file.
+cli_bounds_size_input_before_asking_for_password|Checks the exact 128-byte size-line limit and rejects a longer line before password entry.
+cli_checks_size_before_asking_for_password|Supplies invalid sizes and verifies neither passwords nor generation are requested.
+cli_distinguishes_post_commit_status_failure|Fails the final status write and checks the error explicitly acknowledges completed key creation.
+cli_errors_and_output_do_not_reveal_password|Checks mismatch diagnostics and console output do not contain the synthetic password.
+cli_preserves_unicode_and_whitespace_password_exactly|Passes Unicode and surrounding spaces through the prompt without trimming or normalization.
+cli_prompts_for_password_exactly_twice|Checks that one successful generation reads a password and one confirmation.
+cli_propagates_first_password_read_error|Fails initial hidden password input and verifies the I/O error stops generation.
+cli_propagates_generation_failure_without_success_message|Injects a generator failure and verifies no success message appears.
+cli_propagates_second_password_read_error|Fails confirmation input and verifies the error propagates after exactly two prompts.
+cli_rejects_empty_password_before_generation|Checks an empty password cannot reach the generator.
+cli_rejects_password_mismatch_before_generation|Checks different password and confirmation bytes prevent generation.
+cli_reports_eof_before_password_or_generation|Ends size input immediately and checks failure occurs before any password prompt.
+cli_success_uses_exact_size_and_password|Checks a successful prompt passes the exact requested size and password to generation.
+closed_status_pipe_does_not_turn_committed_xor_into_failure|Breaks XOR status output after publication and verifies the committed operation remains successful.
+command_names_remain_literal_xor_filenames|Uses generator names and option-like names as literal XOR filenames after the option terminator.
+committed_directory_sync_error_is_not_reported_as_success|Passes a post-publication directory-sync error through the CLI and checks the commit is disclosed without a success message.
+complete_data_is_synced_before_replacement_and_directory_after|Checks production, complete-file sync, publication, and directory sync occur in that order.
+concurrent_readers_only_observe_complete_versions|Reads concurrently during atomic in-place replacement and rejects any partially written version.
+confirmation_read_failure_preserves_the_existing_key_and_hard_link|Fails confirmation for all five generators and checks old bytes and the original hard-link relationship survive.
+control_characters|Rejects control characters in XOR filenames on both platforms.
+counter_exhaustion_does_not_publish_a_partial_key|Exhausts ChaCha20 after one block inside a real key transaction and checks rollback and cleanup.
+crlf_size_input_is_accepted|Checks Windows CRLF line endings parse as the requested size.
+data_read_errors_propagate_after_a_full_buffer|Fails source reading after one complete XOR buffer and checks the source-specific error and output prefix.
+derived_key_is_deterministic|Derives twice from identical test inputs and compares the keys.
+destination_appearing_during_file_sync_is_not_overwritten|Creates a competing output during file sync and checks the final recheck preserves it.
+device_names|Rejects reserved Windows device names, including case and extension variants.
+device_stream_and_ambiguous_names_fail_on_every_platform|Exercises unsafe device, alternate-stream, and ambiguous filenames through the real executable.
+different_aes_keys_change_stream|Checks different synthetic AES keys produce different streams.
+different_domain_changes_derived_key|Changes only the configuration domain and checks the derived key changes.
+different_lengths_do_not_share_a_stream_prefix|Checks requested length participates in derivation rather than merely truncating one common key stream.
+different_password_changes_derived_key|Changes only the password and checks the derived key changes.
+different_pepper_changes_derived_key|Changes only the application pepper and checks the derived key changes.
+different_salt_changes_derived_key|Changes only the application salt and checks the derived key changes.
+direct_api_cannot_bypass_name_validation|Calls the XOR library directly with invalid filenames and verifies the same validation applies.
+directory_a_is_refused|Uses a directory as XOR input and checks safe rejection.
+directory_appearing_before_publish_is_preserved|Creates a directory at the destination during processing and checks it is not replaced.
+directory_input_is_preserved|Attempts in-place XOR on a directory and checks its contents survive.
+directory_key_is_refused|Uses a directory as key.key and checks XOR rejects it.
+directory_output_and_its_contents_are_preserved|Uses a populated directory as XOR output and verifies it remains intact.
+directory_sync_failure_reports_that_output_was_published|Fails directory sync after XOR rename and checks the error discloses publication and preserves the new output.
+directory_sync_failure_retains_the_committed_key|Fails key directory sync after publication and checks the new key remains with an explicit committed error.
+directory_sync_panic_does_not_remove_committed_key|Panics after key publication and verifies cleanup cannot delete the committed key.
+each_generator_routes_to_its_original_configuration|Checks every generator command selects the expected suite, domain, and application salt.
+each_subcommand_has_help_without_starting_generation|Runs every generator help form without prompting or creating a key.
+effective_salt_binds_requested_length|Checks the framed Argon2 salt changes when requested output length changes.
+effective_salt_is_unambiguous|Checks length-prefixed domain and salt fields cannot collide through simple concatenation.
+embedded_nul_password_is_not_truncated|Checks the prompt seam preserves password bytes on both sides of an embedded NUL.
+empty_a_accepts_empty_or_longer_key|Runs empty-file XOR with empty and nonempty keys and checks an empty output.
+empty_a_and_nonempty_key|Checks an empty source produces no output despite a nonempty key stream.
+empty_and_dot_names|Rejects empty, dot, and parent-directory filenames.
+empty_configuration_fields_are_rejected|Rejects empty salt, pepper, and domain fields.
+empty_input_never_reads_the_key_stream|Uses a key reader that panics if touched and proves empty XOR consumes no key bytes.
+empty_key_does_not_create_output|Uses a zero-length key with nonempty input and checks no output appears.
+empty_key_fails_for_nonempty_a|Checks nonempty XOR with an empty key fails with unexpected EOF.
+equal_inputs_produce_zeros|Checks XOR of a byte sequence with itself is all zeros across a buffer boundary.
+error_messages_never_include_password_material|Checks generator error formatting does not disclose synthetic password material.
+errors_after_partial_writes_propagate|Fails XOR output after partial progress and checks the write error is returned.
+every_generator_accepts_a_native_non_unicode_working_directory|Generates real keys from all five suites inside an OS-native non-Unicode directory without using a lossy path.
+every_kdf_distinguishes_unicode_normalization_forms|Checks Argon2, scrypt, and PBKDF2 distinguish composed and decomposed password bytes.
+every_kdf_preserves_embedded_nul_password_bytes|Checks all three KDFs use the complete password, including bytes after NUL.
+every_pair_of_byte_values_matches_the_xor_oracle|Checks all 65,536 possible pairs of input and key bytes against direct XOR.
+every_stream_generator_handles_partial_writes|Limits each write and checks AES, ChaCha20, and BLAKE3 still emit complete correct output.
+every_stream_generator_is_independent_of_buffer_partitioning|Checks all stream generators emit identical bytes with different internal chunk sizes.
+every_stream_generator_propagates_write_failure|Injects output errors into each stream generator and checks propagation.
+every_stream_generator_rejects_invalid_size_and_zero_buffer_before_writing|Checks all stream generators reject invalid lengths and zero buffers before emitting bytes.
+every_stream_generator_reports_write_zero|Checks all stream generators reject a writer returning zero rather than looping forever.
+every_stream_generator_retries_interrupted_writes|Injects Interrupted errors into each generator's writer and checks retry preserves output.
+every_stream_generator_uses_bounded_production_writes|Measures every generator's write requests and checks the production one-MiB bound.
+every_stream_generator_writes_exact_boundary_lengths|Checks each generator emits exactly the requested length around important block and buffer boundaries.
+every_stream_preserves_existing_key_on_disk_failure_across_buffer_boundaries|Injects disk failures into every expansion stream around buffer boundaries and checks transactional rollback.
+every_suite_rejects_invalid_input_without_touching_existing_file|Checks all five suites reject invalid inputs while preserving an existing key.
+exact_lengths_replace_existing_files_without_temporary_files|Runs the selected command at boundary sizes and checks exact replacement length and temporary cleanup.
+executable_and_its_hard_links_are_never_overwritten|Attempts in-place replacement of the executable and its aliases and checks protection.
+executable_directory_can_contain_spaces_and_unicode|Launches a copied binary from a directory with spaces and Unicode and checks XOR succeeds there.
+executable_directory_controls_in_place_target|Launches from another working directory and checks in-place XOR selects the executable's neighboring file.
+existing_output_is_unchanged_until_success|Inspects the old output during production and checks it changes only after transaction completion.
+failed_regeneration_keeps_a_key_usable_for_restoration|Fails a password-confirmation regeneration and proves the old key still restores existing ciphertext.
+failed_rename_does_not_sync_directory_or_remove_destination|Forces XOR rename failure and checks no post-publication sync or destination deletion occurs.
+failed_replacement_cleans_up_and_reports_no_success|Forces a command's key replacement to fail and checks cleanup and absence of a success message.
+failed_windows_rename_preserves_output_and_cleans_temp|Blocks Windows output rename and checks old output and cleanup.
+failure_after_partial_writes_preserves_existing_output|Injects a transaction error after substantial writing and checks old output bytes survive.
+failure_does_not_create_new_output|Fails a transaction targeting a missing output and checks the target remains absent.
+file_as_parent_fails_without_truncating_it|Uses a regular file as the key directory and checks rejection preserves that file.
+file_sync_failure_after_complete_transformation_preserves_source|Fails sync after a complete in-place transformation and checks the original source survives.
+file_sync_failure_does_not_publish_a_new_key|Fails key file sync and checks no new key or temporary file remains.
+file_sync_failure_keeps_new_output_absent|Fails XOR file sync and checks a previously absent output remains absent.
+file_sync_failure_preserves_existing_key_and_cleans_temporary|Injects a storage-full error during key sync and checks old key preservation and temporary cleanup.
+file_sync_failure_preserves_existing_output|Injects a storage-full error during XOR sync and checks the existing output survives.
+file_sync_panic_cleans_temporary_without_replacing_output|Panics during XOR sync and checks unwinding cleans temporary data without replacing output.
+file_sync_panic_preserves_old_key_and_cleans_temporary|Panics during key sync and checks old bytes and temporary cleanup.
+final_eof_check_propagates_read_errors|Fails the final source EOF probe and checks XOR reports the error.
+final_flush_failure_reports_commit_and_keeps_each_generated_key|For every production suite, fails final status flush and checks exit code, committed bytes, cleanup, and reproducibility.
+final_flush_failure_reports_that_the_key_was_created|Fails only the post-generation flush and checks the error explicitly states the key was created.
+fixed_key_stream_has_prefix_property|Checks stream expansion with a fixed derived key has consistent prefixes at different lengths.
+framed_salt_capacity_overflow_is_rejected_without_allocating|Passes impossible salt capacities and checks checked arithmetic or allocation rejection prevents a panic.
+framed_salts_keep_all_eight_size_bytes_above_four_gib|Checks both salt formats retain all eight big-endian length bytes above 4 GiB and at the maximum.
+generated_file_is_named_key_key_and_has_exact_raw_content|Checks key generation publishes key.key with the exact raw stream and no added header.
+generated_file_replaces_a_longer_existing_key|Generates a shorter key over a longer one and checks exact replacement without an old tail.
+generated_key_crosses_both_buffer_sizes_and_restores_exactly|Generates a multi-MiB key, checks XOR against a byte oracle, and restores the original source.
+generated_key_supports_atomic_in_place_round_trip|Uses the selected generated key for in-place XOR twice and checks exact restoration.
+generated_short_key_cannot_damage_an_input_or_existing_output|Generates a key one byte too short and checks both XOR modes preserve all existing files.
+generating_a_key_never_requires_an_executable_file|Generates through the application controller with a nonexistent executable path.
+generating_message_flush_failure_prevents_generation|Fails the pre-generation status flush after both passwords and checks the generator is never called.
+generation_and_xor_retain_their_distinct_directory_rules|Checks generation uses its working directory while XOR uses files beside the executable.
+generator_panic_never_prints_a_success_message|Panics in the generator callback and verifies no created-key message appears.
+global_version_does_not_require_a_directory_or_terminal|Checks global version output works with nonexistent environment paths and no password reader.
+growth_detected_after_writes_does_not_publish_new_output|Detects source growth after writing and checks the transaction does not publish a new output.
+growth_of_a_fails_even_from_empty|Checks source growth detection for both empty and nonempty expected inputs.
+help_aliases|Checks the XOR parser recognizes both short and long help options.
+help_and_version_exit_successfully_without_prompting_or_writing|Runs global help and version as subprocesses and checks success without interactive or file side effects.
+help_and_version_work_without_input_files|Runs XOR help and version without any input files.
+help_describes_the_complete_new_contract|Checks XOR help documents location, key length, in-place mode, and file-safety rules.
+hundreds_of_stream_lengths_match_one_shot_reference|Compares hundreds of chunked AES stream lengths with a one-shot reference.
+identity_distinguishes_files_and_recognizes_hard_links|Checks native file identities distinguish separate files and identify hard-link aliases.
+in_place_is_explicit_and_has_one_filename|Checks in-place parsing requires its explicit option and exactly one source filename.
+in_place_terminator_preserves_literal_option_and_native_names|Checks the option terminator preserves option-like and OS-native in-place filenames.
+in_place_uses_the_same_filename_validation|Checks in-place arguments cannot bypass ordinary XOR filename restrictions.
+independent_parallel_invocations|Runs multiple independent XOR processes concurrently and checks their results and cleanup.
+independent_temporary_files_have_unique_names|Creates overlapping transactions and checks their temporary filenames differ.
+infinite_size_input_stops_after_129_bytes|Feeds an endless size stream and verifies reading stops at the rejection bound before prompting.
+internal_temporary_names|Rejects filenames using the reserved XOR temporary prefix.
+interrupted_size_reads_are_retried_without_losing_digits|Alternates Interrupted errors with single-byte reads and checks the complete size is parsed.
+invalid_configuration_does_not_touch_existing_file|Supplies invalid generator configuration and checks an existing key is untouched.
+invalid_generation_does_not_touch_existing_file|Supplies invalid generation lengths and checks the existing key survives.
+invalid_global_commands_never_read_input_or_echo_secrets|Checks malformed top-level commands fail without prompting or echoing synthetic secret arguments.
+invalid_in_place_arguments_do_not_modify_files|Runs invalid in-place command forms and checks existing files remain unchanged.
+invalid_input_and_password_failures_preserve_existing_key|Checks the selected generator preserves its old key after bad sizes, empty passwords, or mismatched confirmation.
+invalid_stream_sizes_are_rejected_before_writing|Checks AES stream length validation occurs before output is written.
+invalid_utf8_size_fails_before_password_or_generation|Provides invalid UTF-8 size bytes and checks InvalidData is returned before prompting.
+key_and_its_hard_links_are_never_overwritten|Attempts in-place XOR on key.key and its hard links and checks key protection.
+key_read_errors_propagate_after_a_full_buffer|Fails key reading after a full XOR buffer and checks key-specific error reporting.
+key_replacement_preserves_hard_links_and_platform_reader_policy|Checks old hard links keep their bytes; Linux open readers survive replacement, while Windows safely refuses and succeeds after closing the reader.
+key_short_by_one_fails|Checks a key one byte shorter than the source produces unexpected EOF.
+key_tail_is_never_read|Uses a reader that fails beyond the needed key prefix and checks XOR never touches the unused tail.
+known_vector|Checks XOR against a small, fixed expected byte vector.
+known_vector_and_status|Runs XOR on known bytes and checks exact output plus the reported byte count.
+large_key_is_not_a_repeated_short_key|Checks a large generated key is not formed by repeating the corresponding short key.
+launch_directory_is_ignored_for_both_inputs_and_output|Runs XOR from another directory and verifies all file selection remains beside the executable.
+length_changes_are_detected_in_both_directions|Checks metadata validation detects both source shrinkage and growth.
+length_check_precedes_destination_inspection|Combines a short key with an invalid destination and checks key-length preflight fails first.
+library_rejects_empty_password_without_touching_existing_file|Calls the generator library with an empty password and checks the old key survives.
+locked_output_rename_fails_without_data_loss|Holds a Windows rename-blocking output handle and checks failed publication preserves old data.
+lone_dash_is_a_filename|Checks a single dash is accepted as a literal filename.
+long_parent_paths_support_atomic_overwrite|Exercises in-place atomic replacement under a long directory path.
+longer_key_produces_exactly_a_length|Uses an oversized key and checks XOR output is exactly the source length.
+longer_key_uses_only_its_prefix|Checks extra key bytes do not alter the output.
+malformed_xor_commands_retain_astra_usage_exit_code|Checks invalid XOR command forms retain usage exit code 2.
+matches_original_binary_known_answer|Compares the selected generator command with the frozen original-binary byte vector.
+maximum_length_leading_zero_input_preserves_the_value|Parses a 128-byte size line with leading zeros and checks the resulting value is exactly one.
+maximum_size_counter_and_chunk_arithmetic_is_safe|Checks counter and chunk arithmetic at 20 billion bytes without allocating or writing that much data.
+maximum_u64_length_uses_a_bounded_first_read|Requests a virtual u64::MAX XOR length, fails its first read, and verifies that read is only 64 KiB.
+missing_a_preserves_output|Runs XOR with a missing source and checks an existing output remains intact.
+missing_directory_fails_before_producer_runs|Attempts key creation under a missing directory and checks no writer callback or directory creation occurs.
+missing_input_is_not_created|Attempts in-place XOR on a missing source and checks it remains absent.
+missing_key_is_required_for_empty_a_too|Checks even an empty XOR source fails when key.key is missing.
+missing_key_preserves_output_even_with_another_b_file|Checks XOR never substitutes a differently named file for a missing key and preserves output.
+missing_or_replaced_source_path_fails_before_transformation|Changes the in-place source path before processing and verifies the transaction refuses to transform it.
+missing_parent_is_not_created|Checks XOR does not silently create a missing destination directory.
+missing_short_or_empty_key_preserves_original|Tries in-place XOR with absent, short, and empty keys and checks the original source survives.
+missing_unknown_or_extra_arguments_never_default_to_a_generator|Checks invalid generator command lines never silently select a default operation.
+multi_buffer_output_matches_independent_expansion|Checks a multi-MiB command output against separately implemented stream expansion.
+native_non_unicode_filenames_end_to_end|Runs XOR through the real binary using native filenames that cannot be represented as Unicode.
+native_non_unicode_names_are_preserved|Checks parsing retains native filename bytes or UTF-16 units without lossy conversion.
+native_non_unicode_subcommand_is_rejected_without_lossy_dispatch|Checks a non-Unicode command selector is rejected instead of being guessed through lossy text.
+nested_failure_cannot_remove_another_active_temporary|Runs a failing key transaction inside an active one and checks it cannot delete the outer temporary file.
+never_falls_back_to_a_in_working_directory|Places a source only in the launch directory and verifies XOR refuses to use it.
+never_falls_back_to_key_in_working_directory|Places a key only in the launch directory and verifies XOR refuses to use it.
+new_kdfs_reject_empty_passwords_and_zero_pbkdf2_rounds|Checks scrypt and PBKDF2 input validation, including rejection of zero PBKDF2 iterations.
+new_output_appears_only_after_success|Checks a missing XOR output stays absent throughout production and appears only after success.
+non_unicode_arguments_fail_without_panicking_or_defaulting|Checks native non-Unicode generator arguments fail cleanly without a default suite.
+ordinary_device_like_names_are_allowed|Checks harmless names resembling Windows devices are still accepted.
+original_suite_and_configuration_are_frozen|Pins each shipped command's suite, salt, pepper, and domain to its original values.
+original_survives_partial_work_and_existing_readers_keep_old_bytes|Checks in-place replacement keeps the original visible during production and old readers retain original bytes afterward.
+other_hard_links_keep_original_bytes|Checks in-place XOR replaces one directory entry without rewriting the original file's other hard links.
+output_becoming_read_only_fails_without_data_loss|Marks output read-only during processing and checks final validation refuses replacement.
+output_cannot_be_a_hard_link_to_either_input|Uses hard-link aliases of source or key as output and verifies identity-based rejection.
+output_cannot_be_either_input|Checks ordinary XOR cannot overwrite its source or key.
+output_cannot_replace_executable_or_its_hard_link|Uses the executable or a hard-link alias as output and checks executable protection.
+panic_during_transformation_preserves_source_and_releases_handle|Panics during in-place processing and checks rollback, temporary cleanup, and handle release.
+panic_unwinds_without_deleting_existing_output|Panics during ordinary XOR production and checks the prior output survives cleanup.
+parallel_fixture_copy_and_launch_are_reliable|Stresses concurrent executable copying and process launch to guard against fixture races.
+parse_size_accepts_exact_boundaries_and_whitespace|Checks one byte and the maximum are accepted with permitted surrounding whitespace.
+parse_size_accepts_hundreds_of_valid_values|Parses a broad set of valid decimal byte counts.
+parse_size_accepts_values_near_maximum|Checks decimal values near the maximum are accepted exactly.
+parse_size_rejects_empty_and_zero|Rejects empty, whitespace-only, and zero byte counts.
+parse_size_rejects_every_common_unit_suffix|Rejects size suffixes such as KB, MB, and GiB; sizes must be plain byte counts.
+parse_size_rejects_non_decimal_notation|Rejects signs, separators, fractions, exponents, and other non-decimal input.
+parse_size_rejects_values_above_maximum_and_u64|Rejects oversized values, including decimal integers that overflow u64.
+partial_and_interrupted_console_writes_preserve_complete_status|Combines short writes with Interrupted errors and checks complete status text without password disclosure.
+password_and_size_change_the_output|For the selected command, changes password and size separately and checks output changes.
+password_is_unicode_and_whitespace_sensitive|Checks the KDF treats Unicode and whitespace password bytes as significant.
+pbkdf2_derivation_is_deterministic_and_input_sensitive|Checks PBKDF2 repeatability and sensitivity to password, size, salt, pepper, and domain.
+pbkdf2_sha256_matches_known_vector|Compares PBKDF2-HMAC-SHA-256 with a fixed known-answer vector.
+peppered_effective_salt_is_unambiguous_and_binds_every_input|Checks peppered salt framing distinguishes field boundaries and binds all configuration fields and length.
+persist_failure_skips_directory_sync_and_preserves_destination|Blocks key persistence with a populated directory and checks no directory sync or deletion follows.
+plain_file_check_rejects_directories|Checks regular-file validation excludes directory metadata.
+producer_failure_never_reaches_file_sync|Fails XOR production and checks incomplete output is never synced or published.
+producer_failure_skips_both_sync_stages|Fails key production and checks neither file sync nor directory sync is called.
+production_kdf_parameters_are_pinned|Pins production memory, iteration, lane, and related KDF settings.
+production_stream_writes_are_bounded_to_one_mibibyte|Checks production AES output requests stay within one MiB.
+production_suite_outputs_match_known_answers|Checks production-cost derivation and expansion for all suites against frozen expected output.
+protected_hard_link_appearing_during_sync_is_not_overwritten|Adds a protected-key hard link at the output during sync and checks the final identity check rejects it.
+protected_source_is_refused_before_transformation|Checks in-place transactions reject a protected source identity before transforming bytes.
+randomized_oracles_and_round_trips|Runs deterministic pseudo-random XOR fixtures against an independent oracle and checks double-XOR restoration.
+read_failure_after_size_digits_does_not_use_a_partial_number|Fails input after valid digits and checks the CLI does not generate using the partial size.
+read_only_output_is_not_replaced|Checks a read-only output is rejected before replacement.
+readonly_inputs_can_be_processed|Runs XOR using read-only source and key files and checks successful output.
+readonly_original_is_preserved_and_readonly_key_is_usable|Checks in-place XOR preserves a read-only source while still allowing a read-only key.
+readonly_output_is_preserved|Runs the executable against a read-only destination and checks its original contents survive.
+rechecks_hard_link_identity_before_publish|Changes destination identity during processing and checks protected hard links are caught before publication.
+refuses_destination_removed_during_processing|Deletes output during production and checks the transaction refuses to recreate it.
+refuses_destination_replaced_during_processing|Replaces output with another file during production and checks the competing file survives.
+refuses_new_destination_created_during_processing|Creates a competing destination during production and checks it is not overwritten.
+regenerated_key_restores_a_previous_ciphertext|Regenerates the selected suite's key from identical inputs and uses it to restore earlier ciphertext.
+rejects_absolute_paths_even_to_files_beside_executable|Checks absolute paths are refused even when their files happen to be beside the binary.
+rejects_all_removed_modes|Checks the parser rejects removed XOR modes.
+rejects_bad_counts_unknown_options_and_empty_names|Runs malformed XOR argument counts, unknown flags, and empty filenames and expects usage failure.
+rejects_parent_paths_subdirectories_and_both_separator_styles|Rejects traversal and subdirectory paths using either platform's path separators.
+rejects_wrong_argument_counts_including_old_cli|Checks XOR parsing rejects incorrect filename counts and obsolete command forms.
+repeated_interruptions_during_final_eof_check_are_retried|Injects seven Interrupted errors into the final EOF probe and checks the eighth read completes successfully.
+replacement_removes_old_trailing_bytes|Runs shorter XOR output over a longer file and checks no old suffix remains.
+root_help_lists_all_six_operations_and_both_location_policies|Checks root help lists five generators, XOR, and their distinct directory rules.
+round_trip_across_multiple_buffers|Runs XOR twice on data spanning multiple buffers and checks exact byte restoration.
+round_trips_at_empty_and_buffer_boundaries_with_longer_keys|Checks in-place double-XOR restoration for empty and boundary-sized files with surplus key bytes.
+same_file_can_supply_a_and_key|Uses key.key as the source too and checks a separate output contains zeros.
+same_length_timestamp_changes_are_detected|Checks metadata validation catches changes even when file length stays constant.
+scrypt_derivation_is_deterministic_and_input_sensitive|Checks scrypt repeatability and sensitivity to password, size, salt, pepper, and domain.
+scrypt_matches_rfc_7914_first_vector|Compares the scrypt primitive with RFC 7914's first known-answer vector.
+short_and_interrupted_reads_use_all_bytes|Splits source and key reads and injects interruptions, checking no bytes are lost.
+short_and_interrupted_writes_are_completed|Limits XOR output writes and injects interruptions, checking complete correct output.
+short_key_after_full_block_does_not_write_partial_second_block|Ends the key during the second block and checks only the complete first block reached output.
+short_key_fails_before_opening_executable_or_creating_temporary|Checks a short-key error is detected before executable access or temporary output creation.
+short_key_preserves_existing_output|Runs XOR with insufficient key bytes and checks an existing output survives.
+short_read_after_a_full_block_preserves_source_and_releases_handle|Ends in-place input after partial progress and checks rollback and handle release.
+shortened_a_fails|Checks XOR detects a source shorter than its declared length.
+simultaneous_short_interrupted_reads_and_writes_preserve_alignment|Interrupts and fragments both inputs and output together across multiple buffers and checks exact alignment.
+size_at_eof_without_newline_is_accepted|Checks a valid size is accepted when EOF follows immediately without a newline.
+size_prompt_flush_failure_does_not_consume_input|Fails flushing the size prompt and checks no size bytes are consumed.
+size_reader_leaves_following_lines_unconsumed|Checks size reading stops at the first newline instead of consuming later lines.
+small_and_large_keys_are_deterministic_across_directories|Generates matching small and large fixtures in different directories and compares their bytes.
+source_failure_does_not_consume_key_for_an_incomplete_block|Fails source input mid-block and checks key consumption and output stop at the previous complete block.
+source_replaced_during_transformation_is_not_overwritten|Replaces the in-place source path during transformation and checks the replacement file survives.
+source_stays_write_protected_after_transformation|On Windows, verifies the source remains protected against writers between transformation and publication.
+spaces_and_unicode_are_preserved|Checks the parser preserves filename spaces and Unicode characters.
+spaces_unicode_and_option_like_filenames|Runs real XOR commands using spaces, Unicode, and names resembling options.
+spaces_unicode_dashes_and_native_names_work_in_place|Checks in-place XOR handles spaces, Unicode, dashes, and native non-Unicode names.
+stable_metadata_passes|Checks unchanged file metadata passes change detection.
+stale_temporary_files_survive_success_and_failure|Leaves another process's key temporary sentinel in place and checks both successful and failed transactions preserve it.
+stale_temporary_is_preserved_across_success_and_failure|Leaves another process's XOR temporary sentinel in place and checks both successful and failed transactions preserve it.
+stream_counter_exhaustion_after_progress_preserves_the_exact_prefix|Exhausts ChaCha20 after a complete block and checks the wrapper returns CounterExhausted without outputting invalid bytes.
+stream_does_not_repeat_common_digest_periods|Checks AES expansion does not repeat short digest-sized patterns.
+stream_halves_are_different|Checks the two halves of a fixed generated AES stream are not identical.
+stream_handles_partial_writes|Checks AES stream writing completes when the writer accepts only short fragments.
+stream_is_independent_of_buffer_partitioning|Checks AES stream bytes are independent of internal buffer size.
+stream_propagates_write_failure|Fails an AES output writer and verifies the error propagates.
+stream_reports_write_zero|Checks AES output rejects zero-progress writes.
+stream_retries_interrupted_writes|Checks AES output retries Interrupted writes without losing data.
+stream_writes_exact_lengths_around_important_boundaries|Checks AES output length around cipher-block and output-buffer boundaries.
+streaming_failure_after_full_block_preserves_destination|Fails streaming after one full XOR block and checks the transaction preserves old output.
+subcommands_have_distinct_domains_and_outputs|Checks the five command configurations use distinct domains and produce distinct keys.
+success_status_reaches_a_buffered_writer_before_returning|Uses a real BufWriter and checks successful generation flushes its final status before returning.
+suite_display_names_are_stable_and_distinct|Pins human-readable suite labels and checks they remain distinct.
+suites_select_the_expected_stream_generators|Checks each suite selects its intended AES, ChaCha20, or BLAKE3 expansion.
+terminator_allows_option_like_names|Checks double dash makes later option-like arguments literal filenames.
+trailing_spaces_and_dots|Rejects filenames ending in spaces or dots to prevent ambiguous Windows aliases.
+two_empty_inputs|Checks two empty XOR streams produce empty output.
+two_filenames_select_fixed_key_processing|Checks ordinary XOR parsing selects two filenames with the fixed key.key policy.
+unicode_directory_supports_atomic_key_replacement|Replaces a key inside a directory containing spaces and Unicode and checks exact bytes and cleanup.
+unicode_whitespace_is_counted_in_bytes_at_the_input_limit|Checks multibyte whitespace obeys the 128-byte size-input bound, not a character count.
+unix_paths|Rejects Unix absolute, parent, and subdirectory paths where plain filenames are required.
+unrelated_hard_link_to_old_output_is_not_modified|Checks replacing one output directory entry leaves another hard link to the old file unchanged.
+validate_size_has_exact_boundaries|Checks the numeric size API accepts exactly the documented inclusive range.
+version_aliases|Checks the XOR parser recognizes both short and long version flags.
+virtual_key_larger_than_four_gib_is_not_eagerly_read|Models a huge key and verifies XOR reads only the needed prefix in bounded chunks.
+whitespace_only_password_is_preserved_as_nonempty|Checks a nonempty whitespace-only password is preserved rather than silently trimmed.
+windows_active_output_writer_is_refused_before_production|Opens output for writing and checks the Windows transaction fails before producing data.
+windows_active_writer_is_refused|Keeps an in-place source open for writing and checks safe refusal.
+windows_case_aliases_preserve_key_protection|Checks case-insensitive Windows aliases cannot bypass in-place key protection.
+windows_delete_lock_preserves_existing_key_and_cleans_temporary|Blocks key deletion sharing and checks failed replacement preserves old bytes and removes its temporary.
+windows_device_and_stream_names_are_refused|Checks Windows device and alternate-data-stream names cannot become transaction destinations.
+windows_input_handle_denies_writes_and_removal_until_closed|Checks open XOR inputs deny writers and deletion until the protecting handle closes.
+windows_input_open_for_writing_fails_safely|Runs XOR with an actively writable input and checks safe failure.
+windows_locked_input_rename_failure_preserves_original|Holds a rename-blocking source handle during in-place XOR and checks the original survives.
+windows_output_denies_writers_until_publication|Checks a Windows output remains protected against writers through final publication.
+windows_output_open_for_writing_is_preserved|Keeps output open for writing and checks the executable refuses replacement without damage.
+windows_paths|Rejects Windows drive, UNC, and separator-containing paths where plain filenames are required.
+windows_special_characters|Rejects Windows-special characters in filenames on both platforms.
+write_failure_after_partial_progress_preserves_source|Fails in-place output after partial writing and checks original source preservation.
+write_failure_stops_before_reading_another_block|Fails output in the second XOR block and verifies neither input advances into the third.
+wrong_generator_size_is_rejected_before_password_in_combined_dispatch|Checks application-level dispatch rejects invalid sizes for every suite before password entry.
+xor_does_not_prompt_or_generate_when_key_is_missing|Checks missing-key XOR fails without prompting, generating a replacement key, or changing source bytes.
+xor_help_aliases_explain_the_same_contract_without_files|Checks the application-level XOR help aliases produce identical help without file access.
+zero_buffer_size_is_rejected_before_writing|Checks AES stream generation rejects a zero-sized buffer before writing anything.
+zero_key_preserves_all_bytes|Checks XOR against an all-zero key preserves source bytes across a buffer boundary.
+zero_length_console_write_fails_before_reading_size|Uses a zero-progress console writer and checks WriteZero occurs before size input is consumed.
+zero_writes_fail_instead_of_spinning|Checks zero-progress XOR output writes fail promptly rather than spinning.
+key_symlink_is_replaced_without_modifying_its_target|On Unix, checks key generation replaces the symlink entry while preserving its referent.
+generated_key_file_has_owner_only_permissions|On Unix, checks newly generated keys are readable and writable only by their owner.
+in_place_preserves_access_bits_and_clears_special_bits|On Unix, checks in-place output retains access permissions while clearing special mode bits.
+same_length_source_edit_during_transformation_is_detected|On Unix, edits source bytes without changing length and checks in-place change detection.
+source_changed_after_reading_but_before_publication_is_detected|On Unix, changes source after transformation and checks the final pre-publication validation refuses it.
+new_unix_output_is_private|Checks a new Unix XOR output has owner-only permissions.
+refuses_destination_edited_in_place_during_processing|On Unix, edits the destination through its existing inode and checks replacement is refused.
+refuses_destination_permission_changes_during_processing|On Unix, changes output permissions during processing and checks final validation detects it.
+refuses_same_length_destination_edit_during_processing|On Unix, changes output bytes at constant length and checks metadata validation rejects replacement.
+unix_access_bits_are_preserved_without_special_bits|Checks ordinary Unix XOR replacement retains access bits while clearing special mode bits.
+unix_device_is_rejected_before_open|Checks the Unix device /dev/null is refused as an input before opening it.
+executable_symlink_uses_real_executable_directory|Launches through a Unix symlink and checks XOR uses the resolved binary's directory.
+in_place_symlinks_and_dangling_links_are_refused|Checks in-place XOR refuses both live and dangling source symlinks.
+key_fifo_is_rejected_without_opening_it|Uses a Unix FIFO as key.key and checks rejection without a blocking open.
+key_symlinks_cannot_escape_executable_directory|Checks XOR refuses a key symlink pointing outside the executable directory.
+output_symlinks_are_refused_including_dangling_links|Checks XOR refuses live and dangling output symlinks and preserves their targets.
+symlink_inputs_are_refused_even_inside_the_same_directory|Checks XOR refuses source symlinks even when their targets are beside the executable.

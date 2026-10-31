@@ -1,0 +1,443 @@
+Windows validation started: 2026-10-31T04:04:48.3946881Z
+rustc 1.98.1 (48a229cea 2026-09-01)
+binary: rustc
+commit-hash: 48a229ceaefd4985c50990b14116b6d856af0985
+commit-date: 2026-09-01
+host: x86_64-pc-windows-msvc
+release: 1.98.1
+LLVM version: 22.1.8
+   Compiling stardust v0.1.0 (C:\Users\cw\Desktop\stardust\stardust2)
+    Finished `release` profile [optimized] target(s) in 13.24s
+     Running unittests src\lib.rs (target\release\deps\stardust-4f72d0a776ffb823.exe)
+
+running 280 tests
+test keygen::cli::command_tests::argon2_aes::exact_lengths_replace_existing_files_without_temporary_files ... ok
+test keygen::cli::command_tests::argon2_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture ... ok
+test keygen::cli::command_tests::argon2_aes::invalid_input_and_password_failures_preserve_existing_key ... ok
+test keygen::cli::command_tests::argon2_aes::large_key_is_not_a_repeated_short_key ... ok
+test keygen::cli::command_tests::argon2_aes::matches_original_binary_known_answer ... ok
+test keygen::cli::command_tests::argon2_aes::failed_replacement_cleans_up_and_reports_no_success ... ok
+test keygen::cli::command_tests::argon2_aes::original_suite_and_configuration_are_frozen ... ok
+test keygen::cli::command_tests::argon2_aes::password_and_size_change_the_output ... ok
+test keygen::cli::command_tests::argon2_aes::small_and_large_keys_are_deterministic_across_directories ... ok
+test keygen::cli::command_tests::argon2_aes::multi_buffer_output_matches_independent_expansion ... ok
+test keygen::cli::command_tests::argon2_blake3::exact_lengths_replace_existing_files_without_temporary_files ... ok
+test keygen::cli::command_tests::argon2_blake3::aligned_blocks_do_not_repeat_in_fixed_large_fixture ... ok
+test keygen::cli::command_tests::argon2_blake3::invalid_input_and_password_failures_preserve_existing_key ... ok
+test keygen::cli::command_tests::argon2_blake3::large_key_is_not_a_repeated_short_key ... ok
+test keygen::cli::command_tests::argon2_blake3::matches_original_binary_known_answer ... ok
+test keygen::cli::command_tests::argon2_blake3::failed_replacement_cleans_up_and_reports_no_success ... ok
+test keygen::cli::command_tests::argon2_blake3::original_suite_and_configuration_are_frozen ... ok
+test keygen::cli::command_tests::argon2_blake3::password_and_size_change_the_output ... ok
+test keygen::cli::command_tests::argon2_blake3::small_and_large_keys_are_deterministic_across_directories ... ok
+test keygen::cli::command_tests::argon2_blake3::multi_buffer_output_matches_independent_expansion ... ok
+test keygen::cli::command_tests::argon2_chacha20::exact_lengths_replace_existing_files_without_temporary_files ... ok
+test keygen::cli::command_tests::argon2_chacha20::aligned_blocks_do_not_repeat_in_fixed_large_fixture ... ok
+test keygen::cli::command_tests::argon2_chacha20::invalid_input_and_password_failures_preserve_existing_key ... ok
+test keygen::cli::command_tests::argon2_chacha20::large_key_is_not_a_repeated_short_key ... ok
+test keygen::cli::command_tests::argon2_chacha20::matches_original_binary_known_answer ... ok
+test keygen::cli::command_tests::argon2_chacha20::failed_replacement_cleans_up_and_reports_no_success ... ok
+test keygen::cli::command_tests::argon2_chacha20::original_suite_and_configuration_are_frozen ... ok
+test keygen::cli::command_tests::argon2_chacha20::password_and_size_change_the_output ... ok
+test keygen::cli::command_tests::argon2_chacha20::small_and_large_keys_are_deterministic_across_directories ... ok
+test keygen::cli::command_tests::argon2_chacha20::multi_buffer_output_matches_independent_expansion ... ok
+test keygen::cli::command_tests::pbkdf2_aes::exact_lengths_replace_existing_files_without_temporary_files ... ok
+test keygen::cli::command_tests::pbkdf2_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture ... ok
+test keygen::cli::command_tests::pbkdf2_aes::invalid_input_and_password_failures_preserve_existing_key ... ok
+test keygen::cli::command_tests::pbkdf2_aes::large_key_is_not_a_repeated_short_key ... ok
+test keygen::cli::command_tests::pbkdf2_aes::matches_original_binary_known_answer ... ok
+test keygen::cli::command_tests::pbkdf2_aes::failed_replacement_cleans_up_and_reports_no_success ... ok
+test keygen::cli::command_tests::pbkdf2_aes::original_suite_and_configuration_are_frozen ... ok
+test keygen::cli::command_tests::pbkdf2_aes::password_and_size_change_the_output ... ok
+test keygen::cli::command_tests::pbkdf2_aes::small_and_large_keys_are_deterministic_across_directories ... ok
+test keygen::cli::command_tests::pbkdf2_aes::multi_buffer_output_matches_independent_expansion ... ok
+test keygen::cli::command_tests::scrypt_aes::exact_lengths_replace_existing_files_without_temporary_files ... ok
+test keygen::cli::command_tests::scrypt_aes::aligned_blocks_do_not_repeat_in_fixed_large_fixture ... ok
+test keygen::cli::command_tests::scrypt_aes::invalid_input_and_password_failures_preserve_existing_key ... ok
+test keygen::cli::command_tests::scrypt_aes::large_key_is_not_a_repeated_short_key ... ok
+test keygen::cli::command_tests::scrypt_aes::matches_original_binary_known_answer ... ok
+test keygen::cli::command_tests::scrypt_aes::failed_replacement_cleans_up_and_reports_no_success ... ok
+test keygen::cli::command_tests::scrypt_aes::original_suite_and_configuration_are_frozen ... ok
+test keygen::cli::command_tests::scrypt_aes::password_and_size_change_the_output ... ok
+test keygen::cli::command_tests::scrypt_aes::small_and_large_keys_are_deterministic_across_directories ... ok
+test keygen::cli::command_tests::scrypt_aes::multi_buffer_output_matches_independent_expansion ... ok
+test keygen::cli::reliability_tests::canonically_equivalent_unicode_passwords_must_match_exact_bytes ... ok
+test keygen::cli::reliability_tests::committed_directory_sync_error_is_not_reported_as_success ... ok
+test keygen::cli::reliability_tests::crlf_size_input_is_accepted ... ok
+test keygen::cli::reliability_tests::embedded_nul_password_is_not_truncated ... ok
+test keygen::cli::reliability_tests::final_flush_failure_reports_that_the_key_was_created ... ok
+test keygen::cli::reliability_tests::generating_message_flush_failure_prevents_generation ... ok
+test keygen::cli::reliability_tests::generator_panic_never_prints_a_success_message ... ok
+test keygen::cli::reliability_tests::infinite_size_input_stops_after_129_bytes ... ok
+test keygen::cli::reliability_tests::interrupted_size_reads_are_retried_without_losing_digits ... ok
+test keygen::cli::reliability_tests::invalid_utf8_size_fails_before_password_or_generation ... ok
+test keygen::cli::reliability_tests::maximum_length_leading_zero_input_preserves_the_value ... ok
+test keygen::cli::reliability_tests::partial_and_interrupted_console_writes_preserve_complete_status ... ok
+test keygen::cli::reliability_tests::read_failure_after_size_digits_does_not_use_a_partial_number ... ok
+test keygen::cli::reliability_tests::size_at_eof_without_newline_is_accepted ... ok
+test keygen::cli::reliability_tests::size_prompt_flush_failure_does_not_consume_input ... ok
+test keygen::cli::reliability_tests::size_reader_leaves_following_lines_unconsumed ... ok
+test keygen::cli::reliability_tests::success_status_reaches_a_buffered_writer_before_returning ... ok
+test keygen::cli::reliability_tests::unicode_whitespace_is_counted_in_bytes_at_the_input_limit ... ok
+test keygen::cli::reliability_tests::whitespace_only_password_is_preserved_as_nonempty ... ok
+test keygen::cli::reliability_tests::zero_length_console_write_fails_before_reading_size ... ok
+test keygen::cli::tests::cli_accepts_maximum_without_narrowing_the_byte_count ... ok
+test keygen::cli::tests::cli_bounds_size_input_before_asking_for_password ... ok
+test keygen::cli::tests::cli_checks_size_before_asking_for_password ... ok
+test keygen::cli::tests::cli_distinguishes_post_commit_status_failure ... ok
+test keygen::cli::tests::cli_errors_and_output_do_not_reveal_password ... ok
+test keygen::cli::tests::cli_preserves_unicode_and_whitespace_password_exactly ... ok
+test keygen::cli::tests::cli_prompts_for_password_exactly_twice ... ok
+test keygen::cli::tests::cli_propagates_first_password_read_error ... ok
+test keygen::cli::tests::cli_propagates_generation_failure_without_success_message ... ok
+test keygen::cli::tests::cli_propagates_second_password_read_error ... ok
+test keygen::cli::tests::cli_rejects_empty_password_before_generation ... ok
+test keygen::cli::tests::cli_rejects_password_mismatch_before_generation ... ok
+test keygen::cli::tests::cli_reports_eof_before_password_or_generation ... ok
+test keygen::cli::tests::cli_success_uses_exact_size_and_password ... ok
+test keygen::cli::tests::non_unicode_arguments_fail_without_panicking_or_defaulting ... ok
+test keygen::storage::tests::complete_data_is_synced_before_replacement_and_directory_after ... ok
+test keygen::storage::tests::directory_sync_failure_retains_the_committed_key ... ok
+test keygen::storage::tests::directory_sync_panic_does_not_remove_committed_key ... ok
+test keygen::storage::tests::file_as_parent_fails_without_truncating_it ... ok
+test keygen::storage::tests::file_sync_failure_does_not_publish_a_new_key ... ok
+test keygen::storage::tests::file_sync_failure_preserves_existing_key_and_cleans_temporary ... ok
+test keygen::storage::tests::file_sync_panic_preserves_old_key_and_cleans_temporary ... ok
+test keygen::storage::tests::key_replacement_preserves_hard_links_and_platform_reader_policy ... ok
+test keygen::storage::tests::missing_directory_fails_before_producer_runs ... ok
+test keygen::storage::tests::nested_failure_cannot_remove_another_active_temporary ... ok
+test keygen::storage::tests::persist_failure_skips_directory_sync_and_preserves_destination ... ok
+test keygen::storage::tests::producer_failure_skips_both_sync_stages ... ok
+test keygen::storage::tests::stale_temporary_files_survive_success_and_failure ... ok
+test keygen::storage::tests::unicode_directory_supports_atomic_key_replacement ... ok
+test keygen::storage::tests::windows_delete_lock_preserves_existing_key_and_cleans_temporary ... ok
+test keygen::tests::aes_ctr_stream_matches_direct_counter_encryption ... ok
+test keygen::tests::aligned_blocks_do_not_repeat_in_large_fixture ... ok
+test keygen::tests::aligned_blocks_stay_unique_across_many_keys ... ok
+test keygen::tests::all_five_suites_are_domain_separated_with_cheap_kdfs ... ok
+test keygen::tests::atomic_writer_cleans_up_when_destination_cannot_be_replaced ... ok
+test keygen::tests::atomic_writer_creates_the_requested_file ... ok
+test keygen::tests::atomic_writer_preserves_existing_file_on_failure ... ok
+test keygen::tests::atomic_writer_removes_temporary_file_after_failure ... ok
+test keygen::tests::atomic_writer_removes_temporary_file_during_unwind ... ok
+test keygen::tests::atomic_writer_replaces_and_truncates_existing_file ... ok
+test keygen::tests::blake3_keyed_xof_stream_matches_known_answer ... ok
+test keygen::tests::chacha20_fails_closed_at_its_counter_limit ... ok
+test keygen::tests::chacha20_zero_key_stream_matches_known_answer ... ok
+test keygen::tests::counter_exhaustion_does_not_publish_a_partial_key ... ok
+test keygen::tests::derived_key_is_deterministic ... ok
+test keygen::tests::different_aes_keys_change_stream ... ok
+test keygen::tests::different_domain_changes_derived_key ... ok
+test keygen::tests::different_lengths_do_not_share_a_stream_prefix ... ok
+test keygen::tests::different_password_changes_derived_key ... ok
+test keygen::tests::different_pepper_changes_derived_key ... ok
+test keygen::tests::different_salt_changes_derived_key ... ok
+test keygen::tests::effective_salt_binds_requested_length ... ok
+test keygen::tests::effective_salt_is_unambiguous ... ok
+test keygen::tests::empty_configuration_fields_are_rejected ... ok
+test keygen::tests::error_messages_never_include_password_material ... ok
+test keygen::tests::every_kdf_distinguishes_unicode_normalization_forms ... ok
+test keygen::tests::every_kdf_preserves_embedded_nul_password_bytes ... ok
+test keygen::tests::every_stream_generator_handles_partial_writes ... ok
+test keygen::tests::every_stream_generator_is_independent_of_buffer_partitioning ... ok
+test keygen::tests::every_stream_generator_propagates_write_failure ... ok
+test keygen::tests::every_stream_generator_rejects_invalid_size_and_zero_buffer_before_writing ... ok
+test keygen::tests::every_stream_generator_reports_write_zero ... ok
+test keygen::tests::every_stream_generator_retries_interrupted_writes ... ok
+test keygen::tests::every_stream_generator_uses_bounded_production_writes ... ok
+test keygen::tests::every_stream_generator_writes_exact_boundary_lengths ... ok
+test keygen::tests::every_stream_preserves_existing_key_on_disk_failure_across_buffer_boundaries ... ok
+test keygen::tests::every_suite_rejects_invalid_input_without_touching_existing_file ... ok
+test keygen::tests::fixed_key_stream_has_prefix_property ... ok
+test keygen::tests::framed_salt_capacity_overflow_is_rejected_without_allocating ... ok
+test keygen::tests::framed_salts_keep_all_eight_size_bytes_above_four_gib ... ok
+test keygen::tests::generated_file_is_named_key_key_and_has_exact_raw_content ... ok
+test keygen::tests::generated_file_replaces_a_longer_existing_key ... ok
+test keygen::tests::hundreds_of_stream_lengths_match_one_shot_reference ... ok
+test keygen::tests::invalid_configuration_does_not_touch_existing_file ... ok
+test keygen::tests::invalid_generation_does_not_touch_existing_file ... ok
+test keygen::tests::invalid_stream_sizes_are_rejected_before_writing ... ok
+test keygen::tests::library_rejects_empty_password_without_touching_existing_file ... ok
+test keygen::tests::maximum_size_counter_and_chunk_arithmetic_is_safe ... ok
+test keygen::tests::new_kdfs_reject_empty_passwords_and_zero_pbkdf2_rounds ... ok
+test keygen::tests::parse_size_accepts_exact_boundaries_and_whitespace ... ok
+test keygen::tests::parse_size_accepts_hundreds_of_valid_values ... ok
+test keygen::tests::parse_size_accepts_values_near_maximum ... ok
+test keygen::tests::parse_size_rejects_empty_and_zero ... ok
+test keygen::tests::parse_size_rejects_every_common_unit_suffix ... ok
+test keygen::tests::parse_size_rejects_non_decimal_notation ... ok
+test keygen::tests::parse_size_rejects_values_above_maximum_and_u64 ... ok
+test keygen::tests::password_is_unicode_and_whitespace_sensitive ... ok
+test keygen::tests::pbkdf2_derivation_is_deterministic_and_input_sensitive ... ok
+test keygen::tests::pbkdf2_sha256_matches_known_vector ... ok
+test keygen::tests::peppered_effective_salt_is_unambiguous_and_binds_every_input ... ok
+test keygen::tests::production_kdf_parameters_are_pinned ... ok
+test keygen::tests::production_stream_writes_are_bounded_to_one_mibibyte ... ok
+test keygen::tests::production_suite_outputs_match_known_answers ... ok
+test keygen::tests::scrypt_derivation_is_deterministic_and_input_sensitive ... ok
+test keygen::tests::scrypt_matches_rfc_7914_first_vector ... ok
+test keygen::tests::stream_counter_exhaustion_after_progress_preserves_the_exact_prefix ... ok
+test keygen::tests::stream_does_not_repeat_common_digest_periods ... ok
+test keygen::tests::stream_halves_are_different ... ok
+test keygen::tests::stream_handles_partial_writes ... ok
+test keygen::tests::stream_is_independent_of_buffer_partitioning ... ok
+test keygen::tests::stream_propagates_write_failure ... ok
+test keygen::tests::stream_reports_write_zero ... ok
+test keygen::tests::stream_retries_interrupted_writes ... ok
+test keygen::tests::stream_writes_exact_lengths_around_important_boundaries ... ok
+test keygen::tests::suite_display_names_are_stable_and_distinct ... ok
+test keygen::tests::suites_select_the_expected_stream_generators ... ok
+test keygen::tests::validate_size_has_exact_boundaries ... ok
+test keygen::tests::zero_buffer_size_is_rejected_before_writing ... ok
+test xor::arguments::control_characters ... ok
+test xor::arguments::device_names ... ok
+test xor::arguments::empty_and_dot_names ... ok
+test xor::arguments::help_aliases ... ok
+test xor::arguments::help_describes_the_complete_new_contract ... ok
+test xor::arguments::in_place_is_explicit_and_has_one_filename ... ok
+test xor::arguments::in_place_terminator_preserves_literal_option_and_native_names ... ok
+test xor::arguments::in_place_uses_the_same_filename_validation ... ok
+test xor::arguments::internal_temporary_names ... ok
+test xor::arguments::lone_dash_is_a_filename ... ok
+test xor::arguments::native_non_unicode_names_are_preserved ... ok
+test xor::arguments::ordinary_device_like_names_are_allowed ... ok
+test xor::arguments::rejects_all_removed_modes ... ok
+test xor::arguments::rejects_wrong_argument_counts_including_old_cli ... ok
+test xor::arguments::spaces_and_unicode_are_preserved ... ok
+test xor::arguments::terminator_allows_option_like_names ... ok
+test xor::arguments::trailing_spaces_and_dots ... ok
+test xor::arguments::two_filenames_select_fixed_key_processing ... ok
+test xor::arguments::unix_paths ... ok
+test xor::arguments::version_aliases ... ok
+test xor::arguments::windows_paths ... ok
+test xor::arguments::windows_special_characters ... ok
+test xor::atomic_file::in_place_tests::concurrent_readers_only_observe_complete_versions ... ok
+test xor::atomic_file::in_place_tests::file_sync_failure_after_complete_transformation_preserves_source ... ok
+test xor::atomic_file::in_place_tests::long_parent_paths_support_atomic_overwrite ... ok
+test xor::atomic_file::in_place_tests::missing_or_replaced_source_path_fails_before_transformation ... ok
+test keygen::cli::command_tests::subcommands_have_distinct_domains_and_outputs ... ok
+test xor::atomic_file::in_place_tests::original_survives_partial_work_and_existing_readers_keep_old_bytes ... ok
+test xor::atomic_file::in_place_tests::panic_during_transformation_preserves_source_and_releases_handle ... ok
+test xor::atomic_file::in_place_tests::protected_source_is_refused_before_transformation ... ok
+test xor::atomic_file::in_place_tests::source_replaced_during_transformation_is_not_overwritten ... ok
+test xor::atomic_file::in_place_tests::short_read_after_a_full_block_preserves_source_and_releases_handle ... ok
+test xor::atomic_file::in_place_tests::source_stays_write_protected_after_transformation ... ok
+test xor::atomic_file::in_place_tests::write_failure_after_partial_progress_preserves_source ... ok
+test xor::atomic_file::tests::directory_appearing_before_publish_is_preserved ... ok
+test xor::atomic_file::tests::destination_appearing_during_file_sync_is_not_overwritten ... ok
+test xor::atomic_file::tests::directory_sync_failure_reports_that_output_was_published ... ok
+test xor::atomic_file::tests::existing_output_is_unchanged_until_success ... ok
+test xor::atomic_file::tests::failed_rename_does_not_sync_directory_or_remove_destination ... ok
+test xor::atomic_file::tests::failed_windows_rename_preserves_output_and_cleans_temp ... ok
+test xor::atomic_file::tests::failure_after_partial_writes_preserves_existing_output ... ok
+test xor::atomic_file::tests::failure_does_not_create_new_output ... ok
+test xor::atomic_file::tests::file_sync_failure_keeps_new_output_absent ... ok
+test xor::atomic_file::tests::file_sync_failure_preserves_existing_output ... ok
+test xor::atomic_file::tests::file_sync_panic_cleans_temporary_without_replacing_output ... ok
+test xor::atomic_file::tests::identity_distinguishes_files_and_recognizes_hard_links ... ok
+test xor::atomic_file::tests::missing_parent_is_not_created ... ok
+test xor::atomic_file::tests::independent_temporary_files_have_unique_names ... ok
+test xor::atomic_file::tests::new_output_appears_only_after_success ... ok
+test xor::atomic_file::tests::output_becoming_read_only_fails_without_data_loss ... ok
+test xor::atomic_file::tests::panic_unwinds_without_deleting_existing_output ... ok
+test xor::atomic_file::tests::producer_failure_never_reaches_file_sync ... ok
+test xor::atomic_file::tests::protected_hard_link_appearing_during_sync_is_not_overwritten ... ok
+test xor::atomic_file::tests::read_only_output_is_not_replaced ... ok
+test xor::atomic_file::tests::rechecks_hard_link_identity_before_publish ... ok
+test xor::atomic_file::tests::refuses_destination_removed_during_processing ... ok
+test xor::atomic_file::tests::refuses_new_destination_created_during_processing ... ok
+test xor::atomic_file::tests::refuses_destination_replaced_during_processing ... ok
+test xor::atomic_file::tests::stale_temporary_is_preserved_across_success_and_failure ... ok
+test xor::atomic_file::tests::unrelated_hard_link_to_old_output_is_not_modified ... ok
+test xor::atomic_file::tests::windows_device_and_stream_names_are_refused ... ok
+test xor::atomic_file::tests::windows_active_output_writer_is_refused_before_production ... ok
+test xor::file_checks::direct_api_cannot_bypass_name_validation ... ok
+test xor::file_checks::growth_detected_after_writes_does_not_publish_new_output ... ok
+test xor::file_checks::length_changes_are_detected_in_both_directions ... ok
+test xor::atomic_file::tests::windows_output_denies_writers_until_publication ... ok
+test xor::file_checks::plain_file_check_rejects_directories ... ok
+test xor::file_checks::same_length_timestamp_changes_are_detected ... ok
+test xor::file_checks::short_key_fails_before_opening_executable_or_creating_temporary ... ok
+test xor::file_checks::stable_metadata_passes ... ok
+test xor::file_checks::windows_input_handle_denies_writes_and_removal_until_closed ... ok
+test xor::streams::all_byte_values ... ok
+test xor::file_checks::streaming_failure_after_full_block_preserves_destination ... ok
+test xor::streams::data_read_errors_propagate_after_a_full_buffer ... ok
+test xor::streams::empty_a_and_nonempty_key ... ok
+test xor::streams::empty_input_never_reads_the_key_stream ... ok
+test xor::streams::empty_key_fails_for_nonempty_a ... ok
+test xor::streams::equal_inputs_produce_zeros ... ok
+test xor::streams::errors_after_partial_writes_propagate ... ok
+test xor::streams::every_pair_of_byte_values_matches_the_xor_oracle ... ok
+test xor::streams::final_eof_check_propagates_read_errors ... ok
+test xor::streams::boundaries_and_multiple_buffers_match_independent_oracle ... ok
+test xor::streams::growth_of_a_fails_even_from_empty ... ok
+test xor::streams::key_read_errors_propagate_after_a_full_buffer ... ok
+test xor::streams::key_short_by_one_fails ... ok
+test xor::streams::key_tail_is_never_read ... ok
+test xor::streams::known_vector ... ok
+test xor::streams::longer_key_uses_only_its_prefix ... ok
+test xor::streams::maximum_u64_length_uses_a_bounded_first_read ... ok
+test xor::streams::repeated_interruptions_during_final_eof_check_are_retried ... ok
+test xor::streams::short_and_interrupted_reads_use_all_bytes ... ok
+test xor::streams::short_and_interrupted_writes_are_completed ... ok
+test xor::streams::short_key_after_full_block_does_not_write_partial_second_block ... ok
+test xor::streams::shortened_a_fails ... ok
+test xor::streams::simultaneous_short_interrupted_reads_and_writes_preserve_alignment ... ok
+test xor::streams::source_failure_does_not_consume_key_for_an_incomplete_block ... ok
+test xor::streams::two_empty_inputs ... ok
+test xor::streams::virtual_key_larger_than_four_gib_is_not_eagerly_read ... ok
+test xor::streams::write_failure_stops_before_reading_another_block ... ok
+test xor::streams::zero_key_preserves_all_bytes ... ok
+test xor::streams::zero_writes_fail_instead_of_spinning ... ok
+test xor::streams::randomized_oracles_and_round_trips ... ok
+
+test result: ok. 280 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.13s
+
+     Running unittests src\main.rs (target\release\deps\stardust-a9d2b49219fdbfba.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\app_dispatch.rs (target\release\deps\app_dispatch-0577bc80a375a592.exe)
+
+running 15 tests
+test broken_generator_status_pipe_fails_before_password_or_generation ... ok
+test closed_status_pipe_does_not_turn_committed_xor_into_failure ... ok
+test confirmation_read_failure_preserves_the_existing_key_and_hard_link ... ok
+test each_generator_routes_to_its_original_configuration ... ok
+test command_names_remain_literal_xor_filenames ... ok
+test every_generator_accepts_a_native_non_unicode_working_directory ... ok
+test generating_a_key_never_requires_an_executable_file ... ok
+test global_version_does_not_require_a_directory_or_terminal ... ok
+test invalid_global_commands_never_read_input_or_echo_secrets ... ok
+test malformed_xor_commands_retain_astra_usage_exit_code ... ok
+test native_non_unicode_subcommand_is_rejected_without_lossy_dispatch ... ok
+test root_help_lists_all_six_operations_and_both_location_policies ... ok
+test wrong_generator_size_is_rejected_before_password_in_combined_dispatch ... ok
+test xor_help_aliases_explain_the_same_contract_without_files ... ok
+test final_flush_failure_reports_commit_and_keeps_each_generated_key ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.78s
+
+     Running tests\combined_workflows.rs (target\release\deps\combined_workflows-bb4aa3094bba01e1.exe)
+
+running 31 tests
+test argon2_aes::failed_regeneration_keeps_a_key_usable_for_restoration ... ok
+test argon2_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly ... ok
+test argon2_aes::generated_key_supports_atomic_in_place_round_trip ... ok
+test argon2_aes::generated_short_key_cannot_damage_an_input_or_existing_output ... ok
+test argon2_aes::generation_and_xor_retain_their_distinct_directory_rules ... ok
+test argon2_aes::regenerated_key_restores_a_previous_ciphertext ... ok
+test argon2_blake3::failed_regeneration_keeps_a_key_usable_for_restoration ... ok
+test argon2_blake3::generated_key_crosses_both_buffer_sizes_and_restores_exactly ... ok
+test argon2_blake3::generated_key_supports_atomic_in_place_round_trip ... ok
+test argon2_blake3::generated_short_key_cannot_damage_an_input_or_existing_output ... ok
+test argon2_blake3::generation_and_xor_retain_their_distinct_directory_rules ... ok
+test argon2_chacha20::failed_regeneration_keeps_a_key_usable_for_restoration ... ok
+test argon2_blake3::regenerated_key_restores_a_previous_ciphertext ... ok
+test argon2_chacha20::generated_key_crosses_both_buffer_sizes_and_restores_exactly ... ok
+test argon2_chacha20::generated_key_supports_atomic_in_place_round_trip ... ok
+test argon2_chacha20::generation_and_xor_retain_their_distinct_directory_rules ... ok
+test argon2_chacha20::generated_short_key_cannot_damage_an_input_or_existing_output ... ok
+test pbkdf2_aes::failed_regeneration_keeps_a_key_usable_for_restoration ... ok
+test argon2_chacha20::regenerated_key_restores_a_previous_ciphertext ... ok
+test pbkdf2_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly ... ok
+test pbkdf2_aes::generated_key_supports_atomic_in_place_round_trip ... ok
+test pbkdf2_aes::generated_short_key_cannot_damage_an_input_or_existing_output ... ok
+test pbkdf2_aes::generation_and_xor_retain_their_distinct_directory_rules ... ok
+test pbkdf2_aes::regenerated_key_restores_a_previous_ciphertext ... ok
+test scrypt_aes::failed_regeneration_keeps_a_key_usable_for_restoration ... ok
+test scrypt_aes::generated_key_crosses_both_buffer_sizes_and_restores_exactly ... ok
+test scrypt_aes::generated_key_supports_atomic_in_place_round_trip ... ok
+test scrypt_aes::generated_short_key_cannot_damage_an_input_or_existing_output ... ok
+test scrypt_aes::generation_and_xor_retain_their_distinct_directory_rules ... ok
+test xor_does_not_prompt_or_generate_when_key_is_missing ... ok
+test scrypt_aes::regenerated_key_restores_a_previous_ciphertext ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.26s
+
+     Running tests\keygen_cli.rs (target\release\deps\keygen_cli-328c0ba997832cc0.exe)
+
+running 8 tests
+test argon2_blake3_validates_before_password_or_file_access ... ok
+test argon2_aes_validates_before_password_or_file_access ... ok
+test argon2_chacha20_validates_before_password_or_file_access ... ok
+test help_and_version_exit_successfully_without_prompting_or_writing ... ok
+test each_subcommand_has_help_without_starting_generation ... ok
+test pbkdf2_aes_validates_before_password_or_file_access ... ok
+test missing_unknown_or_extra_arguments_never_default_to_a_generator ... ok
+test scrypt_aes_validates_before_password_or_file_access ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+
+     Running tests\xor_cli.rs (target\release\deps\xor_cli-f37a3442030b8d19.exe)
+
+running 53 tests
+test case_aliases_of_inputs_are_rejected ... ok
+test all_old_processing_flags_and_three_file_syntax_fail ... ok
+test directory_a_is_refused ... ok
+test directory_key_is_refused ... ok
+test directory_output_and_its_contents_are_preserved ... ok
+test empty_a_accepts_empty_or_longer_key ... ok
+test empty_key_does_not_create_output ... ok
+test executable_directory_can_contain_spaces_and_unicode ... ok
+test device_stream_and_ambiguous_names_fail_on_every_platform ... ok
+test help_and_version_work_without_input_files ... ok
+test in_place::directory_input_is_preserved ... ok
+test in_place::executable_directory_controls_in_place_target ... ok
+test in_place::executable_and_its_hard_links_are_never_overwritten ... ok
+test in_place::key_and_its_hard_links_are_never_overwritten ... ok
+test in_place::invalid_in_place_arguments_do_not_modify_files ... ok
+test in_place::known_vector_and_status ... ok
+test in_place::missing_input_is_not_created ... ok
+test in_place::other_hard_links_keep_original_bytes ... ok
+test in_place::missing_short_or_empty_key_preserves_original ... ok
+test in_place::readonly_original_is_preserved_and_readonly_key_is_usable ... ok
+test in_place::spaces_unicode_dashes_and_native_names_work_in_place ... ok
+test in_place::windows_active_writer_is_refused ... ok
+test in_place::windows_case_aliases_preserve_key_protection ... ok
+test in_place::windows_locked_input_rename_failure_preserves_original ... ok
+test independent_parallel_invocations ... ok
+test known_vector_and_status ... ok
+test in_place::round_trips_at_empty_and_buffer_boundaries_with_longer_keys ... ok
+test launch_directory_is_ignored_for_both_inputs_and_output ... ok
+test length_check_precedes_destination_inspection ... ok
+test locked_output_rename_fails_without_data_loss ... ok
+test longer_key_produces_exactly_a_length ... ok
+test missing_a_preserves_output ... ok
+test missing_key_is_required_for_empty_a_too ... ok
+test missing_key_preserves_output_even_with_another_b_file ... ok
+test native_non_unicode_filenames_end_to_end ... ok
+test never_falls_back_to_a_in_working_directory ... ok
+test never_falls_back_to_key_in_working_directory ... ok
+test output_cannot_be_a_hard_link_to_either_input ... ok
+test output_cannot_be_either_input ... ok
+test output_cannot_replace_executable_or_its_hard_link ... ok
+test readonly_inputs_can_be_processed ... ok
+test readonly_output_is_preserved ... ok
+test rejects_absolute_paths_even_to_files_beside_executable ... ok
+test parallel_fixture_copy_and_launch_are_reliable ... ok
+test rejects_bad_counts_unknown_options_and_empty_names ... ok
+test replacement_removes_old_trailing_bytes ... ok
+test round_trip_across_multiple_buffers ... ok
+test same_file_can_supply_a_and_key ... ok
+test short_key_preserves_existing_output ... ok
+test rejects_parent_paths_subdirectories_and_both_separator_styles ... ok
+test windows_input_open_for_writing_fails_safely ... ok
+test spaces_unicode_and_option_like_filenames ... ok
+test windows_output_open_for_writing_is_preserved ... ok
+
+test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.75s
+
+   Doc-tests stardust
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Checking stardust v0.1.0 (C:\Users\cw\Desktop\stardust\stardust2)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.68s
+    Finished `release` profile [optimized] target(s) in 0.10s
+Windows validation PASSED.
